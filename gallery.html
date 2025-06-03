@@ -2,85 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery | A1 Painting & Decorating</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-    }
-    header img {
-      width: 350px;
-      max-width: 90%;
-    }
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #00ff00;
-      font-size: 24px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 30px;
-      gap: 20px;
-    }
-    .gallery img {
-      width: 300px;
-      height: auto;
-      border: 2px solid #00ff00;
-      border-radius: 8px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #1c1c1c;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-      .gallery img {
-        width: 90%;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo">
-    <h1>Gallery</h1>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section class="gallery">
-    <img src="before1.jpg" alt="Before Painting 1">
-    <img src="after1.jpg" alt="After Painting 1">
-    <img src="before2.jpg" alt="Before Painting 2">
-    <img src="after2.jpg" alt="After Painting 2">
-    <img src="wallpaper1.jpg" alt="Wallpapering Job 1">
-    <img src="wallpaper2.jpg" alt="Wallpapering Job 2">
-  </section>
+  <main>
+    <section class="gallery">
+      <h1>Our Work</h1>
+      <div class="gallery-grid">
+        <div><img src="before1.jpg" alt="Before Painting 1"></div>
+        <div><img src="after1.jpg" alt="After Painting 1"></div>
+        <div><img src="before2.jpg" alt="Before Painting 2"></div>
+        <div><img src="after2.jpg" alt="After Painting 2"></div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 A1 Painting & Decorating</p>
+    <p>Contact: 07495517536 | Serving Inverness and surrounding areas</p>
   </footer>
 
 </body>
