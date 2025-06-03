@@ -1,74 +1,57 @@
-body {
-  background-color: #121212;
-  color: #ffffff;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1c1c1c;
-  padding: 10px 20px;
-}
+  <main>
+    <h1>Our Wallpapering Work</h1>
+    <div class="gallery">
+      
+      <div class="gallery-item">
+        <img src="wallpaper-before1.jpg" alt="Before Wallpapering 1">
+        <p><strong>Before:</strong> Preparation for wallpaper installation</p>
+      </div>
+      <div class="gallery-item">
+        <img src="wallpaper-after1.jpg" alt="After Wallpapering 1">
+        <p><strong>After:</strong> Finished wallpaper installation</p>
+      </div>
 
-.logo {
-  height: 60px;
-}
+      <div class="gallery-item">
+        <img src="wallpaper-before2.jpg" alt="Before Wallpapering 2">
+        <p><strong>Before:</strong> Plain wall before wallpapering</p>
+      </div>
+      <div class="gallery-item">
+        <img src="wallpaper-after2.jpg" alt="After Wallpapering 2">
+        <p><strong>After:</strong> Stylish wallpaper applied</p>
+      </div>
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: limegreen;
-  font-weight: bold;
-  font-size: 18px;
-}
+      <div class="gallery-item">
+        <img src="wallpaper-before3.jpg" alt="Before Wallpapering 3">
+        <p><strong>Before:</strong> Bare room ready for new wallpaper</p>
+      </div>
+      <div class="gallery-item">
+        <img src="wallpaper-after3.jpg" alt="After Wallpapering 3">
+        <p><strong>After:</strong> Beautiful new wallpaper finish</p>
+      </div>
 
-nav a:hover {
-  color: #ffffff;
-}
+    </div>
+  </main>
 
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-h1 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: limegreen;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.gallery-item {
-  background-color: #1c1c1c;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px #000;
-}
-
-.gallery-item img {
-  width: 100%;
-  height: auto;
-}
-
-.gallery-item p {
-  padding: 10px;
-  font-size: 16px;
-}
-
-footer {
-  background-color: #1c1c1c;
-  text-align: center;
-  padding: 15px 0;
-  margin-top: 40px;
-  color: #999;
-  font-size: 14px;
-}
+  <footer>
+    <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+  </footer>
+</body>
+</html>
