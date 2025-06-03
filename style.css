@@ -19,9 +19,9 @@ header {
 }
 
 nav a {
-  color: limegreen;
   margin-left: 20px;
   text-decoration: none;
+  color: limegreen;
   font-weight: bold;
   font-size: 18px;
 }
@@ -36,16 +36,25 @@ main {
 }
 
 h1 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 30px;
   color: limegreen;
+}
+
+h2 {
+  font-size: 28px;
+  margin-top: 40px;
+  color: #ffffff;
+  border-bottom: 2px solid limegreen;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  padding: 10px;
+  margin-bottom: 50px;
 }
 
 .gallery-item {
@@ -58,22 +67,21 @@ h1 {
 
 .gallery-item img {
   width: 100%;
-  height: 250px;
-  object-fit: cover; /* Crop the images to fit nicely */
-  border-radius: 10px;
+  height: auto;
+  border-radius: 8px;
 }
 
 .gallery-item p {
   margin-top: 10px;
-  color: #ccc;
-  font-size: 16px;
+  font-size: 14px;
+  color: #999;
 }
 
 footer {
   background-color: #1c1c1c;
+  text-align: center;
   padding: 15px 0;
   margin-top: 40px;
-  text-align: center;
   color: #999;
   font-size: 14px;
 }
