@@ -1,39 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background-color: #1c1c1c;
+      padding: 20px;
+    }
+    header img {
+      width: 200px;
+    }
+    h1 {
+      margin: 20px 0;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #1c1c1c;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" />
   </header>
 
-  <main>
-    <section class="gallery">
-      <h1>Our Work</h1>
-      <div class="gallery-grid">
-        <div><img src="before1.jpg" alt="Before Painting 1"></div>
-        <div><img src="after1.jpg" alt="After Painting 1"></div>
-        <div><img src="before2.jpg" alt="Before Painting 2"></div>
-        <div><img src="after2.jpg" alt="After Painting 2"></div>
-      </div>
-    </section>
-  </main>
+  <h1>Our Work</h1>
+  <div class="gallery">
+    <img src="before1.jpg" alt="Before painting 1" />
+    <img src="after1.jpg" alt="After painting 1" />
+    <img src="before2.jpg" alt="Before painting 2" />
+    <img src="after2.jpg" alt="After painting 2" />
+  </div>
 
   <footer>
-    <p>Contact: 07495517536 | Serving Inverness and surrounding areas</p>
+    <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
