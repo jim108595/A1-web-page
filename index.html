@@ -1,239 +1,106 @@
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A1 Painting & Decorating | Transforming Spaces with Color</title>
-  <meta name="description" content="Professional painting and decorating services. Interior, exterior, residential, and commercial. Get a free quote today.">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #333;
-      line-height: 1.6;
-    }
-    header {
-      background-color: #1b3a57;
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
+<style>
+  /* Reset and Base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #fff;
+  }
+  header {
+    background-color: #1b3a57;
+    text-align: center;
+    padding: 30px 15px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    background-color: #142738;
+    text-align: center;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+  }
+  nav a {
+    color: #fff;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  .hero {
+    background: url('images/hero-painting.jpg') no-repeat center center/cover;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+  .hero a {
+    margin-top: 20px;
+    background-color: #e63946;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  .hero a:hover {
+    background-color: #c62828;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
     header h1 {
-      font-size: 2.8em;
-    }
-    nav {
-      background-color: #142738;
-      text-align: center;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 999;
+      font-size: 2rem;
     }
     nav a {
-      color: #fff;
-      margin: 0 20px;
-      text-decoration: none;
-      font-size: 1.1em;
-      font-weight: 600;
+      display: inline-block;
+      margin: 10px 10px;
+      font-size: 1rem;
     }
     .hero {
-      background: url('images/hero-painting.jpg') no-repeat center center/cover;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
+      min-height: 300px;
+      padding: 20px 10px;
     }
     .hero h2 {
-      font-size: 3em;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+      font-size: 2rem;
     }
     .hero p {
-      margin-top: 15px;
-      font-size: 1.5em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      font-size: 1rem;
     }
     .hero a {
-      margin-top: 25px;
-      background-color: #e63946;
-      color: #fff;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 1.2em;
-      transition: background-color 0.3s ease;
+      font-size: 0.9rem;
+      padding: 10px 20px;
     }
-    .hero a:hover {
-      background-color: #c62828;
+  }
+  @media (max-width: 480px) {
+    .hero h2 {
+      font-size: 1.5rem;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
+    .hero p {
+      font-size: 0.9rem;
     }
-    h2 {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 40px;
+    nav a {
+      margin: 5px;
+      font-size: 0.9rem;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
-    .service {
-      flex: 1 1 300px;
-      border: 1px solid #ddd;
-      padding: 25px 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      background-color: #fafafa;
-      transition: transform 0.3s ease;
-      text-align: center;
-    }
-    .service:hover {
-      transform: translateY(-10px);
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
-    .gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.03);
-    }
-    .testimonial {
-      background-color: #f5f5f5;
-      padding: 30px 25px;
-      margin-bottom: 30px;
-      border-left: 5px solid #1b3a57;
-      font-style: italic;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 600px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 15px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      width: 100%;
-    }
-    button {
-      background-color: #1b3a57;
-      color: #fff;
-      padding: 15px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1.2em;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0f1e2b;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1b3a57;
-      color: #fff;
-      font-size: 0.9em;
-      margin-top: 60px;
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <h1>A1 Painting & Decorating</h1>
-</header>
-
-<nav>
-  <a href="#services">Services</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#testimonials">Testimonials</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<section class="hero">
-  <h2>Transform Your Home or Business</h2>
-  <p>Expert Painting & Decorating Services</p>
-  <a href="#contact">Get a Free Quote</a>
-</section>
-
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service">
-      <h3>Interior Painting</h3>
-      <p>Beautiful finishes for walls, ceilings, and woodwork with minimum disruption.</p>
-    </div>
-    <div class="service">
-      <h3>Exterior Painting</h3>
-      <p>Protect your property and boost kerb appeal with our expert exterior services.</p>
-    </div>
-    <div class="service">
-      <h3>Decorating</h3>
-      <p>Wallpapering, feature walls, and full room makeovers tailored to your taste.</p>
-    </div>
-  </div>
-</section>
-
-<section id="gallery">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="images/painting1.jpg" alt="Living room painting">
-    <img src="images/painting2.jpg" alt="Exterior house painting">
-    <img src="images/painting3.jpg" alt="Office decorating">
-    <img src="images/painting4.jpg" alt="Kitchen painting">
-  </div>
-</section>
-
-<section id="testimonials">
-  <h2>What Our Customers Say</h2>
-  <div class="testimonial">
-    "A1 Painting & Decorating completely transformed our home — punctual, tidy, and fantastic results!"
-  </div>
-  <div class="testimonial">
-    "Highly professional and easy to work with. Would definitely recommend to anyone looking for quality painting services."
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <form>
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  &copy; 2025 A1 Painting & Decorating. All rights reserved.
-</footer>
-
-</body>
-</html> 
+  }
+</style>
