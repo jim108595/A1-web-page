@@ -2,70 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | A1 Painting & Decorating</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #ffffff;
-      text-align: center;
-    }
-    header {
-      padding: 20px;
-    }
-    header img {
-      width: 350px;
-      max-width: 90%;
-    }
-    nav {
-      margin: 20px 0;
-    }
-    nav a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: #00ff00;
-      font-size: 24px;
-    }
-    section {
-      margin: 40px 20px;
-      font-size: 20px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      background-color: #1c1c1c;
-    }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo">
-    <h1>Contact Us</h1>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-
-  <section>
-    <p>📞 <a href="tel:07495517536" style="color: #00ff00;">07495517536</a></p>
-    <p>📍 Serving Inverness and surrounding areas (up to 30 miles radius)</p>
-    <p>📧 <a href="mailto:a1paintingdecorating@gmail.com" style="color: #00ff00;">a1paintingdecorating@gmail.com</a></p>
-  </section>
+  <main>
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <p>Get in touch for a free quote!</p>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 A1 Painting & Decorating</p>
+    <p>Contact: 07495517536 | Serving Inverness and surrounding areas</p>
   </footer>
 
 </body>
