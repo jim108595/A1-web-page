@@ -2,16 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact | A1 Painting & Decorating</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | A1 Painting & Decorating</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <!-- Header -->
   <header class="header">
     <div class="container">
-      <a href="index.html"><img src="logo.png" alt="A1 Logo" class="logo"></a>
+      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -22,32 +20,24 @@
     </div>
   </header>
 
-  <!-- ⭐️ Contact Section ⭐️ -->
-  <main class="contact-section">
-    <h1>Contact Us</h1>
-    <p>Get in touch today for a free quote or consultation</p>
-
-    <div class="contact-container">
-      <div class="contact-details">
-        <h2>Reach Us At</h2>
-        <p><strong>Phone:</strong> <a href="tel:07495517536">07495 517536</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
-        <p><strong>Location:</strong> Inverness, Scotland</p>
+  <main class="gallery">
+    <h1>Our Work</h1>
+    <div class="gallery-grid">
+      <!-- Example Pair -->
+      <div class="gallery-item">
+        <img src="kitchen-before1.jpg" alt="Kitchen Before">
+        <p>Kitchen - Before</p>
       </div>
-
-      <form class="contact-form" action="mailto:info@a1paintingdecorators.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+      <div class="gallery-item">
+        <img src="kitchen-after.jpg" alt="Kitchen After">
+        <p>Kitchen - After</p>
+      </div>
+      <!-- Duplicate the block above for each Before/After -->
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 A1 Painting & Decorating | All rights reserved.</p>
   </footer>
-
 </body>
 </html>
