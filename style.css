@@ -71,8 +71,104 @@ body {
 
 .footer {
   background-color: #111;
-  padding: 20px 0;
+  padding: 20px 0;/* Contact Section */
+.contact-section {
+  padding: 60px 20px;
   text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 36px;
+  color: #0f0;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #bbb;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-details {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.contact-details h2 {
+  color: #0f0;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  margin-bottom: 10px;
+  color: #eee;
+}
+
+.contact-details a {
+  color: #09c372;
+  text-decoration: none;
+}
+
+.contact-form {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 15px;
+  background: #333;
+  border: none;
+  border-radius: 5px;
+  color: #eee;
+  font-size: 16px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
+}
+
+.contact-form button {
+  padding: 15px;
+  background: #0f0;
+  color: #111;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background: #09c372;
+}
+
+/* Responsive for Contact Section */
+@media (min-width: 768px) {
+  .contact-container {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .contact-details, .contact-form {
+    flex: 1;
+  }
+}  text-align: center;
   border-top: 1px solid #222;
   font-size: 14px;
 }
