@@ -1,87 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Contact | A1 Painting & Decorating</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="logo.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #f4f4f4;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
     }
-    nav ul li {
-      margin: 0 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 20px;
-      display: block;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #0a7f3c;
-    }
-    .contact-section {
-      max-width: 600px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    header {
+      background: #000;
+      padding: 20px 0;
       text-align: center;
     }
-    .contact-section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+
+    header img {
+      width: 200px;
+      height: auto;
     }
-    .contact-section p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
+
+    .contact-container {
+      flex: 1;
+      max-width: 600px;
+      margin: 60px auto;
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+      text-align: center;
     }
+
+    h1 {
+      color: #00ff00;
+      margin-bottom: 20px;
+      font-size: 2.5em;
+    }
+
     .contact-info {
-      font-size: 20px;
+      font-size: 1.2em;
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .contact-info a {
+      color: #00ff00;
+      text-decoration: none;
       font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    address {
       margin-top: 20px;
+      font-style: normal;
+      line-height: 1.6;
+      color: #ccc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      background: #111;
+      color: #fff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #00ff00;
+      color: #0e0e0e;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #00cc00;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px 0;
+      text-align: center;
+      color: #777;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <a href="index.html">
+      <img src="logo.png" alt="A1 Painting & Decorating Logo" />
+    </a>
+  </header>
 
-  <div class="contact-section">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear about your next project! Feel free to call, email, or reach out via our social media channels.</p>
+  <div class="contact-container">
+    <h1>Contact Us</h1>
     <div class="contact-info">
-      📞 01234 567890<br>
-      📧 info@a1paintingdecorating.com
+      📞 <a href="tel:07495517536">07495 517536</a><br />
+      📧 <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a><br />
+      🏠 Address:<br />
+      <address>
+        A1 Painting & Decorating<br />
+        123 Your Street Name<br />
+        Your City, Postcode<br />
+        United Kingdom
+      </address>
     </div>
+
+    <p>Get in touch for a free quote or to discuss your next project!</p>
+
+    <form action="https://formsubmit.co/info@a1paintingdecorators.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
   </div>
+
+  <footer>
+    <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
