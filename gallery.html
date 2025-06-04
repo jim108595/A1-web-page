@@ -5,58 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gallery</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .gallery-section {
+      margin-bottom: 50px;
+    }
+
+    .gallery-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .image-pair {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .image-pair img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    @media (max-width: 768px) {
+      .image-pair {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <div class="gallery-container">
+  <h1>Gallery</h1>
 
-    <section class="gallery-section">
-      <h2>Kitchen Paint</h2>
+  <div class="gallery-section">
+    <h2>Kitchen Paint</h2>
+    <div class="image-pair">
       <img src="kitchen-paint-before1.jpg" alt="Kitchen Before">
       <img src="kitchen-paint-after2.jpg" alt="Kitchen After">
-    </section>
+    </div>
+  </div>
 
-    <section class="gallery-section">
-      <h2>Living Room</h2>
-      <img src="large-living-area-wallpaper-before1.jpg" alt="Living Room Before">
-      <img src="large-living-area-wallpaper-finish1.jpg" alt="Living Room After">
-    </section>
+  <div class="gallery-section">
+    <h2>Living Room</h2>
+    <div class="image-pair">
+      <img src="living-room-wallpaper-before.jpg" alt="Living Room Before">
+      <img src="living-room-wallpaper-finish.jpg" alt="Living Room After">
+    </div>
+  </div>
 
-    <section class="gallery-section">
-      <h2>Hallway Doors</h2>
+  <div class="gallery-section">
+    <h2>Hallway Doors</h2>
+    <div class="image-pair">
       <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
       <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
-    </section>
+    </div>
+  </div>
 
-    <section class="gallery-section">
-      <h2>Hallway Painting</h2>
-      <img src="hallway-paint-finish1.jpg" alt="Hallway Painting Before">
-      <img src="hallway-paint-finish2.jpg" alt="Hallway Painting After">
-    </section>
+  <div class="gallery-section">
+    <h2>Bedroom Wallpaper</h2>
+    <div class="image-pair">
+      <img src="large-living-area-wallpaper-begin1.jpg" alt="Bedroom Before">
+      <img src="bed-room-finish.jpg" alt="Bedroom After">
+    </div>
+  </div>
 
-    <section class="gallery-section">
-      <h2>On Suite Toilet</h2>
-      <img src="small-toilet-wallpaper-before.jpg" alt="On Suite Toilet Before">
-      <img src="small-toilet-wallpaper-after.jpg" alt="On Suite Toilet After">
-    </section>
-
-    <section class="gallery-section">
-      <h2>Living Room Wallpaper</h2>
-      <img src="living-room-wallpaper-before.jpg" alt="Living Room Wallpaper Before">
-      <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper After">
-    </section>
-
-    <section class="gallery-section">
-      <h2>Bedroom Wallpaper</h2>
-      <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
-    </section>
-
-    <section class="gallery-section">
-      <h2>Staircase Paint</h2>
+  <div class="gallery-section">
+    <h2>Staircase Paint</h2>
+    <div class="image-pair">
       <img src="staircase-paint-before.jpg" alt="Staircase Before">
       <img src="staircase-paint-after.jpg" alt="Staircase After">
-    </section>
+    </div>
+  </div>
 
+  <div class="gallery-section">
+    <h2>On-Suite Toilet</h2>
+    <div class="image-pair">
+      <img src="small-toilet-wallpaper-before.jpg" alt="Toilet Before">
+      <img src="small-toilet-wallpaper-after.jpg" alt="Toilet After">
+    </div>
   </div>
 
 </body>
