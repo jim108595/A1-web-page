@@ -2,59 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery - A1 Painting</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gallery | A1 Painting & Decorating</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      color: white;
+      margin: 0;
+      font-size: 2rem;
+    }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 15px;
-      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 30px;
     }
-    .gallery img {
-      width: 100%;
+    .project {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .project h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .images {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .images img {
+      width: 45%;
       height: auto;
-      border: 2px solid #ccc;
       border-radius: 8px;
+      object-fit: cover;
+    }
+    @media (max-width: 600px) {
+      .images img {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Our Work Gallery</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="gallery.html">Gallery</a> |
-      <a href="contact.html">Contact</a>
-    </nav>
+    <h1>A1 Painting & Decorating Gallery</h1>
   </header>
+  <main class="gallery">
+    <div class="project">
+      <h2>Kitchen Paint</h2>
+      <div class="images">
+        <img src="kitchen-paint-before1.jpg" alt="Kitchen Before">
+        <img src="kitchen-paint-after2.jpg" alt="Kitchen After">
+      </div>
+    </div>
 
-  <main>
-    <section class="gallery">
-      <img src="bed-room-finish.jpg" alt="Bedroom Finish">
-      <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
-      <img src="hallway-door-prep-before.jpg" alt="Hallway Door Prep">
-      <img src="hallway-doors-painting-finish.jpg" alt="Hallway Painting">
-      <img src="hallway-paint-finish1.jpg" alt="Hallway Paint Finish">
-      <img src="hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
-      <img src="kitchen-paint-after2.jpg" alt="Kitchen Paint After">
-      <img src="kitchen-paint-before1.jpg" alt="Kitchen Paint Before">
-      <img src="large-living-area-wallpaper-after2.jpg" alt="Living Area After">
-      <img src="large-living-area-wallpaper-before1.jpg" alt="Living Area Before">
-      <img src="living-room-wallpaper-after.jpg" alt="Living Room After">
-      <img src="living-room-wallpaper-before.jpg" alt="Living Room Before">
-      <img src="living-room-wallpaper-finish.jpg" alt="Living Room Finish">
-      <img src="on-suite-toilet-wallpaper-after2.jpg" alt="On Suite Toilet After">
-      <img src="on-suite-toilet-wallpaper-before1.jpg" alt="On Suite Toilet Before">
-      <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
-      <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
-      <img src="staircase-paint-after.jpg" alt="Staircase Paint After">
-      <img src="staircase-paint-before.jpg" alt="Staircase Paint Before">
-    </section>
+    <div class="project">
+      <h2>Living Area</h2>
+      <div class="images">
+        <img src="large-living-area-wallpaper-let1.jpg" alt="Living Area Before">
+        <img src="large-living-area-wallpaper-ete2.jpg" alt="Living Area After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Hallway Doors</h2>
+      <div class="images">
+        <img src="hallway-door-prep-before.jpg" alt="Hallway Doors Before">
+        <img src="hallway-door-finish-after.jpg" alt="Hallway Doors After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Hallway Painting</h2>
+      <div class="images">
+        <img src="hallway-doors-painting-finish.jpg" alt="Hallway Painting Before">
+        <img src="hallway-paint-finish1.jpg" alt="Hallway Painting After 1">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Hallway Paint 2</h2>
+      <div class="images">
+        <img src="hallway-paint-finish2.jpg" alt="Hallway Painting After 2">
+        <!-- No before, if you have add here -->
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Living Room Wallpaper</h2>
+      <div class="images">
+        <img src="living-room-wallpaper-before.jpg" alt="Living Room Before">
+        <img src="living-room-wallpaper-finish.jpg" alt="Living Room After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Small Toilet Wallpaper</h2>
+      <div class="images">
+        <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
+        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>On Suite Toilet Wallpaper</h2>
+      <div class="images">
+        <img src="on-suite-toilet-wallpaper-fore1.jpg" alt="On Suite Toilet Before">
+        <img src="on-suite-toilet-wallpaper-after2.jpg" alt="On Suite Toilet After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Staircase Paint</h2>
+      <div class="images">
+        <img src="staircase-paint-before.jpg" alt="Staircase Before">
+        <img src="staircase-paint-after.jpg" alt="Staircase After">
+      </div>
+    </div>
+
+    <div class="project">
+      <h2>Bedroom Finish</h2>
+      <div class="images">
+        <img src="bed-room-finish.jpg" alt="Bedroom Finish">
+        <!-- No before image -->
+      </div>
+    </div>
   </main>
-
-  <footer>
-    <p>© 2025 A1 Painting & Decorating. All rights reserved.</p>
-  </footer>
 </body>
 </html>
