@@ -2,99 +2,87 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery | A1 Painting & Decorating</title>
-    <link href="style.css" rel="stylesheet">
-    <!-- Lightbox CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
         }
-        h1 {
+        header {
+            background: #003366;
+            color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            margin-top: 30px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav {
+            margin-top: 10px;
         }
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .gallery img {
             width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform 0.3s;
         }
         .gallery img:hover {
             transform: scale(1.05);
         }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #003366;
+            color: #fff;
+            margin-top: 50px;
+        }
     </style>
 </head>
 <body>
 
-<h1>Our Work</h1>
+<header>
+    <h1>A1 Painting & Decorating</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
 
-<div class="gallery">
-    <a href="images/a1-painting-gallery/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint - After">
-        <img src="images/a1-painting-gallery/staircase-paint-after.jpg" alt="Staircase Paint After">
-    </a>
-    <a href="images/a1-painting-gallery/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door - Finish After">
-        <img src="images/a1-painting-gallery/hallway-door-finish-after.jpg" alt="Hallway Door Finish After">
-    </a>
-    <a href="images/a1-painting-gallery/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint - Before">
-        <img src="images/a1-painting-gallery/staircase-paint-before.jpg" alt="Staircase Paint Before">
-    </a>
-    <a href="images/a1-painting-gallery/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door - Prep Before">
-        <img src="images/a1-painting-gallery/hallway-door-prep-before.jpg" alt="Hallway Door Prep Before">
-    </a>
-    <a href="images/a1-painting-gallery/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint - Finish 1">
-        <img src="images/a1-painting-gallery/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
-    </a>
-    <a href="images/a1-painting-gallery/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint - Finish 2">
-        <img src="images/a1-painting-gallery/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
-    </a>
-    <a href="images/a1-painting-gallery/kitchen-paint-after2.jpg" data-lightbox="gallery" data-title="Kitchen Paint - After 2">
-        <img src="images/a1-painting-gallery/kitchen-paint-after2.jpg" alt="Kitchen Paint After 2">
-    </a>
-    <a href="images/a1-painting-gallery/kitchen-paint-before1.jpg" data-lightbox="gallery" data-title="Kitchen Paint - Before 1">
-        <img src="images/a1-painting-gallery/kitchen-paint-before1.jpg" alt="Kitchen Paint Before 1">
-    </a>
-    <a href="images/a1-painting-gallery/large-living-area-wallpaper-ete2.jpg" data-lightbox="gallery" data-title="Large Living Area - Wallpaper 2">
-        <img src="images/a1-painting-gallery/large-living-area-wallpaper-ete2.jpg" alt="Large Living Area Wallpaper 2">
-    </a>
-    <a href="images/a1-painting-gallery/large-living-area-wallpaper-left1.jpg" data-lightbox="gallery" data-title="Large Living Area - Wallpaper 1">
-        <img src="images/a1-painting-gallery/large-living-area-wallpaper-left1.jpg" alt="Large Living Area Wallpaper 1">
-    </a>
-    <a href="images/a1-painting-gallery/living-room-wallpaper-after.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - After">
-        <img src="images/a1-painting-gallery/living-room-wallpaper-after.jpg" alt="Living Room Wallpaper After">
-    </a>
-    <a href="images/a1-painting-gallery/living-room-wallpaper-before.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - Before">
-        <img src="images/a1-painting-gallery/living-room-wallpaper-before.jpg" alt="Living Room Wallpaper Before">
-    </a>
-    <a href="images/a1-painting-gallery/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - Finish">
-        <img src="images/a1-painting-gallery/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
-    </a>
-    <a href="images/a1-painting-gallery/on-suite-toilet-wallpaper-after2.jpg" data-lightbox="gallery" data-title="On-Suite Toilet Wallpaper - After">
-        <img src="images/a1-painting-gallery/on-suite-toilet-wallpaper-after2.jpg" alt="On-Suite Toilet Wallpaper After">
-    </a>
-    <a href="images/a1-painting-gallery/on-suite-toilet-wallpaper-before1.jpg" data-lightbox="gallery" data-title="On-Suite Toilet Wallpaper - Before">
-        <img src="images/a1-painting-gallery/on-suite-toilet-wallpaper-before1.jpg" alt="On-Suite Toilet Wallpaper Before">
-    </a>
-    <a href="images/a1-painting-gallery/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper - After">
-        <img src="images/a1-painting-gallery/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
-    </a>
-    <a href="images/a1-painting-gallery/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper - Before">
-        <img src="images/a1-painting-gallery/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
-    </a>
-    <a href="images/a1-painting-gallery/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
-        <img src="images/a1-painting-gallery/bed-room-finish.jpg" alt="Bedroom Finish">
-    </a>
-</div>
+<main>
+    <section class="gallery">
+        <!-- Gallery Images -->
+        <img src="bed-room-finish.jpg" alt="Bedroom Finish">
+        <img src="hallway-door-finish-after.jpg" alt="Hallway Door Finish">
+        <img src="hallway-doors-painting-finish.jpg" alt="Hallway Doors Painting Finish">
+        <img src="hallway-paint-finish1.jpg" alt="Hallway Paint Finish">
+        <img src="kitchen-paint-after2.jpg" alt="Kitchen Paint After">
+        <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
+        <img src="on-suite-toilet-wallpaper-after.jpg" alt="On-Suite Toilet Wallpaper">
+        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper">
+        <img src="staircase-paint-after.jpg" alt="Staircase Paint Finish">
+        <!-- Add more images here if you have more -->
+    </section>
+</main>
 
-<!-- Lightbox JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<footer>
+    &copy; 2025 A1 Painting & Decorating. All rights reserved.
+</footer>
 
 </body>
 </html>
