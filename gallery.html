@@ -1,80 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Gallery | A1 Painting & Decorating</title>
+    <link href="style.css" rel="stylesheet">
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <main>
-    <h1>Our Work</h1>
+<h1>Our Work</h1>
 
-    <section>
-      <h2>Wallpapering Work</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="wallpaper_before1.jpg" alt="Before Wallpapering 1" />
-          <p><strong>Before:</strong> Preparation for wallpaper installation</p>
-        </div>
-        <div class="gallery-item">
-          <img src="wallpaper_after1.jpg" alt="After Wallpapering 1" />
-          <p><strong>After:</strong> Finished wallpaper installation</p>
-        </div>
-        <div class="gallery-item">
-          <img src="wallpaper_before2.jpg" alt="Before Wallpapering 2" />
-          <p><strong>Before:</strong> Plain wall before wallpapering</p>
-        </div>
-        <div class="gallery-item">
-          <img src="wallpaper_after2.jpg" alt="After Wallpapering 2" />
-          <p><strong>After:</strong> Stylish wallpaper applied</p>
-        </div>
-        <div class="gallery-item">
-          <img src="wallpaper_before3.jpg" alt="Before Wallpapering 3" />
-          <p><strong>Before:</strong> Bare room ready for new wallpaper</p>
-        </div>
-        <div class="gallery-item">
-          <img src="wallpaper_after3.jpg" alt="After Wallpapering 3" />
-          <p><strong>After:</strong> Beautiful new wallpaper finish</p>
-        </div>
-      </div>
-    </section>
+<div class="gallery">
+    <a href="images/a1-painting-gallery/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint - After">
+        <img src="images/a1-painting-gallery/staircase-paint-after.jpg" alt="Staircase Paint After">
+    </a>
+    <a href="images/a1-painting-gallery/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door - Finish After">
+        <img src="images/a1-painting-gallery/hallway-door-finish-after.jpg" alt="Hallway Door Finish After">
+    </a>
+    <a href="images/a1-painting-gallery/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint - Before">
+        <img src="images/a1-painting-gallery/staircase-paint-before.jpg" alt="Staircase Paint Before">
+    </a>
+    <a href="images/a1-painting-gallery/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door - Prep Before">
+        <img src="images/a1-painting-gallery/hallway-door-prep-before.jpg" alt="Hallway Door Prep Before">
+    </a>
+    <a href="images/a1-painting-gallery/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint - Finish 1">
+        <img src="images/a1-painting-gallery/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
+    </a>
+    <a href="images/a1-painting-gallery/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint - Finish 2">
+        <img src="images/a1-painting-gallery/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
+    </a>
+    <a href="images/a1-painting-gallery/kitchen-paint-after2.jpg" data-lightbox="gallery" data-title="Kitchen Paint - After 2">
+        <img src="images/a1-painting-gallery/kitchen-paint-after2.jpg" alt="Kitchen Paint After 2">
+    </a>
+    <a href="images/a1-painting-gallery/kitchen-paint-before1.jpg" data-lightbox="gallery" data-title="Kitchen Paint - Before 1">
+        <img src="images/a1-painting-gallery/kitchen-paint-before1.jpg" alt="Kitchen Paint Before 1">
+    </a>
+    <a href="images/a1-painting-gallery/large-living-area-wallpaper-ete2.jpg" data-lightbox="gallery" data-title="Large Living Area - Wallpaper 2">
+        <img src="images/a1-painting-gallery/large-living-area-wallpaper-ete2.jpg" alt="Large Living Area Wallpaper 2">
+    </a>
+    <a href="images/a1-painting-gallery/large-living-area-wallpaper-left1.jpg" data-lightbox="gallery" data-title="Large Living Area - Wallpaper 1">
+        <img src="images/a1-painting-gallery/large-living-area-wallpaper-left1.jpg" alt="Large Living Area Wallpaper 1">
+    </a>
+    <a href="images/a1-painting-gallery/living-room-wallpaper-after.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - After">
+        <img src="images/a1-painting-gallery/living-room-wallpaper-after.jpg" alt="Living Room Wallpaper After">
+    </a>
+    <a href="images/a1-painting-gallery/living-room-wallpaper-before.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - Before">
+        <img src="images/a1-painting-gallery/living-room-wallpaper-before.jpg" alt="Living Room Wallpaper Before">
+    </a>
+    <a href="images/a1-painting-gallery/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper - Finish">
+        <img src="images/a1-painting-gallery/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
+    </a>
+    <a href="images/a1-painting-gallery/on-suite-toilet-wallpaper-after2.jpg" data-lightbox="gallery" data-title="On-Suite Toilet Wallpaper - After">
+        <img src="images/a1-painting-gallery/on-suite-toilet-wallpaper-after2.jpg" alt="On-Suite Toilet Wallpaper After">
+    </a>
+    <a href="images/a1-painting-gallery/on-suite-toilet-wallpaper-before1.jpg" data-lightbox="gallery" data-title="On-Suite Toilet Wallpaper - Before">
+        <img src="images/a1-painting-gallery/on-suite-toilet-wallpaper-before1.jpg" alt="On-Suite Toilet Wallpaper Before">
+    </a>
+    <a href="images/a1-painting-gallery/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper - After">
+        <img src="images/a1-painting-gallery/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
+    </a>
+    <a href="images/a1-painting-gallery/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper - Before">
+        <img src="images/a1-painting-gallery/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
+    </a>
+    <a href="images/a1-painting-gallery/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
+        <img src="images/a1-painting-gallery/bed-room-finish.jpg" alt="Bedroom Finish">
+    </a>
+</div>
 
-    <section>
-      <h2>Painting Work</h2>
-      <div class="gallery">
-        <div class="gallery-item">
-          <img src="painting_before1.jpg" alt="Before Painting 1" />
-          <p><strong>Before:</strong> Walls before painting</p>
-        </div>
-        <div class="gallery-item">
-          <img src="painting_after1.jpg" alt="After Painting 1" />
-          <p><strong>After:</strong> Freshly painted room</p>
-        </div>
-        <div class="gallery-item">
-          <img src="painting_before2.jpg" alt="Before Painting 2" />
-          <p><strong>Before:</strong> Surface preparation</p>
-        </div>
-        <div class="gallery-item">
-          <img src="painting_after2.jpg" alt="After Painting 2" />
-          <p><strong>After:</strong> Smooth professional finish</p>
-        </div>
-      </div>
-    </section>
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
-  </main>
-
-  <footer>
-    <p>© 2025 A1 Painting & Decorating. All rights reserved.</p>
-  </footer>
 </body>
 </html>
