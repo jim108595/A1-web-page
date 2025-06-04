@@ -7,27 +7,27 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: #f9f9f9;
+      background: #f4f4f4;
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
       color: #222;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
       max-width: 1200px;
       margin: auto;
     }
     .gallery-item {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
     .gallery-item:hover {
@@ -44,6 +44,7 @@
       font-size: 18px;
       font-weight: bold;
       color: #333;
+      border-top: 1px solid #eee;
     }
     .fade-in {
       opacity: 0;
@@ -58,17 +59,16 @@
 </head>
 <body>
 
-  <h1>Gallery</h1>
+  <h1>Our Work - Before & After</h1>
   <div class="gallery">
 
-    <!-- Example item -->
+    <!-- Kitchen Paint -->
     <div class="gallery-item fade-in">
       <a href="kitchen-before1.jpg" data-lightbox="kitchen" data-title="Kitchen Before">
         <img src="kitchen-before1.jpg" alt="Kitchen Before">
       </a>
       <div class="caption">Kitchen Before</div>
     </div>
-
     <div class="gallery-item fade-in">
       <a href="kitchen-after.jpg" data-lightbox="kitchen" data-title="Kitchen After">
         <img src="kitchen-after.jpg" alt="Kitchen After">
@@ -76,14 +76,15 @@
       <div class="caption">Kitchen After</div>
     </div>
 
-    <!-- Repeat for other images -->
+    <!-- Living Room Wallpaper -->
     <div class="gallery-item fade-in">
-      <a href="living-room-wallpaper-finish.jpg" data-lightbox="living" data-title="Living Room Wallpaper Finish">
+      <a href="living-room-wallpaper-finish.jpg" data-lightbox="living" data-title="Living Room Finish">
         <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
       </a>
       <div class="caption">Living Room Finish</div>
     </div>
 
+    <!-- Bedroom Wallpaper -->
     <div class="gallery-item fade-in">
       <a href="bed-room-finish.jpg" data-lightbox="bedroom" data-title="Bedroom Wallpaper">
         <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
@@ -91,13 +92,101 @@
       <div class="caption">Bedroom Wallpaper</div>
     </div>
 
-    <!-- (Continue adding other Before/After pairs) -->
+    <!-- Small Toilet Wallpaper -->
+    <div class="gallery-item fade-in">
+      <a href="small-toilet-wallpaper-before.jpg" data-lightbox="toilet" data-title="Small Toilet Before">
+        <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
+      </a>
+      <div class="caption">Small Toilet Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="small-toilet-wallpaper-after.jpg" data-lightbox="toilet" data-title="Small Toilet After">
+        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
+      </a>
+      <div class="caption">Small Toilet After</div>
+    </div>
+
+    <!-- Staircase Paint -->
+    <div class="gallery-item fade-in">
+      <a href="staircase-paint-before.jpg" data-lightbox="staircase" data-title="Staircase Before">
+        <img src="staircase-paint-before.jpg" alt="Staircase Paint Before">
+      </a>
+      <div class="caption">Staircase Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="staircase-paint-after.jpg" data-lightbox="staircase" data-title="Staircase After">
+        <img src="staircase-paint-after.jpg" alt="Staircase Paint After">
+      </a>
+      <div class="caption">Staircase After</div>
+    </div>
+
+    <!-- Wallpaper Jobs -->
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-before.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before">
+        <img src="wallpaper-before.jpg" alt="Wallpaper Before">
+      </a>
+      <div class="caption">Wallpaper Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-after.jpg" data-lightbox="wallpaper" data-title="Wallpaper After">
+        <img src="wallpaper-after.jpg" alt="Wallpaper After">
+      </a>
+      <div class="caption">Wallpaper After</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-before1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before 1">
+        <img src="wallpaper-before1.jpg" alt="Wallpaper Before 1">
+      </a>
+      <div class="caption">Wallpaper Before 1</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-after2.jpg" data-lightbox="wallpaper" data-title="Wallpaper After 2">
+        <img src="wallpaper-after2.jpg" alt="Wallpaper After 2">
+      </a>
+      <div class="caption">Wallpaper After 2</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish">
+        <img src="wallpaper-finish.jpg" alt="Wallpaper Finish">
+      </a>
+      <div class="caption">Wallpaper Finish</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 1">
+        <img src="wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
+      </a>
+      <div class="caption">Wallpaper Finish 1</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish2.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 2">
+        <img src="wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+      </a>
+      <div class="caption">Wallpaper Finish 2</div>
+    </div>
+
+    <!-- Hallway Doors Paint -->
+    <div class="gallery-item fade-in">
+      <a href="hallway-door-prep-before.jpg" data-lightbox="hallway" data-title="Hallway Door Before">
+        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
+      </a>
+      <div class="caption">Hallway Door Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="hallway-door-finish-after.jpg" data-lightbox="hallway" data-title="Hallway Door After">
+        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
+      </a>
+      <div class="caption">Hallway Door After</div>
+    </div>
 
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   <script>
-    // Fade-in effect
+    // Fade-in animation
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
