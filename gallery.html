@@ -1,167 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Gallery | A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
   <style>
     body {
-      background-color: #111;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
       margin: 0;
-      padding: 0;
+      padding: 20px;
     }
-
-    header {
-      background: #000;
-      padding: 1rem 0;
-      text-align: center;
-    }
-
-    header img {
-      max-width: 220px;
-      height: auto;
-    }
-
     h1 {
-      font-size: 2rem;
-      margin: 1rem 0;
+      text-align: center;
+      color: #222;
+      margin-bottom: 40px;
     }
-
-    .gallery-container {
+    .gallery {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
       max-width: 1200px;
       margin: auto;
     }
-
     .gallery-item {
-      background: #222;
-      border-radius: 10px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-      text-align: center;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
     }
-
-    .gallery-item h2 {
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      border-bottom: 3px solid #3bde62;
-      display: inline-block;
-      padding-bottom: 0.5rem;
+    .gallery-item:hover {
+      transform: scale(1.05);
     }
-
-    .image-pair {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .image-pair img {
+    .gallery-item img {
       width: 100%;
       height: auto;
-      border-radius: 8px;
-      transition: transform 0.3s;
-      object-fit: cover;
+      display: block;
     }
-
-    .image-pair img:hover {
-      transform: scale(1.03);
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      border-top: 1px solid #eee;
     }
-
-    @media (min-width: 768px) {
-      .image-pair {
-        flex-direction: row;
-      }
-
-      .image-pair img {
-        width: 48%;
-      }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" />
-  </header>
+  <h1>Our Work - Before & After</h1>
+  <div class="gallery">
 
-  <div class="gallery-container">
-
-    <div class="gallery-item">
-      <h2>Kitchen Paint</h2>
-      <div class="image-pair">
+    <!-- Kitchen Paint -->
+    <div class="gallery-item fade-in">
+      <a href="kitchen-before1.jpg" data-lightbox="kitchen" data-title="Kitchen Before">
         <img src="kitchen-before1.jpg" alt="Kitchen Before">
+      </a>
+      <div class="caption">Kitchen Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="kitchen-after.jpg" data-lightbox="kitchen" data-title="Kitchen After">
         <img src="kitchen-after.jpg" alt="Kitchen After">
-      </div>
+      </a>
+      <div class="caption">Kitchen After</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>Living Room Wallpaper</h2>
-      <div class="image-pair">
-        <img src="living-room-wallpaper-finish.jpg" alt="Living Room Finish">
-        <img src="wallpaper-after2.jpg" alt="Living Room After 2">
-      </div>
+    <!-- Living Room Wallpaper -->
+    <div class="gallery-item fade-in">
+      <a href="living-room-wallpaper-finish.jpg" data-lightbox="living" data-title="Living Room Finish">
+        <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
+      </a>
+      <div class="caption">Living Room Finish</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>Hallway Doors</h2>
-      <div class="image-pair">
-        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
-        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
-      </div>
+    <!-- Bedroom Wallpaper -->
+    <div class="gallery-item fade-in">
+      <a href="bed-room-finish.jpg" data-lightbox="bedroom" data-title="Bedroom Wallpaper">
+        <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
+      </a>
+      <div class="caption">Bedroom Wallpaper</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>Hallway Paint</h2>
-      <div class="image-pair">
-        <img src="hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
-        <img src="hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
-      </div>
-    </div>
-
-    <div class="gallery-item">
-      <h2>Small Toilet Wallpaper</h2>
-      <div class="image-pair">
+    <!-- Small Toilet Wallpaper -->
+    <div class="gallery-item fade-in">
+      <a href="small-toilet-wallpaper-before.jpg" data-lightbox="toilet" data-title="Small Toilet Before">
         <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
+      </a>
+      <div class="caption">Small Toilet Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="small-toilet-wallpaper-after.jpg" data-lightbox="toilet" data-title="Small Toilet After">
         <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
-      </div>
+      </a>
+      <div class="caption">Small Toilet After</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>Staircase Paint</h2>
-      <div class="image-pair">
-        <img src="staircase-paint-before.jpg" alt="Staircase Before">
-        <img src="staircase-paint-after.jpg" alt="Staircase After">
-      </div>
+    <!-- Staircase Paint -->
+    <div class="gallery-item fade-in">
+      <a href="staircase-paint-before.jpg" data-lightbox="staircase" data-title="Staircase Before">
+        <img src="staircase-paint-before.jpg" alt="Staircase Paint Before">
+      </a>
+      <div class="caption">Staircase Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="staircase-paint-after.jpg" data-lightbox="staircase" data-title="Staircase After">
+        <img src="staircase-paint-after.jpg" alt="Staircase Paint After">
+      </a>
+      <div class="caption">Staircase After</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>Bedroom Wallpaper</h2>
-      <div class="image-pair">
-        <img src="wallpaper-before.jpg" alt="Bedroom Before">
-        <img src="bed-room-finish.jpg" alt="Bedroom After">
-      </div>
+    <!-- Wallpaper Jobs -->
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-before.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before">
+        <img src="wallpaper-before.jpg" alt="Wallpaper Before">
+      </a>
+      <div class="caption">Wallpaper Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-after.jpg" data-lightbox="wallpaper" data-title="Wallpaper After">
+        <img src="wallpaper-after.jpg" alt="Wallpaper After">
+      </a>
+      <div class="caption">Wallpaper After</div>
     </div>
 
-    <div class="gallery-item">
-      <h2>More Wallpaper Work</h2>
-      <div class="image-pair">
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-before1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before 1">
         <img src="wallpaper-before1.jpg" alt="Wallpaper Before 1">
-        <img src="wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
-      </div>
-      <div class="image-pair">
-        <img src="wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+      </a>
+      <div class="caption">Wallpaper Before 1</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-after2.jpg" data-lightbox="wallpaper" data-title="Wallpaper After 2">
+        <img src="wallpaper-after2.jpg" alt="Wallpaper After 2">
+      </a>
+      <div class="caption">Wallpaper After 2</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish">
         <img src="wallpaper-finish.jpg" alt="Wallpaper Finish">
-      </div>
+      </a>
+      <div class="caption">Wallpaper Finish</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 1">
+        <img src="wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
+      </a>
+      <div class="caption">Wallpaper Finish 1</div>
+    </div>
+
+    <div class="gallery-item fade-in">
+      <a href="wallpaper-finish2.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 2">
+        <img src="wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+      </a>
+      <div class="caption">Wallpaper Finish 2</div>
+    </div>
+
+    <!-- Hallway Doors Paint -->
+    <div class="gallery-item fade-in">
+      <a href="hallway-door-prep-before.jpg" data-lightbox="hallway" data-title="Hallway Door Before">
+        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
+      </a>
+      <div class="caption">Hallway Door Before</div>
+    </div>
+    <div class="gallery-item fade-in">
+      <a href="hallway-door-finish-after.jpg" data-lightbox="hallway" data-title="Hallway Door After">
+        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
+      </a>
+      <div class="caption">Hallway Door After</div>
     </div>
 
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    // Fade-in animation
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 
 </body>
 </html>
