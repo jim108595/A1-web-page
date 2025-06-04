@@ -1,159 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A1 Painting & Decorating | 5-Star Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 Painting & Decorating | Excellence in Every Stroke</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #00FF00;
-    }
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #111;
-    }
-    .logo {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #00FF00;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .hero {
-      text-align: center;
-      padding: 100px 20px 50px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #00FF00;
-    }
-    .hero p {
-      font-size: 20px;
-      color: #ccc;
-    }
-    .reviews-section {
-      background-color: #111;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .reviews-section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    .stars {
-      color: gold;
-      font-size: 40px;
-      margin-bottom: 50px;
-    }
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .review-card {
-      background-color: #000;
-      padding: 30px 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
-      transition: transform 0.3s ease;
-    }
-    .review-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
-    }
-    .review-card p {
-      font-size: 18px;
-      color: #ccc;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    .review-card strong {
-      font-size: 18px;
-      color: #fff;
-    }
-    .verified {
-      color: gold;
-      font-weight: 600;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #666;
-      font-size: 14px;
-      background-color: #111;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="hero" data-aos="fade-up">
-    <h1>Welcome to A1 Painting & Decorating</h1>
-    <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
-  </section>
-
-  <section class="reviews-section" data-aos="fade-up">
-    <h2>What Our Customers Say</h2>
-    <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-    <div class="reviews-grid">
-      <div class="review-card" data-aos="zoom-in">
-        <p>"Incredible attention to detail — my home has never looked better!"</p>
-        <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
-      </div>
-      <div class="review-card" data-aos="zoom-in" data-aos-delay="100">
-        <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
-        <strong>– James L. <span class="verified">✔️ Verified</span></strong>
-      </div>
-      <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
-        <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
-        <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+  <header class="header">
+    <div class="container nav-container">
+      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+      <nav>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="menu" class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>  <section class="hero">
+    <div class="container">
+      <h1>Professional Painting & Decorating</h1>
+      <p>Transforming Spaces with Excellence and Care</p>
+      <a href="gallery.html" class="btn">View Our Work</a>
+    </div>
+  </section>  <section class="reviews">
+    <div class="container">
+      <h2>5-Star Rated Service</h2>
+      <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+      <div class="reviews-grid">
+        <div class="review">
+          <p>"A flawless finish and superb professionalism. Highly recommended!"</p>
+          <strong>- Sarah M. <span class="verified">✔️ Verified</span></strong>
+        </div>
+        <div class="review">
+          <p>"Exceeded my expectations in every way. Will hire again!"</p>
+          <strong>- James L. <span class="verified">✔️ Verified</span></strong>
+        </div>
+        <div class="review">
+          <p>"On time, on budget, and absolutely stunning results."</p>
+          <strong>- Emily R. <span class="verified">✔️ Verified</span></strong>
+        </div>
       </div>
     </div>
-  </section>
+  </section>  <footer class="footer">
+    <div class="container">
+      &copy; 2025 A1 Painting & Decorating | All rights reserved.
+    </div>
+  </footer>  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
 
-  <footer>
-    &copy; 2025 A1 Painting & Decorating | All rights reserved.
-  </footer>
-
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1200,
-      once: true,
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
     });
-  </script>
-</body>
+  </script></body>
 </html>
