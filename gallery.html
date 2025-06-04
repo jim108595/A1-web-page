@@ -1,145 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery | A1 Painting & Decorating</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 40px;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-    }
-    .project {
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      width: 320px;
-      transition: transform 0.3s ease;
-    }
-    .project:hover {
-      transform: scale(1.02);
-    }
-    .project img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-bottom: 1px solid #eee;
-    }
-    .caption {
-      text-align: center;
-      font-weight: bold;
-      margin: 10px 0;
-      font-size: 18px;
-      color: #2e2e2e;
-    }
-    .before-after {
-      display: flex;
-      flex-direction: column;
-    }
-    .label {
-      text-align: center;
-      font-size: 14px;
-      margin: 6px 0;
-      color: #666;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | A1 Painting & Decorating</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+        .gallery-section h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #222;
+            position: relative;
+        }
+        .gallery-section h2::after {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: #27ae60;
+            margin: 10px auto;
+        }
+        .image-pair {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .image-pair img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .image-pair img:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 768px) {
+            .image-pair {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <h1>A1 Painting & Decorating Gallery</h1>
+    <h1>Painting & Decorating Gallery</h1>
 
-  <div class="gallery">
-
-    <!-- Kitchen -->
-    <div class="project">
-      <div class="before-after">
-        <img src="kitchen-before1.jpg" alt="Kitchen Before">
-        <div class="label">Before</div>
-        <img src="kitchen-after1.jpg" alt="Kitchen After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Kitchen Paint</div>
+    <div class="gallery-section">
+        <h2>Kitchen Paint</h2>
+        <div class="image-pair">
+            <img src="kitchen-before1.jpg" alt="Kitchen Before">
+            <img src="kitchen-after.jpg" alt="Kitchen After">
+        </div>
     </div>
 
-    <!-- Living Room -->
-    <div class="project">
-      <div class="before-after">
-        <img src="living-room-wallpaper-before.jpg" alt="Living Room Before">
-        <div class="label">Before</div>
-        <img src="living-room-wallpaper-after.jpg" alt="Living Room After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Living Room Wallpaper</div>
+    <div class="gallery-section">
+        <h2>Living Room Wallpaper</h2>
+        <div class="image-pair">
+            <img src="living-room-wallpaper-finish.jpg" alt="Living Room Finish">
+        </div>
     </div>
 
-    <!-- Hallway Doors -->
-    <div class="project">
-      <div class="before-after">
-        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
-        <div class="label">Before</div>
-        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Hallway Doors</div>
+    <div class="gallery-section">
+        <h2>Small Toilet Wallpaper</h2>
+        <div class="image-pair">
+            <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
+            <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
+        </div>
     </div>
 
-    <!-- Bedroom Wallpaper -->
-    <div class="project">
-      <div class="before-after">
-        <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Bedroom Wallpaper</div>
+    <div class="gallery-section">
+        <h2>Hallway Doors</h2>
+        <div class="image-pair">
+            <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
+            <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
+        </div>
     </div>
 
-    <!-- Staircase Paint -->
-    <div class="project">
-      <div class="before-after">
-        <img src="staircase-paint-before.jpg" alt="Staircase Before">
-        <div class="label">Before</div>
-        <img src="staircase-paint-after.jpg" alt="Staircase After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Staircase Paint</div>
+    <div class="gallery-section">
+        <h2>Hallway Painting</h2>
+        <div class="image-pair">
+            <img src="hallway-paint-finish1.jpg" alt="Hallway Finish 1">
+            <img src="hallway-paint-finish2.jpg" alt="Hallway Finish 2">
+        </div>
     </div>
 
-    <!-- Small Toilet -->
-    <div class="project">
-      <div class="before-after">
-        <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
-        <div class="label">Before</div>
-        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">Small Toilet Wallpaper</div>
+    <div class="gallery-section">
+        <h2>Staircase Paint</h2>
+        <div class="image-pair">
+            <img src="staircase-paint-before.jpg" alt="Staircase Before">
+            <img src="staircase-paint-after.jpg" alt="Staircase After">
+        </div>
     </div>
 
-    <!-- On Suite Toilet -->
-    <div class="project">
-      <div class="before-after">
-        <img src="on-suite-toilet-wallpaper-before.jpg" alt="On Suite Toilet Before">
-        <div class="label">Before</div>
-        <img src="on-suite-toilet-wallpaper-after.jpg" alt="On Suite Toilet After">
-        <div class="label">After</div>
-      </div>
-      <div class="caption">On Suite Toilet Wallpaper</div>
+    <div class="gallery-section">
+        <h2>Bedroom Wallpaper</h2>
+        <div class="image-pair">
+            <img src="bed-room-finish.jpg" alt="Bedroom Finish">
+        </div>
     </div>
 
-  </div>
+    <div class="gallery-section">
+        <h2>Wallpaper Finishes</h2>
+        <div class="image-pair">
+            <img src="wallpaper-before.jpg" alt="Wallpaper Before">
+            <img src="wallpaper-after.jpg" alt="Wallpaper After">
+        </div>
+        <div class="image-pair">
+            <img src="wallpaper-before1.jpg" alt="Wallpaper Before 1">
+            <img src="wallpaper-after2.jpg" alt="Wallpaper After 2">
+        </div>
+        <div class="image-pair">
+            <img src="wallpaper-finish.jpg" alt="Wallpaper Finish">
+            <img src="wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
+        </div>
+        <div class="image-pair">
+            <img src="wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+        </div>
+    </div>
 
 </body>
 </html>
