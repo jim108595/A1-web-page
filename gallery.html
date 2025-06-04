@@ -1,247 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Gallery | A1 Painting & Decorating</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="logo.png" type="image/png" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A1 Painting & Decorating | 5-Star Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Poppins', sans-serif;
-      background: #0e0e0e;
-      color: #fff;
+      background-color: #000;
+      color: #00FF00;
     }
-
     header {
-      background: #000;
-      padding: 20px 0;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+      position: relative;
+      z-index: 1000;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00FF00;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      height: 3px;
+      width: 25px;
+      background: #00FF00;
+      margin: 4px 0;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      nav ul {
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        background-color: #111;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+    }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #00FF00;
+    }
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+    }
+    .reviews-section {
+      background-color: #111;
+      padding: 80px 20px;
       text-align: center;
     }
-
-    header img {
-      width: 200px;
-      height: auto;
+    .reviews-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
     }
-
-    h1 {
-      text-align: center;
-      margin: 40px 0 20px;
-      font-size: 2.8em;
-      color: #00ff00;
+    .stars {
+      color: gold;
+      font-size: 40px;
+      margin-bottom: 50px;
     }
-
-    .gallery {
+    .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
       max-width: 1200px;
-      margin: 0 auto 60px;
-      padding: 20px;
+      margin: 0 auto;
     }
-
-    .gallery-item {
-      background: #1a1a1a;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 255, 0, 0.2);
+    .review-card {
+      background-color: #000;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
       transition: transform 0.3s ease;
     }
-
-    .gallery-item:hover {
-      transform: scale(1.05);
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
     }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .caption {
-      padding: 15px;
-      text-align: center;
+    .review-card p {
       font-size: 18px;
-      font-weight: bold;
-      color: #00ff00;
-      background: #111;
-      border-top: 1px solid #222;
+      color: #ccc;
+      margin-bottom: 20px;
+      line-height: 1.6;
     }
-
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease-out;
+    .review-card strong {
+      font-size: 18px;
+      color: #fff;
     }
-
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .verified {
+      color: gold;
+      font-weight: 600;
     }
-
     footer {
-      background: #111;
-      padding: 20px 0;
       text-align: center;
-      color: #777;
-      font-size: 0.9em;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
+      background-color: #111;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <a href="index.html">
-      <img src="logo.png" alt="A1 Painting & Decorating Logo" />
-    </a>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <h1>Our Work - Before & After</h1>
+  <section class="hero" data-aos="fade-up">
+    <h1>Welcome to A1 Painting & Decorating</h1>
+    <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
+  </section>
 
-  <div class="gallery">
-    <!-- Kitchen Paint -->
-    <div class="gallery-item fade-in">
-      <a href="kitchen-before1.jpg" data-lightbox="kitchen" data-title="Kitchen Before">
-        <img src="kitchen-before1.jpg" alt="Kitchen Before">
-      </a>
-      <div class="caption">Kitchen Before</div>
+  <section class="reviews-section" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+    <div class="reviews-grid">
+      <div class="review-card" data-aos="zoom-in">
+        <p>"Incredible attention to detail — my home has never looked better!"</p>
+        <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
+      </div>
+      <div class="review-card" data-aos="zoom-in" data-aos-delay="100">
+        <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
+        <strong>– James L. <span class="verified">✔️ Verified</span></strong>
+      </div>
+      <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
+        <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
+        <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+      </div>
     </div>
-    <div class="gallery-item fade-in">
-      <a href="kitchen-after.jpg" data-lightbox="kitchen" data-title="Kitchen After">
-        <img src="kitchen-after.jpg" alt="Kitchen After">
-      </a>
-      <div class="caption">Kitchen After</div>
-    </div>
-
-    <!-- Living Room Wallpaper -->
-    <div class="gallery-item fade-in">
-      <a href="living-room-wallpaper-finish.jpg" data-lightbox="living" data-title="Living Room Finish">
-        <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
-      </a>
-      <div class="caption">Living Room Finish</div>
-    </div>
-
-    <!-- Bedroom Wallpaper -->
-    <div class="gallery-item fade-in">
-      <a href="bed-room-finish.jpg" data-lightbox="bedroom" data-title="Bedroom Wallpaper">
-        <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
-      </a>
-      <div class="caption">Bedroom Wallpaper</div>
-    </div>
-
-    <!-- Small Toilet Wallpaper -->
-    <div class="gallery-item fade-in">
-      <a href="small-toilet-wallpaper-before.jpg" data-lightbox="toilet" data-title="Small Toilet Before">
-        <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
-      </a>
-      <div class="caption">Small Toilet Before</div>
-    </div>
-    <div class="gallery-item fade-in">
-      <a href="small-toilet-wallpaper-after.jpg" data-lightbox="toilet" data-title="Small Toilet After">
-        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
-      </a>
-      <div class="caption">Small Toilet After</div>
-    </div>
-
-    <!-- Staircase Paint -->
-    <div class="gallery-item fade-in">
-      <a href="staircase-paint-before.jpg" data-lightbox="staircase" data-title="Staircase Before">
-        <img src="staircase-paint-before.jpg" alt="Staircase Paint Before">
-      </a>
-      <div class="caption">Staircase Before</div>
-    </div>
-    <div class="gallery-item fade-in">
-      <a href="staircase-paint-after.jpg" data-lightbox="staircase" data-title="Staircase After">
-        <img src="staircase-paint-after.jpg" alt="Staircase Paint After">
-      </a>
-      <div class="caption">Staircase After</div>
-    </div>
-
-    <!-- Wallpaper Jobs -->
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-before.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before">
-        <img src="wallpaper-before.jpg" alt="Wallpaper Before">
-      </a>
-      <div class="caption">Wallpaper Before</div>
-    </div>
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-after.jpg" data-lightbox="wallpaper" data-title="Wallpaper After">
-        <img src="wallpaper-after.jpg" alt="Wallpaper After">
-      </a>
-      <div class="caption">Wallpaper After</div>
-    </div>
-
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-before1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Before 1">
-        <img src="wallpaper-before1.jpg" alt="Wallpaper Before 1">
-      </a>
-      <div class="caption">Wallpaper Before 1</div>
-    </div>
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-after2.jpg" data-lightbox="wallpaper" data-title="Wallpaper After 2">
-        <img src="wallpaper-after2.jpg" alt="Wallpaper After 2">
-      </a>
-      <div class="caption">Wallpaper After 2</div>
-    </div>
-
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-finish.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish">
-        <img src="wallpaper-finish.jpg" alt="Wallpaper Finish">
-      </a>
-      <div class="caption">Wallpaper Finish</div>
-    </div>
-
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-finish1.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 1">
-        <img src="wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
-      </a>
-      <div class="caption">Wallpaper Finish 1</div>
-    </div>
-
-    <div class="gallery-item fade-in">
-      <a href="wallpaper-finish2.jpg" data-lightbox="wallpaper" data-title="Wallpaper Finish 2">
-        <img src="wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
-      </a>
-      <div class="caption">Wallpaper Finish 2</div>
-    </div>
-
-    <!-- Hallway Doors Paint -->
-    <div class="gallery-item fade-in">
-      <a href="hallway-door-prep-before.jpg" data-lightbox="hallway" data-title="Hallway Door Before">
-        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
-      </a>
-      <div class="caption">Hallway Door Before</div>
-    </div>
-    <div class="gallery-item fade-in">
-      <a href="hallway-door-finish-after.jpg" data-lightbox="hallway" data-title="Hallway Door After">
-        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
-      </a>
-      <div class="caption">Hallway Door After</div>
-    </div>
-
-  </div>
+  </section>
 
   <footer>
-    <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+    &copy; 2025 A1 Painting & Decorating | All rights reserved.
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    // Fade-in animation
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
 
-    document.querySelectorAll('.fade-in').forEach(el => {
-      observer.observe(el);
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
