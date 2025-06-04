@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -119,24 +120,24 @@
     </nav>
   </header>
 
-  <section class="hero">
+  <section class="hero" data-aos="fade-up">
     <h1>Welcome to A1 Painting & Decorating</h1>
     <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
   </section>
 
-  <section class="reviews-section">
+  <section class="reviews-section" data-aos="fade-up">
     <h2>What Our Customers Say</h2>
     <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
     <div class="reviews-grid">
-      <div class="review-card">
+      <div class="review-card" data-aos="zoom-in">
         <p>"Incredible attention to detail — my home has never looked better!"</p>
         <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
       </div>
-      <div class="review-card">
+      <div class="review-card" data-aos="zoom-in" data-aos-delay="100">
         <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
         <strong>– James L. <span class="verified">✔️ Verified</span></strong>
       </div>
-      <div class="review-card">
+      <div class="review-card" data-aos="zoom-in" data-aos-delay="200">
         <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
         <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
       </div>
@@ -146,5 +147,13 @@
   <footer>
     &copy; 2025 A1 Painting & Decorating | All rights reserved.
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
 </body>
 </html>
