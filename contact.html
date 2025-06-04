@@ -2,28 +2,86 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: #f4f4f4;
+    }
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 20px;
+      display: block;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #0a7f3c;
+    }
+    .contact-section {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .contact-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .contact-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .contact-info {
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="contact">
-    <h1>Contact Us</h1>
-    <p>Phone: 07495517536</p>
-    <p>Serving: Inverness and surrounding areas</p>
-  </section>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <footer>
-    <p>© 2025 A1 Painting & Decorating. All rights reserved.</p>
-  </footer>
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear about your next project! Feel free to call, email, or reach out via our social media channels.</p>
+    <div class="contact-info">
+      📞 01234 567890<br>
+      📧 info@a1paintingdecorating.com
+    </div>
+  </div>
+
 </body>
 </html>
