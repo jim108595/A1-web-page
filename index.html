@@ -1,106 +1,30 @@
-<style>
-  /* Reset and Base */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    background-color: #fff;
-  }
-  header {
-    background-color: #1b3a57;
-    text-align: center;
-    padding: 30px 15px;
-  }
-  header h1 {
-    font-size: 2.5rem;
-  }
-  nav {
-    background-color: #142738;
-    text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-  }
-  nav a {
-    color: #fff;
-    margin: 0 20px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-  }
-  .hero {
-    background: url('images/hero-painting.jpg') no-repeat center center/cover;
-    min-height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-  }
-  .hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-  }
-  .hero p {
-    font-size: 1.2rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-  }
-  .hero a {
-    margin-top: 20px;
-    background-color: #e63946;
-    color: #fff;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-  }
-  .hero a:hover {
-    background-color: #c62828;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>A1 Painting & Decorating</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="gallery.html">Gallery</a> |
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  /* --- Responsive --- */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
-    }
-    nav a {
-      display: inline-block;
-      margin: 10px 10px;
-      font-size: 1rem;
-    }
-    .hero {
-      min-height: 300px;
-      padding: 20px 10px;
-    }
-    .hero h2 {
-      font-size: 2rem;
-    }
-    .hero p {
-      font-size: 1rem;
-    }
-    .hero a {
-      font-size: 0.9rem;
-      padding: 10px 20px;
-    }
-  }
-  @media (max-width: 480px) {
-    .hero h2 {
-      font-size: 1.5rem;
-    }
-    .hero p {
-      font-size: 0.9rem;
-    }
-    nav a {
-      margin: 5px;
-      font-size: 0.9rem;
-    }
-  }
-</style>
+  <main>
+    <section>
+      <h2>Welcome to A1 Painting</h2>
+      <p>High-quality painting and decorating services for your home and business. See our transformations below!</p>
+      <p><a href="gallery.html">View Our Gallery</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 A1 Painting & Decorating. All rights reserved.</p>
+  </footer>
+</body>
+</html>
