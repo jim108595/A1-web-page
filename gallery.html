@@ -1,107 +1,141 @@
-    <!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <title>Gallery | A1 Painting & Decorating</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       padding: 20px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .gallery-section {
-      margin-bottom: 50px;
-    }
-
-    .gallery-section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 24px;
+      font-family: 'Poppins', sans-serif;
+      background: #f9f9f9;
       color: #333;
+    }
+
+    .gallery-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      margin-bottom: 40px;
+      padding: 30px 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h2 {
+      font-size: 28px;
+      color: #222;
+      margin-bottom: 25px;
+      border-bottom: 3px solid #4CAF50;
+      display: inline-block;
+      padding-bottom: 8px;
     }
 
     .image-pair {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .image-pair img {
-      width: 300px;
+      width: 45%;
+      max-width: 500px;
       height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-pair img:hover {
+      transform: scale(1.05);
     }
 
     @media (max-width: 768px) {
       .image-pair {
         flex-direction: column;
-        align-items: center;
+      }
+
+      .image-pair img {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Gallery</h1>
+  <div class="gallery-container">
 
-  <div class="gallery-section">
-    <h2>Kitchen Paint</h2>
-    <div class="image-pair">
-      <img src="kitchen-paint-before1.jpg" alt="Kitchen Before">
-      <img src="kitchen-paint-after2.jpg" alt="Kitchen After">
+    <div class="card">
+      <h2>Kitchen Paint</h2>
+      <div class="image-pair">
+        <img src="kitchen-paint-before1.jpg" alt="Kitchen Before">
+        <img src="kitchen-paint-after2.jpg" alt="Kitchen After">
+      </div>
     </div>
-  </div>
 
-  <div class="gallery-section">
-    <h2>Living Room</h2>
-    <div class="image-pair">
-      <img src="living-room-wallpaper-before.jpg" alt="Living Room Before">
-      <img src="living-room-wallpaper-finish.jpg" alt="Living Room After">
+    <div class="card">
+      <h2>Living Area Wallpaper</h2>
+      <div class="image-pair">
+        <img src="large-living-area-wallpaper-before1.jpg" alt="Living Area Before">
+        <img src="large-living-area-wallpaper-after2.jpg" alt="Living Area After">
+      </div>
     </div>
-  </div>
 
-  <div class="gallery-section">
-    <h2>Hallway Doors</h2>
-    <div class="image-pair">
-      <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
-      <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
+    <div class="card">
+      <h2>Hallway Doors</h2>
+      <div class="image-pair">
+        <img src="hallway-door-prep-before.jpg" alt="Hallway Door Before">
+        <img src="hallway-door-finish-after.jpg" alt="Hallway Door After">
+      </div>
     </div>
-  </div>
 
-  <div class="gallery-section">
-    <h2>Bedroom Wallpaper</h2>
-    <div class="image-pair">
-      <img src="large-living-area-wallpaper-begin1.jpg" alt="Bedroom Before">
-      <img src="bed-room-finish.jpg" alt="Bedroom After">
+    <div class="card">
+      <h2>Hallway Paint</h2>
+      <div class="image-pair">
+        <img src="hallway-paint-finish1.jpg" alt="Hallway Paint 1">
+        <img src="hallway-paint-finish2.jpg" alt="Hallway Paint 2">
+      </div>
     </div>
-  </div>
 
-  <div class="gallery-section">
-    <h2>Staircase Paint</h2>
-    <div class="image-pair">
-      <img src="staircase-paint-before.jpg" alt="Staircase Before">
-      <img src="staircase-paint-after.jpg" alt="Staircase After">
+    <div class="card">
+      <h2>Small Toilet Wallpaper</h2>
+      <div class="image-pair">
+        <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Before">
+        <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet After">
+      </div>
     </div>
-  </div>
 
-  <div class="gallery-section">
-    <h2>On-Suite Toilet</h2>
-    <div class="image-pair">
-      <img src="small-toilet-wallpaper-before.jpg" alt="Toilet Before">
-      <img src="small-toilet-wallpaper-after.jpg" alt="Toilet After">
+    <div class="card">
+      <h2>Bedroom Wallpaper</h2>
+      <div class="image-pair">
+        <img src="bed-room-finish.jpg" alt="Bedroom Wallpaper">
+        <img src="living-room-wallpapered-finish.jpg" alt="Living Room Wallpapered Finish">
+      </div>
     </div>
+
+    <div class="card">
+      <h2>Staircase Paint</h2>
+      <div class="image-pair">
+        <img src="staircase-paint-before.jpg" alt="Staircase Before">
+        <img src="staircase-paint-after.jpg" alt="Staircase After">
+      </div>
+    </div>
+
   </div>
 
 </body>
-</html>
+</html> 
