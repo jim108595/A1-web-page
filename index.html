@@ -3,159 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="style.css">
+  <title>A1 Painting & Decorating | 5-Star Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #000;
-      color: #00FF00;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    .nav-links {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
       color: #00FF00;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #111;
+    }
+    .logo {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav a {
       text-decoration: none;
-      font-size: 20px;
+      color: #00FF00;
+      font-size: 18px;
+      font-weight: 600;
     }
-    .hero-content h1 {
-      font-size: 40px;
-      margin-top: 20px;
+    .hero {
+      text-align: center;
+      padding: 100px 20px 50px;
     }
-    .hero-content p {
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #00FF00;
+    }
+    .hero p {
       font-size: 20px;
       color: #ccc;
     }
     .reviews-section {
-      margin-top: 60px;
-      padding: 20px;
+      background-color: #111;
+      padding: 80px 20px;
+      text-align: center;
     }
     .reviews-section h2 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 20px;
     }
     .stars {
       color: gold;
-      font-size: 36px;
-      margin-bottom: 30px;
+      font-size: 40px;
+      margin-bottom: 50px;
     }
-    .reviews-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .review {
-      background-color: #111;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-      flex: 1 1 300px;
-      max-width: 350px;
-      min-width: 250px;
+    .review-card {
+      background-color: #000;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.2);
+      transition: transform 0.3s ease;
     }
-    .review p {
+    .review-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+    }
+    .review-card p {
       font-size: 18px;
       color: #ccc;
+      margin-bottom: 20px;
       line-height: 1.6;
     }
-    .review strong {
-      display: block;
-      margin-top: 20px;
-      color: #fff;
+    .review-card strong {
       font-size: 18px;
+      color: #fff;
     }
     .verified {
       color: gold;
-      font-weight: bold;
+      font-weight: 600;
     }
     footer {
       text-align: center;
-      margin-top: 60px;
-      color: #444;
+      padding: 30px 20px;
+      color: #666;
       font-size: 14px;
-      padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .review {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
-      .hero-content h1 {
-        font-size: 32px;
-      }
-      .hero-content p {
-        font-size: 18px;
-      }
-      .reviews-section h2 {
-        font-size: 28px;
-      }
-      .stars {
-        font-size: 30px;
-      }
+      background-color: #111;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="hero">
-    <div class="container hero-content">
-      <h1>Welcome to A1 Painting & Decorating</h1>
-      <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
-    </div>
+  <section class="hero">
+    <h1>Welcome to A1 Painting & Decorating</h1>
+    <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
+  </section>
 
-    <section class="reviews-section">
-      <h2>What Our Customers Say</h2>
-      <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-
-      <div class="reviews-container">
-        <div class="review">
-          <p>"Incredible attention to detail — my home has never looked better!"</p>
-          <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
-        </div>
-
-        <div class="review">
-          <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
-          <strong>– James L. <span class="verified">✔️ Verified</span></strong>
-        </div>
-
-        <div class="review">
-          <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
-          <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
-        </div>
+  <section class="reviews-section">
+    <h2>What Our Customers Say</h2>
+    <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <p>"Incredible attention to detail — my home has never looked better!"</p>
+        <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
       </div>
-    </section>
-  </main>
+      <div class="review-card">
+        <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
+        <strong>– James L. <span class="verified">✔️ Verified</span></strong>
+      </div>
+      <div class="review-card">
+        <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
+        <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+      </div>
+    </div>
+  </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 A1 Painting & Decorating | All rights reserved.</p>
+  <footer>
+    &copy; 2025 A1 Painting & Decorating | All rights reserved.
   </footer>
 </body>
 </html>
