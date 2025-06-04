@@ -2,124 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>A1 Painting & Decorating | Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #f4f4f4;
-    }
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      margin: 0 20px;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-size: 18px;
-      font-weight: bold;
-      padding: 20px;
-      display: block;
-      transition: color 0.3s;
-    }
-    nav ul li a:hover {
-      color: #0a7f3c;
-    }
-    .hero {
-      background: url('your-hero-image.jpg') no-repeat center center/cover;
-      height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      text-align: center;
-      flex-direction: column;
-    }
-    .hero h1 {
-      font-size: 48px;
-      background: rgba(0,0,0,0.5);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    .hero p {
-      font-size: 24px;
-      margin-top: 20px;
-      background: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      border-radius: 10px;
-    }
-    .cta-button {
-      margin-top: 30px;
-      padding: 15px 30px;
-      background: #27ae60;
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #219150;
-    }
-    section.about {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    section.about h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    section.about p {
-      font-size: 18px;
-      line-height: 1.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
 </head>
 <body>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <h1>A1 Painting & Decorating</h1>
-    <p>Transforming Homes & Spaces with Perfection</p>
-    <a href="gallery.html" class="cta-button">View Our Work</a>
-  </section>
+  <header class="header">
+    <div class="container">
+      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+      <h1>Transforming Homes with Precision & Style</h1>
+      <p>Expert Painting & Decorating Solutions</p>
+      <a href="contact.html" class="btn">Get a Free Quote</a>
+    </div>
+  </header>
 
   <section class="about">
-    <h2>About Us</h2>
-    <p>
-      At A1 Painting & Decorating, we bring your vision to life with precision and care. 
-      From full home transformations to feature walls, we take pride in delivering 
-      outstanding craftsmanship on every project. Trust us to elevate your space with 
-      a professional finish that exceeds expectations.
-    </p>
+    <div class="container">
+      <h2>Why Choose A1 Painting & Decorating?</h2>
+      <p>We bring your vision to life with high-quality finishes and a professional touch. Whether it's a single room or a full property makeover, we handle every project with care, precision, and passion.</p>
+      <ul>
+        <li>✅ Over 10 Years Experience</li>
+        <li>✅ Top Quality Materials</li>
+        <li>✅ Customer Satisfaction Guaranteed</li>
+        <li>✅ Residential & Commercial Projects</li>
+      </ul>
+    </div>
   </section>
 
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Transform Your Space?</h2>
+      <a href="gallery.html" class="btn">View Our Work</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
