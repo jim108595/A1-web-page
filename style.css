@@ -1,83 +1,50 @@
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #0e0e0e;
+.contact-form-section {
+  padding: 60px 20px;
+  background-color: #0e0e0e;
   color: #fff;
-}
-
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
   text-align: center;
 }
 
-.header {
-  background: #111;
-  padding: 60px 20px;
-}
-
-.logo {
-  width: 180px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.8em;
-  margin-bottom: 10px;
+.contact-form-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
   color: #00ff00;
 }
 
-p {
-  font-size: 1.2em;
-  color: #bbb;
+form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
-  background: #00ff00;
-  color: #0e0e0e;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #00cc00;
-}
-
-.about {
-  background: #1a1a1a;
-  padding: 60px 20px;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about li {
-  font-size: 1.1em;
-  margin: 10px 0;
-}
-
-.cta {
-  background: #00ff00;
-  color: #0e0e0e;
-  padding: 60px 20px;
-}
-
-.cta h2 {
-  font-size: 2.2em;
+.form-group {
   margin-bottom: 20px;
 }
 
-.footer {
-  background: #111;
-  padding: 20px;
-  font-size: 0.9em;
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 16px;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #bbb;
+}
+
+button.btn {
+  background: #00ff00;
+  color: #0e0e0e;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s;
+}
+
+button.btn:hover {
+  background: #00cc00;
 }
