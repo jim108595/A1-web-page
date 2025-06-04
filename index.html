@@ -1,14 +1,131 @@
-<!-- ⭐⭐⭐⭐⭐ Review Section -->
-<div style="text-align: center; padding: 40px 20px; color: #00FF00;">
-  <h2 style="font-size: 28px; margin-bottom: 10px;">What Our Customers Say</h2>
-  <div style="font-size: 30px; margin-bottom: 30px; color: gold;">
-    ★★★★★
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-color: #000;
+      color: #00FF00;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .nav-links {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    .nav-links a {
+      color: #00FF00;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    .hero-content h1 {
+      font-size: 40px;
+      margin-top: 20px;
+    }
+    .hero-content p {
+      font-size: 20px;
+      color: #ccc;
+    }
+    .reviews-section {
+      margin-top: 60px;
+      padding: 20px;
+    }
+    .reviews-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .stars {
+      color: gold;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .review {
+      max-width: 800px;
+      margin: 30px auto;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    }
+    .review p {
+      font-size: 20px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+    .review strong {
+      display: block;
+      margin-top: 20px;
+      color: #fff;
+      font-size: 18px;
+    }
+    .verified {
+      color: gold;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #444;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <div style="max-width: 600px; margin: 0 auto; font-size: 18px; color: #CCCCCC;">
-    <p>"Incredible attention to detail — my home has never looked better!"<br><strong>– Sarah M. <span style="color: gold;">✔️ Verified</span></strong></p>
-    <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"<br><strong>– James L. <span style="color: gold;">✔️ Verified</span></strong></p>
-    <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"<br><strong>– Emily R. <span style="color: gold;">✔️ Verified</span></strong></p>
-  </div>
-</div>
-<!-- ⭐⭐⭐⭐⭐ End of Review Section -->
+  <main class="hero">
+    <div class="container hero-content">
+      <h1>Welcome to A1 Painting & Decorating</h1>
+      <p>Professional Painting & Decorating Services with a 5⭐ Touch</p>
+    </div>
+
+    <section class="reviews-section">
+      <h2>What Our Customers Say</h2>
+      <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+
+      <div class="review">
+        <p>"Incredible attention to detail — my home has never looked better!"</p>
+        <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
+      </div>
+
+      <div class="review">
+        <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
+        <strong>– James L. <span class="verified">✔️ Verified</span></strong>
+      </div>
+
+      <div class="review">
+        <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
+        <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 A1 Painting & Decorating | All rights reserved.</p>
+  </footer>
+</body>
+</html>
