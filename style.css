@@ -1,32 +1,83 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
 }
 
-.gallery-container {
-  padding: 20px;
-}
-
-.gallery-section {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
-}
-
-.gallery-section h2 {
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333;
 }
 
-.gallery-section img {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  margin: 10px auto;
-  border-radius: 8px;
+.header {
+  background: #111;
+  padding: 60px 20px;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #00ff00;
+}
+
+p {
+  font-size: 1.2em;
+  color: #bbb;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: #00ff00;
+  color: #0e0e0e;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #00cc00;
+}
+
+.about {
+  background: #1a1a1a;
+  padding: 60px 20px;
+}
+
+.about ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about li {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.cta {
+  background: #00ff00;
+  color: #0e0e0e;
+  padding: 60px 20px;
+}
+
+.cta h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background: #111;
+  padding: 20px;
+  font-size: 0.9em;
 }
