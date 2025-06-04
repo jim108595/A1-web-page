@@ -25,6 +25,7 @@
       display: flex;
       justify-content: center;
       gap: 30px;
+      flex-wrap: wrap;
     }
     .nav-links a {
       color: #00FF00;
@@ -52,16 +53,23 @@
       font-size: 36px;
       margin-bottom: 30px;
     }
+    .reviews-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
     .review {
-      max-width: 800px;
-      margin: 30px auto;
       background-color: #111;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+      flex: 1 1 300px;
+      max-width: 350px;
+      min-width: 250px;
     }
     .review p {
-      font-size: 20px;
+      font-size: 18px;
       color: #ccc;
       line-height: 1.6;
     }
@@ -80,6 +88,26 @@
       margin-top: 60px;
       color: #444;
       font-size: 14px;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .review {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+      .hero-content h1 {
+        font-size: 32px;
+      }
+      .hero-content p {
+        font-size: 18px;
+      }
+      .reviews-section h2 {
+        font-size: 28px;
+      }
+      .stars {
+        font-size: 30px;
+      }
     }
   </style>
 </head>
@@ -107,19 +135,21 @@
       <h2>What Our Customers Say</h2>
       <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
 
-      <div class="review">
-        <p>"Incredible attention to detail — my home has never looked better!"</p>
-        <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
-      </div>
+      <div class="reviews-container">
+        <div class="review">
+          <p>"Incredible attention to detail — my home has never looked better!"</p>
+          <strong>– Sarah M. <span class="verified">✔️ Verified</span></strong>
+        </div>
 
-      <div class="review">
-        <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
-        <strong>– James L. <span class="verified">✔️ Verified</span></strong>
-      </div>
+        <div class="review">
+          <p>"A1 Painting & Decorating delivers perfection every time — beyond expectations!"</p>
+          <strong>– James L. <span class="verified">✔️ Verified</span></strong>
+        </div>
 
-      <div class="review">
-        <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
-        <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+        <div class="review">
+          <p>"Superb craftsmanship, friendly team, and stunning results. Highly recommended!"</p>
+          <strong>– Emily R. <span class="verified">✔️ Verified</span></strong>
+        </div>
       </div>
     </section>
   </main>
