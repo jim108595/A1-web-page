@@ -172,3 +172,79 @@ body {
   border-top: 1px solid #222;
   font-size: 14px;
 }
+/* Contact Section */
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: #111;
+  color: #eee;
+  padding: 40px 20px;
+}
+
+.contact .container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  color: #0f0;
+  margin-bottom: 10px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  padding: 15px;
+  background: #0f0;
+  color: #111;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #09c372;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .contact h1 {
+    font-size: 2rem;
+  }
+}
