@@ -1,4 +1,4 @@
-* {
+è* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -245,6 +245,83 @@ body {
 /* Mobile Fix */
 @media (max-width: 768px) {
   .contact h1 {
+    font-size: 2rem;
+  }
+}
+/* Contact Page Only */
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 90vh;
+  padding: 40px 20px;
+  background-color: #111;
+  color: #eee;
+  text-align: center;
+}
+
+.contact-page h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #0f0;
+}
+
+.contact-page p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin: 20px 0;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #222;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 15px;
+  background-color: #0f0;
+  color: #111;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #09c372;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-page h1 {
     font-size: 2rem;
   }
 }
