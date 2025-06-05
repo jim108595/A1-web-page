@@ -1,74 +1,57 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A1 Painting & Decorating | Excellence in Every Stroke</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
-
-<!-- AOS Animation Library -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">  
+  <title>A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav-container">
-      <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-      <nav>
-        <div class="menu-toggle" id="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul id="menu" class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>  <section class="hero">
-    <div class="container">
-      <h1>Professional Painting & Decorating</h1>
-      <p>Transforming Spaces with Excellence and Care</p>
-      <a href="gallery.html" class="btn">View Our Work</a>
-    </div>
-  </section>  <section class="reviews">
-    <div class="container">
-      <h2>5-Star Rated Service</h2>
-      <div class="stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
-      <div class="reviews-grid">
-        <div class="review">
-          <p>"A flawless finish and superb professionalism. Highly recommended!"</p>
-          <strong>- Sarah M. <span class="verified">✔️ Verified</span></strong>
-        </div>
-        <div class="review">
-          <p>"Exceeded my expectations in every way. Will hire again!"</p>
-          <strong>- James L. <span class="verified">✔️ Verified</span></strong>
-        </div>
-        <div class="review">
-          <p>"On time, on budget, and absolutely stunning results."</p>
-          <strong>- Emily R. <span class="verified">✔️ Verified</span></strong>
-        </div>
-      </div>
-    </div>
-  </section>  <footer class="footer">
-    <div class="container">
-      &copy; 2025 A1 Painting & Decorating | All rights reserved.
-    </div>
-  </footer>  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
 
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script><!-- AOS Animation JS -->
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<header>
+  <a href="index.html">
+    <img src="logo.png" alt="A1 Painting & Decorating" class="logo">
+  </a>
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav>
+    <ul id="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Professional <span class="highlight">Painting & Decorating</span></h1>
+    <p>Transforming Spaces with Excellence and Care</p>
+    <a href="#gallery" class="button">View Our Work</a>
+  </div>
+</section>
+
+<!-- Your other sections like reviews, about us, services, etc. -->
+
+<footer>
+  <p>&copy; 2025 A1 Painting & Decorating | All rights reserved.</p>
+</footer>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 <script>
-  AOS.init();
-</script>/body>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+</body>
 </html>
