@@ -2,107 +2,266 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery | A1 Painting & Decorating</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | A1 Painting & Decorating</title>
+  
   <!-- Lightbox2 CSS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
   <style>
     body {
       background-color: #000;
-      color: #ccc;
+      color: #fff;
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 20px;
       text-align: center;
     }
     h1 {
-      color: #00FF00;
-      margin-bottom: 40px;
-      font-size: 2.5rem;
+      color: #00ff00;
+      margin-bottom: 30px;
     }
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      padding: 0;
-      margin: 0 auto;
-      max-width: 1200px;
     }
     .gallery a {
-      border: 2px solid #00FF00;
+      display: block;
+      border: 2px solid #00ff00;
       border-radius: 10px;
       overflow: hidden;
-      display: block;
-      transition: transform 0.3s, border-color 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .gallery a:hover {
       transform: scale(1.05);
-      border-color: #00cc00;
+      box-shadow: 0 0 15px #00ff00;
     }
     .gallery img {
       width: 100%;
       height: auto;
       display: block;
     }
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #666;
+    .caption {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <h1>Our Work</h1>
+  <h1>Our Work Gallery</h1>
 
   <div class="gallery">
-    <!-- Images -->
+    <!-- GALLERY START -->
+
     <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
       <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
     </a>
+
     <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
       <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
     </a>
+
     <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
       <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
     </a>
-    <a href="gallery-photos-new/hallway-doors-painting-finish.jpg" data-lightbox="gallery" data-title="Hallway Doors Finish">
-      <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Doors Finish">
+
+    <a href="gallery-photos-new/hallway-doors-painting-finish.jpg" data-lightbox="gallery" data-title="Hallway Doors Painting Finish">
+      <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Doors Painting Finish">
     </a>
-    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint 1">
-      <img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint 1">
+
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 1">
+      <img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
     </a>
-    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint 2">
-      <img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint 2">
+
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 2">
+      <img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
     </a>
+
     <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
       <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
     </a>
+
     <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
       <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
     </a>
+
     <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper Finish">
       <img src="gallery-photos-new/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
     </a>
+
     <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper After">
       <img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
     </a>
+
     <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper Before">
       <img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
     </a>
+
     <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint After">
       <img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After">
     </a>
+
     <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint Before">
       <img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before">
     </a>
+
     <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 2">
       <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2">
     </a>
+
     <a href="gallery-photos-new/wallpaper-before2.jpg" data-lightbox="gallery" data-title="Wallpaper Before 2">
       <img src="gallery-photos-new/wallpaper-before2.jpg" alt="Wallpaper Before 2">
     </a>
+
     <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="Wallpaper Finish">
       <img src="gallery-photos-new/wallpaper-finish.jpg" alt="Wallpaper Finish">
     </a>
-    <a href="
+
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="Wallpaper Finish 2">
+      <img src="gallery-photos-new/wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+    </a>
+
+    <!-- GALLERY END -->
+  </div>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | A1 Painting & Decorating</title>
+  
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00ff00;
+      margin-bottom: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery a {
+      display: block;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .gallery a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ff00;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .caption {
+      margin-top: 8px;
+      font-size: 16px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Our Work Gallery</h1>
+
+  <div class="gallery">
+    <!-- GALLERY START -->
+
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
+      <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
+    </a>
+
+    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
+      <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
+    </a>
+
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
+      <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
+    </a>
+
+    <a href="gallery-photos-new/hallway-doors-painting-finish.jpg" data-lightbox="gallery" data-title="Hallway Doors Painting Finish">
+      <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Doors Painting Finish">
+    </a>
+
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 1">
+      <img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
+    </a>
+
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 2">
+      <img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
+    </a>
+
+    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
+      <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
+    </a>
+
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
+      <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
+    </a>
+
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper Finish">
+      <img src="gallery-photos-new/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
+    </a>
+
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper After">
+      <img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
+    </a>
+
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper Before">
+      <img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
+    </a>
+
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint After">
+      <img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After">
+    </a>
+
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint Before">
+      <img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before">
+    </a>
+
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 2">
+      <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2">
+    </a>
+
+    <a href="gallery-photos-new/wallpaper-before2.jpg" data-lightbox="gallery" data-title="Wallpaper Before 2">
+      <img src="gallery-photos-new/wallpaper-before2.jpg" alt="Wallpaper Before 2">
+    </a>
+
+    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="Wallpaper Finish">
+      <img src="gallery-photos-new/wallpaper-finish.jpg" alt="Wallpaper Finish">
+    </a>
+
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="Wallpaper Finish 2">
+      <img src="gallery-photos-new/wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+    </a>
+
+    <!-- GALLERY END -->
+  </div>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
+</body>
+</html>
