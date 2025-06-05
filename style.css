@@ -7,7 +7,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #000;
-  color: #ccc; /* Light grey for body text */
+  color: #bbb; /* Lighter grey body text */
   line-height: 1.7;
   font-size: 16px;
 }
@@ -30,13 +30,13 @@ nav ul {
 }
 nav a {
   text-decoration: none;
-  color: #00FF00;
+  color: #00FF00; /* Strong Green for nav links */
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 nav a:hover {
-  color: #999;
+  color: #fff; /* White on hover */
 }
 .menu-toggle {
   display: none;
@@ -75,16 +75,16 @@ nav a:hover {
 /* Typography */
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
+  font-size: 36px;
+  color: #00FF00;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 28px;
   color: #eee;
   margin-bottom: 20px;
   font-weight: 600;
-}
-h2 {
-  font-size: 24px;
-  color: #eee;
-  margin-bottom: 20px;
-  font-weight: 500;
 }
 p {
   font-size: 16px;
@@ -99,6 +99,7 @@ a {
 }
 a:hover {
   text-decoration: underline;
+  color: #00FF00;
 }
 
 /* Section Layout */
@@ -109,6 +110,12 @@ section {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* Highlights */
+.highlight {
+  color: #00FF00;
+  font-weight: bold;
 }
 
 /* Button Style */
@@ -126,11 +133,18 @@ section {
   background-color: #0f0;
 }
 
+/* Review Stars */
+.stars {
+  color: #FFD700;
+  font-size: 24px;
+  margin: 10px 0;
+}
+
 /* Gallery Section */
 .gallery-section h1 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
-  color: #eee;
+  color: #00FF00;
   margin-bottom: 50px;
 }
 .gallery-grid {
