@@ -1,186 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | A1 Painting & Decorating</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .back-button {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px 20px;
-            background-color: #00FF00;
-            color: black;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 10px;
-            transition: background-color 0.3s;
-        }
-        .back-button:hover {
-            background-color: #00cc00;
-        }
-        .gallery-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            padding: 20px;
-        }
-        .gallery-item {
-            width: 300px;
-            text-align: center;
-        }
-        .gallery-item img {
-            width: 100%;
-            height: auto;
-            border: 3px solid #00FF00;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        .gallery-item img:hover {
-            transform: scale(1.05);
-        }
-        .gallery-title {
-            margin-top: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #00FF00;
-        }
-        @media (max-width: 768px) {
-            .gallery-item {
-                width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | A1 Painting & Decorating</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse the gallery of A1 Painting & Decorating. Stunning before and after photos showcasing our transformations in Inverness.">
+  <meta name="keywords" content="Painting Gallery, Decorator Portfolio, Before After Painting, Painter Inverness Gallery, Home Makeovers, Interior Exterior Painting">
+  <meta name="author" content="A1 Painting & Decorating">
+
+  <!-- Open Graph for Social Sharing -->
+  <meta property="og:title" content="Gallery | A1 Painting & Decorating">
+  <meta property="og:description" content="View our stunning painting and decorating transformations.">
+  <meta property="og:image" content="https://a1paintingdecorators.com/logo.png">
+  <meta property="og:url" content="https://a1paintingdecorators.com/gallery.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.min.css" />
 </head>
 <body>
 
-    <a href="index.html" class="back-button">← Back to Home</a>
-
-    <div class="gallery-container">
-        <!-- Bedroom Finish -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
-                <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
-            </a>
-            <div class="gallery-title">Bedroom Finish</div>
-        </div>
-
-        <!-- Hallway Door Before -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
-                <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
-            </a>
-            <div class="gallery-title">Hallway Door Before</div>
-        </div>
-
-        <!-- Hallway Door After -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
-                <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
-            </a>
-            <div class="gallery-title">Hallway Door After</div>
-        </div>
-
-        <!-- Hallway Paint Before -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/hallway-doors-painting-finish.jpg" data-lightbox="gallery" data-title="Hallway Paint Before">
-                <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Paint Before">
-            </a>
-            <div class="gallery-title">Hallway Paint Finish</div>
-        </div>
-
-        <!-- Kitchen Before -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
-                <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
-            </a>
-            <div class="gallery-title">Kitchen Before</div>
-        </div>
-
-        <!-- Kitchen After -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
-                <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
-            </a>
-            <div class="gallery-title">Kitchen After</div>
-        </div>
-
-        <!-- Small Toilet Wallpaper Before -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper Before">
-                <img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
-            </a>
-            <div class="gallery-title">Small Toilet Wallpaper Before</div>
-        </div>
-
-        <!-- Small Toilet Wallpaper After -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper After">
-                <img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
-            </a>
-            <div class="gallery-title">Small Toilet Wallpaper After</div>
-        </div>
-
-        <!-- Staircase Paint Before -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint Before">
-                <img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before">
-            </a>
-            <div class="gallery-title">Staircase Paint Before</div>
-        </div>
-
-        <!-- Staircase Paint After -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint After">
-                <img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After">
-            </a>
-            <div class="gallery-title">Staircase Paint After</div>
-        </div>
-
-        <!-- Wallpaper Before 1 -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Wallpaper Before 1">
-                <img src="gallery-photos-new/wallpaper-before.jpg" alt="Wallpaper Before 1">
-            </a>
-            <div class="gallery-title">Wallpaper Before 1</div>
-        </div>
-
-        <!-- Wallpaper After 1 -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="Wallpaper After 1">
-                <img src="gallery-photos-new/wallpaper-after.jpg" alt="Wallpaper After 1">
-            </a>
-            <div class="gallery-title">Wallpaper After 1</div>
-        </div>
-
-        <!-- Wallpaper Before 2 -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/wallpaper-before2.jpg" data-lightbox="gallery" data-title="Wallpaper Before 2">
-                <img src="gallery-photos-new/wallpaper-before2.jpg" alt="Wallpaper Before 2">
-            </a>
-            <div class="gallery-title">Wallpaper Before 2</div>
-        </div>
-
-        <!-- Wallpaper After 2 -->
-        <div class="gallery-item">
-            <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 2">
-                <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2">
-            </a>
-            <div class="gallery-title">Wallpaper After 2</div>
-        </div>
-
+  <header>
+    <img src="logo.png" alt="A1 Painting & Decorating" class="logo">
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+  <section class="gallery-section">
+    <h1>Our Projects</h1>
+    <div class="gallery-grid">
+      <!-- Gallery Images -->
+      <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
+        <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
+      </a>
+      <!-- Repeat for all gallery images -->
+    </div>
+  </section>
+
+  <footer>
+    © 2025 A1 Painting & Decorating | All rights reserved.
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav ul');
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 
 </body>
 </html>
