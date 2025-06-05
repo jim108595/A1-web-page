@@ -5,162 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | A1 Painting & Decorating</title>
   <link rel="stylesheet" href="contact.css" />
-  <style>
-    /* Reset & Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #bbb;
-      line-height: 1.7;
-      font-size: 16px;
-    }
-
-    /* Center everything and control width */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Logo */
-    .logo {
-      display: block;
-      margin: 20px auto;
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-    }
-
-    /* Navigation */
-    nav {
-      text-align: center;
-      margin: 30px 0;
-    }
-    nav a {
-      color: #00FF00;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Contact Section */
-    .contact-container {
-      text-align: center;
-      padding: 20px;
-    }
-
-    h1 {
-      color: #00FF00;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    .contact-info {
-      margin-bottom: 30px;
-      font-size: 20px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-    }
-
-    .contact-info a {
-      color: #00FF00;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* Form */
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    input, textarea {
-      width: 100%;
-      max-width: 500px;
-      margin: 10px 0;
-      padding: 12px 15px;
-      border: 2px solid #00FF00;
-      border-radius: 5px;
-      background-color: #111;
-      color: white;
-      font-size: 16px;
-    }
-
-    button {
-      background-color: #00FF00;
-      color: black;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 5px;
-      margin-top: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background-color: #0f0;
-    }
-
-    /* Footer */
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      text-align: center;
-      color: #555;
-    }
-  </style>
 </head>
 <body>
+  <img src="logo.png" alt="A1 Painting & Decorating" class="logo" />
 
-  <div class="container">
-    <img src="logo.png" alt="A1 Painting & Decorating" class="logo" />
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-
-    <div class="contact-container">
-      <h1>Contact Us</h1>
-      <div class="contact-info">
-        <p>Get in touch today for a free quote or consultation</p>
-        <p><strong>Phone:</strong> <a href="tel:07495517536">07495 517536</a></p>
-        <p><strong>Email:</strong> <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
-        <p><strong>Location:</strong> Inverness, Scotland</p>
-      </div>
-      <form action="mailto:info@a1paintingdecorators.com" method="post" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <div class="contact-container">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <p>Get in touch today for a free quote or consultation</p>
+      <p><strong>Phone:</strong> <a href="tel:07495517536">07495 517536</a></p>
+      <p><strong>Email:</strong> <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
+      <p><strong>Location:</strong> Inverness, Scotland</p>
     </div>
-
-    <footer>
-      © 2025 A1 Painting & Decorating | All rights reserved.
-    </footer>
+    <form action="mailto:info@a1paintingdecorators.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 
+  <footer>
+    © 2025 A1 Painting & Decorating | All rights reserved.
+  </footer>
 </body>
 </html>
