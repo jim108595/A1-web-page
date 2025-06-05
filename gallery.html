@@ -1,80 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery | A1 Painting & Decorating</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  
-  <!-- Lightbox CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  
-  <section class="gallery">
-    <h2 data-aos="fade-up" data-aos-duration="1000">Our Latest Projects (Before & After)</h2>
-    <div class="gallery-grid">
-      
-      <!-- Bedroom -->
-      <div data-aos="fade-up" data-aos-delay="100">
-        <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
-          <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
-        </a>
-        <p>Bedroom Finish</p>
-      </div>
-      
-      <!-- Hallway Door Before -->
-      <div data-aos="fade-up" data-aos-delay="200">
-        <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
-          <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
-        </a>
-        <p>Hallway Door Before</p>
-      </div>
-
-      <!-- Hallway Door After -->
-      <div data-aos="fade-up" data-aos-delay="300">
-        <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
-          <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
-        </a>
-        <p>Hallway Door After</p>
-      </div>
-
-      <!-- Keep going for each image -->
-      <!-- Example kitchen-before and after -->
-      <div data-aos="fade-up" data-aos-delay="400">
-        <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
-          <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
-        </a>
-        <p>Kitchen Before</p>
-      </div>
-
-      <div data-aos="fade-up" data-aos-delay="500">
-        <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
-          <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
-        </a>
-        <p>Kitchen After</p>
-      </div>
-
-      <!-- ADD ALL OTHERS THE SAME WAY -->
-
+<section class="gallery">
+  <h2 data-aos="fade-up" data-aos-duration="1000">Our Latest Projects <br> (Before & After)</h2>
+  <div class="gallery-grid">
+    
+    <!-- Bedroom Finish -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+      <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
+        <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
+      </a>
+      <p>Bedroom Finish</p>
     </div>
-  </section>
 
-  <!-- AOS Animation JS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <!-- Hallway Door Before -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+      <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
+        <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
+      </a>
+      <p>Hallway Door Before</p>
+    </div>
 
-  <!-- Lightbox JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-</body>
-</html>
+    <!-- Hallway Door After -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+      <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
+        <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
+      </a>
+      <p>Hallway Door After</p>
+    </div>
+
+    <!-- Hallway Paint Finish 1 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+      <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 1">
+        <img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
+      </a>
+      <p>Hallway Paint Finish 1</p>
+    </div>
+
+    <!-- Hallway Paint Finish 2 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+      <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 2">
+        <img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
+      </a>
+      <p>Hallway Paint Finish 2</p>
+    </div>
+
+    <!-- Kitchen Before -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+      <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
+        <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
+      </a>
+      <p>Kitchen Before</p>
+    </div>
+
+    <!-- Kitchen After -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="700">
+      <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
+        <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
+      </a>
+      <p>Kitchen After</p>
+    </div>
+
+    <!-- Small Toilet Wallpaper Before -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="800">
+      <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper Before">
+        <img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
+      </a>
+      <p>Small Toilet Wallpaper Before</p>
+    </div>
+
+    <!-- Small Toilet Wallpaper After -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="900">
+      <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper After">
+        <img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
+      </a>
+      <p>Small Toilet Wallpaper After</p>
+    </div>
+
+    <!-- Staircase Paint Before -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1000">
+      <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint Before">
+        <img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before">
+      </a>
+      <p>Staircase Paint Before</p>
+    </div>
+
+    <!-- Staircase Paint After -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1100">
+      <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint After">
+        <img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After">
+      </a>
+      <p>Staircase Paint After</p>
+    </div>
+
+    <!-- Wallpaper Before 1 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1200">
+      <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Wallpaper Before 1">
+        <img src="gallery-photos-new/wallpaper-before1.jpg" alt="Wallpaper Before 1">
+      </a>
+      <p>Wallpaper Before 1</p>
+    </div>
+
+    <!-- Wallpaper After 1 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1300">
+      <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="Wallpaper After 1">
+        <img src="gallery-photos-new/wallpaper-after.jpg" alt="Wallpaper After 1">
+      </a>
+      <p>Wallpaper After 1</p>
+    </div>
+
+    <!-- Wallpaper Before 2 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1400">
+      <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Wallpaper Before 2">
+        <img src="gallery-photos-new/wallpaper-before.jpg" alt="Wallpaper Before 2">
+      </a>
+      <p>Wallpaper Before 2</p>
+    </div>
+
+    <!-- Wallpaper After 2 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1500">
+      <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 2">
+        <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2">
+      </a>
+      <p>Wallpaper After 2</p>
+    </div>
+
+    <!-- Wallpaper Finish -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1600">
+      <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="Wallpaper Finish">
+        <img src="gallery-photos-new/wallpaper-finish.jpg" alt="Wallpaper Finish">
+      </a>
+      <p>Wallpaper Finish</p>
+    </div>
+
+    <!-- Wallpaper Finish 1 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1700">
+      <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="Wallpaper Finish 1">
+        <img src="gallery-photos-new/wallpaper-finish1.jpg" alt="Wallpaper Finish 1">
+      </a>
+      <p>Wallpaper Finish 1</p>
+    </div>
+
+    <!-- Wallpaper Finish 2 -->
+    <div class="gallery-item" data-aos="zoom-in" data-aos-delay="1800">
+      <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="Wallpaper Finish 2">
+        <img src="gallery-photos-new/wallpaper-finish2.jpg" alt="Wallpaper Finish 2">
+      </a>
+      <p>Wallpaper Finish 2</p>
+    </div>
+
+  </div>
+</section>
