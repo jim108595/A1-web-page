@@ -3,67 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | A1 Painting & Decorating</title>
-
+  <title>A1 Painting & Decorating | Inverness</title>
+  
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Browse the gallery of A1 Painting & Decorating. Stunning before and after photos showcasing our transformations in Inverness.">
-  <meta name="keywords" content="Painting Gallery, Decorator Portfolio, Before After Painting, Painter Inverness Gallery, Home Makeovers, Interior Exterior Painting">
+  <meta name="description" content="Expert painters and decorators in Inverness. A1 Painting & Decorating transforms homes with quality craftsmanship and care. Free quotes available.">
+  <meta name="keywords" content="Painter Inverness, Decorating Inverness, House Painter, Professional Painting, A1 Painting & Decorating, Interior Painting, Exterior Painting">
   <meta name="author" content="A1 Painting & Decorating">
 
-  <!-- Open Graph for Social Sharing -->
-  <meta property="og:title" content="Gallery | A1 Painting & Decorating">
-  <meta property="og:description" content="View our stunning painting and decorating transformations.">
-  <meta property="og:image" content="https://a1paintingdecorators.com/logo.png">
-  <meta property="og:url" content="https://a1paintingdecorators.com/gallery.html">
-  <meta property="og:type" content="website">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="lightbox.min.css" />
 </head>
 <body>
 
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating" class="logo">
-    <div class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <img src="logo.png" alt="A1 Painting & Decorating" class="logo" />
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav id="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="gallery-section">
-    <h1>Our Projects</h1>
-    <div class="gallery-grid">
-      <!-- Gallery Images -->
-      <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
-        <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
-      </a>
-      <!-- Repeat for all gallery images -->
-    </div>
-  </section>
+<section class="hero">
+  <h1>Professional Painting & Decorating</h1>
+  <h2>Transforming Spaces with Excellence and Care</h2>
+  <a href="gallery.html" class="button">View Our Work</a>
+</section>
 
-  <footer>
-    © 2025 A1 Painting & Decorating | All rights reserved.
-  </footer>
+<section class="gallery-section">
+  <h1>Our Projects</h1>
+  <div class="gallery-grid">
+    <!-- Example gallery item -->
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery">
+      <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish" />
+    </a>
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery">
+      <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before" />
+    </a>
+    <!-- Add all your images here -->
+  </div>
+</section>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const nav = document.querySelector('nav ul');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('active');
-    });
-  </script>
+<footer>
+  © 2025 A1 Painting & Decorating | All rights reserved.
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav');
+  
+  menuToggle.addEventListener('click', () => {
+    nav.querySelector('ul').classList.toggle('active');
+  });
+</script>
+
+<!-- Lightbox2 for Gallery Images -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
 </body>
 </html>
