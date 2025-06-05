@@ -6,22 +6,63 @@
   <title>Gallery | A1 Painting & Decorating</title>
 
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Before and after transformations by A1 Painting & Decorating. Explore our professional painting and decorating work in Inverness.">
-  <meta name="keywords" content="Painting Gallery, Decorating Projects, Before After Painting, Inverness Decorators, A1 Painting & Decorating">
+  <meta name="description" content="Explore the stunning before and after transformations by A1 Painting & Decorating. View our professional painting and decorating projects in Inverness.">
+  <meta name="keywords" content="Painting Gallery, Decorating Gallery, Before After Painting, Wallpaper Finishing, A1 Painting & Decorating, Inverness Decorators">
   <meta name="author" content="A1 Painting & Decorating">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
+  <style>
+    .gallery-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .gallery-section h1 {
+      color: #00FF00;
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 30px;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gallery-grid a {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gallery-grid a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 14px;
+      background-color: #111;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
 
 <header>
   <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" />
-  <div class="menu-toggle" id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
   <nav id="nav">
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -32,28 +73,69 @@
 </header>
 
 <section class="gallery-section">
-  <h1>Our Projects</h1>
+  <h1>Our Transformations</h1>
   <div class="gallery-grid">
-    <!-- EXAMPLE IMAGES — replace with your real ones -->
+    <!-- BEDROOM -->
     <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="Bedroom Finish">
-      <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish" />
+      <img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish">
+    </a>
+    <!-- HALLWAY DOOR -->
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
+      <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before">
     </a>
     <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="Hallway Door After">
-      <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After" />
+      <img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door After">
     </a>
-    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Hallway Door Before">
-      <img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Before" />
-    </a>
+    <!-- HALLWAY DOORS PAINTING -->
     <a href="gallery-photos-new/hallway-doors-painting-finish.jpg" data-lightbox="gallery" data-title="Hallway Doors Painting Finish">
-      <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Doors Painting Finish" />
+      <img src="gallery-photos-new/hallway-doors-painting-finish.jpg" alt="Hallway Doors Painting Finish">
+    </a>
+    <!-- HALLWAY PAINT -->
+    <a href="gallery-photos-new/hallway-paint-finish.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish">
+      <img src="gallery-photos-new/hallway-paint-finish.jpg" alt="Hallway Paint Finish">
+    </a>
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="Hallway Paint Finish 2">
+      <img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
+    </a>
+    <!-- KITCHEN -->
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
+      <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before">
     </a>
     <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="Kitchen After">
-      <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After" />
+      <img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After">
     </a>
-    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Kitchen Before">
-      <img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before" />
+    <!-- LIVING ROOM WALLPAPER -->
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="Living Room Wallpaper Finish">
+      <img src="gallery-photos-new/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
     </a>
-    <!-- Keep adding ALL your gallery images here -->
+    <!-- SMALL TOILET WALLPAPER -->
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper Before">
+      <img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
+    </a>
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="Small Toilet Wallpaper After">
+      <img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
+    </a>
+    <!-- STAIRCASE PAINT -->
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Staircase Paint Before">
+      <img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before">
+    </a>
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="Staircase Paint After">
+      <img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After">
+    </a>
+    <!-- WALLPAPER 1 -->
+    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Wallpaper Before 1">
+      <img src="gallery-photos-new/wallpaper-before.jpg" alt="Wallpaper Before 1">
+    </a>
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 1">
+      <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 1">
+    </a>
+    <!-- WALLPAPER 2 -->
+    <a href="gallery-photos-new/wallpaper-before2.jpg" data-lightbox="gallery" data-title="Wallpaper Before 2">
+      <img src="gallery-photos-new/wallpaper-before2.jpg" alt="Wallpaper Before 2">
+    </a>
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="Wallpaper After 2">
+      <img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2">
+    </a>
   </div>
 </section>
 
@@ -63,6 +145,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 <script>
+  // Burger Menu Toggle
   const menuToggle = document.getElementById('menu-toggle');
   const nav = document.getElementById('nav');
   menuToggle.addEventListener('click', () => {
