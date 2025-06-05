@@ -1,165 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gallery | A1 Painting & Decorating</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Lightbox2 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #00FF00;
-    }
-    header {
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: #111;
-    }
-    .logo {
-      height: 50px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-    }
-    nav a {
-      text-decoration: none;
-      color: #00FF00;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    .menu-toggle span {
-      height: 3px;
-      width: 25px;
-      background: #00FF00;
-      margin: 4px 0;
-    }
-    @media (max-width: 768px) {
-      nav ul {
-        position: absolute;
-        top: 70px;
-        right: 40px;
-        background-color: #111;
-        flex-direction: column;
-        width: 200px;
-        display: none;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
-      }
-      nav ul.active {
-        display: flex;
-      }
-      .menu-toggle {
-        display: flex;
-      }
-    }
-    .gallery-section {
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .gallery-section h1 {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .gallery-grid a {
-      display: block;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
-      transition: transform 0.3s ease;
-    }
-    .gallery-grid a:hover {
-      transform: scale(1.03);
-      box-shadow: 0 0 25px rgba(0, 255, 0, 0.5);
-    }
-    .gallery-grid img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    footer {
-      text-align: center;
-      padding: 30px 20px;
-      color: #666;
-      font-size: 14px;
-      background-color: #111;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
-    <nav>
-      <div class="menu-toggle" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul id="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section class="gallery-section">
-    <h1>Our Latest Projects</h1>
-    <div class="gallery-grid">
-      <a href="bed-room-finish.jpg" data-lightbox="projects" data-title="Bedroom Finish">
-        <img src="bed-room-finish.jpg" alt="Bedroom Finish">
-      </a>
-      <a href="hallway-door-finish-after.jpg" data-lightbox="projects" data-title="Hallway Door Finish">
-        <img src="hallway-door-finish-after.jpg" alt="Hallway Door Finish">
-      </a>
-      <a href="hallway-paint-finish1.jpg" data-lightbox="projects" data-title="Hallway Paint Finish">
-        <img src="hallway-paint-finish1.jpg" alt="Hallway Paint Finish">
-      </a>
-      <!-- Add more images as needed up to 20+ -->
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 A1 Painting & Decorating | All rights reserved.
-  </footer>
-
-  <!-- Lightbox2 JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-
-    menuToggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-  </script>
-</body>
-</html>
+<section class="gallery-section">
+  <h1>Our Latest Projects</h1>
+  <div class="gallery-grid">
+    <a href="bed-room-finish.jpg" data-lightbox="projects" data-title="Bedroom Finish">
+      <img src="bed-room-finish.jpg" alt="Bedroom Finish">
+    </a>
+    <a href="hallway-door-finish-after.jpg" data-lightbox="projects" data-title="Hallway Door Finish After">
+      <img src="hallway-door-finish-after.jpg" alt="Hallway Door Finish After">
+    </a>
+    <a href="hallway-door-prep-before.jpg" data-lightbox="projects" data-title="Hallway Door Prep Before">
+      <img src="hallway-door-prep-before.jpg" alt="Hallway Door Prep Before">
+    </a>
+    <a href="hallway-doors-painting.jpg" data-lightbox="projects" data-title="Hallway Doors Painting">
+      <img src="hallway-doors-painting.jpg" alt="Hallway Doors Painting">
+    </a>
+    <a href="hallway-paint-finish1.jpg" data-lightbox="projects" data-title="Hallway Paint Finish 1">
+      <img src="hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1">
+    </a>
+    <a href="hallway-paint-finish2.jpg" data-lightbox="projects" data-title="Hallway Paint Finish 2">
+      <img src="hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2">
+    </a>
+    <a href="kitchen-after.jpg" data-lightbox="projects" data-title="Kitchen After">
+      <img src="kitchen-after.jpg" alt="Kitchen After">
+    </a>
+    <a href="kitchen-before1.jpg" data-lightbox="projects" data-title="Kitchen Before 1">
+      <img src="kitchen-before1.jpg" alt="Kitchen Before 1">
+    </a>
+    <a href="living-room-wallpaper-finish.jpg" data-lightbox="projects" data-title="Living Room Wallpaper Finish">
+      <img src="living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish">
+    </a>
+    <a href="logo.png" data-lightbox="projects" data-title="Company Logo">
+      <img src="logo.png" alt="Company Logo">
+    </a>
+    <a href="small-toilet-wallpaper-after.jpg" data-lightbox="projects" data-title="Small Toilet Wallpaper After">
+      <img src="small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After">
+    </a>
+    <a href="small-toilet-wallpaper-before.jpg" data-lightbox="projects" data-title="Small Toilet Wallpaper Before">
+      <img src="small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before">
+    </a>
+    <a href="staircase-paint-after.jpg" data-lightbox="projects" data-title="Staircase Paint After">
+      <img src="staircase-paint-after.jpg" alt="Staircase Paint After">
+    </a>
+    <a href="staircase-paint-before.jpg" data-lightbox="projects" data-title="Staircase Paint Before">
+      <img src="staircase-paint-before.jpg" alt="Staircase Paint Before">
+    </a>
+  </div>
+</section>
