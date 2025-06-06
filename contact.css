@@ -5,6 +5,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | A1 Painting & Decorating</title>
   <link rel="stylesheet" href="contact.css">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #bbb;
+      line-height: 1.7;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1100px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .logo {
+      display: block;
+      margin: 20px auto;
+      max-width: 300px;
+      width: 100%;
+      height: auto;
+    }
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+    nav a {
+      color: #00FF00;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-container h1 {
+      color: #00FF00;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .contact-container p {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+
+    form {
+      background: #111;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px #00FF00;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border: 2px solid #00FF00;
+      border-radius: 8px;
+      background-color: #111;
+      color: white;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #00FF00;
+      color: #000;
+      font-size: 20px;
+      font-weight: bold;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 20px #00FF00;
+    }
+
+    button:hover {
+      background-color: #0f0;
+      box-shadow: 0 0 30px #00FF00;
+    }
+
+    #thank-you {
+      display: none;
+      margin-top: 30px;
+      color: #0f0;
+      font-size: 24px;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      text-align: center;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -21,19 +144,19 @@
       <p>We'd love to hear from you. Send us a message!</p>
 
       <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
-        <label for="name">Your Name:</label><br>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-        <label for="email">Your Email:</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-        <label for="message">Your Message:</label><br>
-        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea><br>
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
 
         <button type="submit">Send Message</button>
       </form>
 
-      <div id="thank-you" style="display: none;">
+      <div id="thank-you">
         <h2>Thank you! Your message has been sent. 🎉</h2>
       </div>
     </div>
@@ -66,13 +189,12 @@
         form.style.display = 'none';
         thankYou.style.display = 'block';
 
-        // Fire confetti 🎉
+        // Fire Confetti
         confetti({
           particleCount: 150,
           spread: 70,
           origin: { y: 0.6 }
         });
-
       } catch (error) {
         alert('Oops! Something went wrong.');
       }
