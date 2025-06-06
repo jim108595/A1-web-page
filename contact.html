@@ -1,53 +1,153 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- SEO -->
-<title>Contact | A1 Painting & Decorating Inverness</title>
-<meta name="description" content="Get in touch with A1 Painting & Decorating. Contact us today for a free quote on your painting and decorating needs in Inverness." />
+<form id="contact-form" action="https://formspree.io/f/xjkrgopv" method="POST">
+  <label for="name">Your Name:</label><br>
+  <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
 
-<!-- Open Graph -->
-<meta property="og:title" content="Contact | A1 Painting & Decorating Inverness" />
-<meta property="og:description" content="Contact A1 Painting & Decorating in Inverness for a free quote today." />
-<meta property="og:image" content="https://a1paintingdecorators.com/logo_og.png" />
-<meta property="og:url" content="https://a1paintingdecorators.com/contact.html" />
-<meta property="og:type" content="website" />
+  <label for="email">Your Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Contact | A1 Painting & Decorating Inverness" />
-<meta name="twitter:description" content="Professional painting and decorating services in Inverness. Contact us today." />
-<meta name="twitter:image" content="https://a1paintingdecorators.com/logo_og.png" />  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | A1 Painting & Decorating</title>
-  <link rel="stylesheet" href="contact.css" />
-</head>
-<body>
-  <img src="logo.png" alt="A1 Painting & Decorating" class="logo" />
+  <label for="message">Your Message:</label><br>
+  <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea><br><br>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <button type="submit">Send Message</button>
 
-  <div class="contact-container">
-    <h1>Contact Us</h1>
-    <div class="contact-info">
-      <p>Get in touch today for a free quote or consultation</p>
-      <p><strong>Phone:</strong> <a href="tel:07495517536">07495 517536</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
-      <p><strong>Location:</strong> Inverness, Scotland</p>
-    </div>
-    <form action="mailto:info@a1paintingdecorators.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+  <div id="thank-you" class="thank-you" style="display: none;">
+    🎉 Thank you! Your message has been sent. 🎉
   </div>
+</form>
 
-  <footer>
-    © 2025 A1 Painting & Decorating | All rights reserved.
-  </footer>
-</body>
-</html>
+<!-- Boss Style CSS -->
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+  }
+  form {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #111;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px #00FF00;
+    border: 2px solid #00FF00;
+    animation: fadeIn 1.5s ease;
+  }
+  input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #00FF00;
+    background-color: #222;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  input:focus, textarea:focus {
+    border-color: #00cc00;
+    box-shadow: 0 0 8px #00cc00;
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder {
+    color: #aaa;
+  }
+  button {
+    background-color: #00FF00;
+    color: #000;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+  }
+  button:hover {
+    background-color: #00cc00;
+    box-shadow: 0 0 10px #00cc00;
+  }
+  /* Thank You Message Style */
+  .thank-you {
+    font-size: 20px;
+    font-weight: bold;
+    color: #00FF00;
+    margin-top: 30px;
+    animation: slideIn 1s ease forwards;
+    opacity: 0;
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+</style>
+
+<!-- Confetti + Animated Thank You Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
+  const form = document.getElementById('contact-form');
+  const thankYouMessage = document.getElementById('thank-you');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.reset();
+      thankYouMessage.style.display = 'block';
+      thankYouMessage.style.animation = 'slideIn 1s ease forwards';
+      
+      // Start confetti rain for 3 seconds
+      var duration = 3 * 1000;
+      var end = Date.now() + duration;
+
+      (function frame() {
+        confetti({
+          particleCount: 5,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 }
+        });
+        confetti({
+          particleCount: 5,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+          requestAnimationFrame(frame);
+        }
+      }());
+    } else {
+      thankYouMessage.innerText = 'Oops! There was a problem sending your message.';
+      thankYouMessage.style.color = 'red';
+      thankYouMessage.style.display = 'block';
+    }
+  });
+</script>
