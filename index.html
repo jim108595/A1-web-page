@@ -1,70 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 1. Character Encoding & Viewport -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A1 Painting & Decorating | Inverness</title>
 
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Professional painting and decorating services based in Inverness. Transforming spaces with excellence and care. Free quotes available.">
-  <meta name="keywords" content="Painter Inverness, Decorator Inverness, House Painting Inverness, Interior Decorating, A1 Painting & Decorating, Home Renovation">
-  <meta name="author" content="A1 Painting & Decorating">
-  <meta name="robots" content="index, follow">
+  <!-- 2. Title & Canonical URL -->
+  <title>A1 Painting &amp; Decorating | Professional Painter in Inverness</title>
+  <link rel="canonical" href="https://a1paintingdecorators.com/" />
 
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="A1 Painting & Decorating | Inverness" />
-  <meta property="og:description" content="Professional painting and decorating services based in Inverness. Transforming spaces with excellence and care." />
+  <!-- 3. SEO Meta Tags -->
+  <meta name="description"
+        content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
+  <meta name="keywords"
+        content="Painter Inverness, Decorator Inverness, House Painting Inverness, Interior Decorating, A1 Painting & Decorating, Home Renovation" />
+  <meta name="author" content="A1 Painting &amp; Decorating" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- 4. Open Graph Meta Tags (for Facebook, WhatsApp, LinkedIn, etc.) -->
+  <meta property="og:site_name" content="A1 Painting &amp; Decorating" />
+  <meta property="og:title" content="A1 Painting &amp; Decorating | Professional Painter in Inverness" />
+  <meta property="og:description"
+        content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
   <meta property="og:image" content="https://a1paintingdecorators.com/logo_og_final.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://a1paintingdecorators.com/" />
   <meta property="og:type" content="website" />
 
-  <!-- Twitter Card Meta Tags -->
+  <!-- 5. Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="A1 Painting & Decorating | Inverness" />
-  <meta name="twitter:description" content="Professional painting and decorating services based in Inverness. Transforming spaces with excellence and care." />
+  <!-- If you have a Twitter username, you can uncomment and set these:
+       <meta name="twitter:site" content="@YourTwitterHandle" />
+       <meta name="twitter:creator" content="@YourTwitterHandle" /> 
+  -->
+  <meta name="twitter:title" content="A1 Painting &amp; Decorating | Professional Painter in Inverness" />
+  <meta name="twitter:description"
+        content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
   <meta name="twitter:image" content="https://a1paintingdecorators.com/logo_og_final.png" />
 
-  <!-- Favicon -->
+  <!-- 6. Favicon & Touch Icons -->
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <!-- Optional (uncomment if you create these additional files):
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  -->
 
-  <!-- Stylesheet -->
+  <!-- 7. Stylesheet -->
   <link rel="stylesheet" href="style.css" />
+
+  <!-- 8. Structured Data (Local Business Schema) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "A1 Painting & Decorating",
+    "image": "https://a1paintingdecorators.com/logo.png",
+    "@id": "https://a1paintingdecorators.com/",
+    "url": "https://a1paintingdecorators.com/",
+    "telephone": "01234 567890",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Inverness",
+      "postalCode": "IV1 1AA",
+      "addressCountry": "GB"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "££"
+  }
+  </script>
+
+  <!-- 9. Optional Google Verification (commented out) -->
+  <!-- <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" /> -->
+
+  <!-- 10. Optional: Link to Sitemap (if you upload sitemap.xml) -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://a1paintingdecorators.com/sitemap.xml" />
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" loading="lazy" />
-  <div class="menu-toggle" id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <nav id="nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header + Logo + Navigation -->
+  <header>
+    <img src="logo.png" alt="A1 Painting &amp; Decorating Logo" class="logo" loading="lazy" />
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h1>Professional Painting & Decorating</h1>
-  <h2>Transforming Spaces with Excellence and Care</h2>
-  <a href="gallery.html" class="button">View Our Work</a>
-</section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Professional Painting &amp; Decorating</h1>
+    <h2>Transforming Spaces with Excellence and Care</h2>
+    <a href="gallery.html" class="button">View Our Work</a>
+  </section>
 
-<footer>
-  © 2025 A1 Painting & Decorating | All rights reserved.
-</footer>
+  <!-- Footer -->
+  <footer>
+    © 2025 A1 Painting &amp; Decorating | All rights reserved.  
+    <!-- Optional: add address/phone for local SEO -->
+    <!-- <br>123 Main Street, Inverness, IV1 1AA | Call: 01234 567890 -->
+  </footer>
 
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav');
-  menuToggle.addEventListener('click', () => {
-    nav.querySelector('ul').classList.toggle('active');
-  });
-</script>
-
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.querySelector('ul').classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
