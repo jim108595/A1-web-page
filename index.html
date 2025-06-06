@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <!-- 1. Basic Meta Tags -->
   <meta charset="UTF-8" />
@@ -81,3 +83,45 @@
   }
   </script>
 </head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <img src="logo.png" alt="A1 Painting &amp; Decorating Logo" class="logo" loading="lazy" />
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Professional Painting &amp; Decorating</h1>
+    <h2>Transforming Spaces with Excellence and Care</h2>
+    <a href="gallery.html" class="button">View Our Work</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 A1 Painting &amp; Decorating | All rights reserved.
+  </footer>
+
+  <!-- Mobile Menu Toggle Script -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('nav');
+    menuToggle.addEventListener('click', () => {
+      nav.querySelector('ul').classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
