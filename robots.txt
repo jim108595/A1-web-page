@@ -1,5 +1,5 @@
-# robots.txt for a1paintingdecorators.com
 User-agent: *
-Allow: /
+Disallow:
 
 Sitemap: https://a1paintingdecorators.com/sitemap.xml
+Host: https://a1paintingdecorators.com
