@@ -1,120 +1,82 @@
-/* Reset & Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | A1 Painting & Decorating</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+  <div class="container">
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
 
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #000;
-  color: #bbb;
-  line-height: 1.7;
-  font-size: 16px;
-}
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-/* Center everything and control width */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    <div class="contact-container">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Send us a message!</p>
 
-/* Logo */
-.logo {
-  display: block;
-  margin: 20px auto;
-  max-width: 300px;
-  width: 100%;
-  height: auto;
-}
+      <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
 
-/* Navigation */
-nav {
-  text-align: center;
-  margin: 30px 0;
-}
-nav a {
-  color: #00FF00;
-  text-decoration: none;
-  margin: 0 20px;
-  font-size: 18px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-nav a:hover {
-  text-decoration: underline;
-}
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
 
-/* Contact Section */
-.contact-container {
-  text-align: center;
-}
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea><br>
 
-h1 {
-  color: #00FF00;
-  font-size: 36px;
-  margin-bottom: 20px;
-}
+        <button type="submit">Send Message</button>
+      </form>
 
-.contact-info {
-  margin-bottom: 30px;
-  font-size: 20px;
-}
+      <div id="thank-you" style="display: none;">
+        <h2>Thank you! Your message has been sent. 🎉</h2>
+      </div>
+    </div>
 
-.contact-info p {
-  margin: 10px 0;
-}
+    <footer>
+      <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+    </footer>
+  </div>
 
-.contact-info a {
-  color: #00FF00;
-  text-decoration: none;
-  font-weight: bold;
-}
+  <!-- CONFETTI Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const form = document.getElementById('contact-form');
+    const thankYou = document.getElementById('thank-you');
 
-.contact-info a:hover {
-  text-decoration: underline;
-}
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const data = new FormData(form);
+      const action = form.action;
 
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+      try {
+        await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        form.reset();
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
 
-input, textarea {
-  width: 100%;
-  max-width: 500px;
-  margin: 10px 0;
-  padding: 12px 15px;
-  border: 2px solid #00FF00;
-  border-radius: 5px;
-  background-color: #111;
-  color: white;
-}
+        // Fire confetti 🎉
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
 
-button {
-  background-color: #00FF00;
-  color: black;
-  font-size: 18px;
-  font-weight: bold;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 5px;
-  margin-top: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background-color: #0f0;
-}
-
-/* Footer */
-footer {
-  margin-top: 50px;
-  font-size: 14px;
-  text-align: center;
-  color: #555;
-}
+      } catch (error) {
+        alert('Oops! Something went wrong.');
+      }
+    });
+  </script>
+</body>
+</html>
