@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://a1paintingdecorators.com/sitemap.xml
