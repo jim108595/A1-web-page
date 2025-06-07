@@ -17,7 +17,7 @@
 
     .hero-section {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .hero-section h1 {
@@ -35,25 +35,35 @@
     }
 
     .filters {
+      position: sticky;
+      top: 0;
+      background: #000;
+      padding: 10px 0;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
       margin-bottom: 30px;
     }
 
     .filter-btn {
-      background: none;
+      background: #000;
       border: 2px solid #00ff00;
       color: #00ff00;
-      padding: 10px 20px;
-      margin: 0 10px;
+      padding: 12px 24px;
       border-radius: 30px;
       cursor: pointer;
       font-size: 16px;
       text-transform: uppercase;
-      transition: background 0.3s, color 0.3s;
+      transition: all 0.3s ease;
     }
 
     .filter-btn:hover, .filter-btn.active {
       background: #00ff00;
       color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
     }
 
     .gallery {
@@ -100,6 +110,17 @@
       color: inherit;
     }
 
+    /* Lightbox Custom Caption */
+    .lb-caption {
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 5px;
+    }
+
     @media (max-width: 600px) {
       .hero-section h1 {
         font-size: 28px;
@@ -119,57 +140,57 @@
 </div><div class="gallery">
   <!-- Before and After Pairs -->
   <div class="gallery-item before">
-    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Prep Before"></a>
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-door-prep-before.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door Finish After"></a>
+    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-door-finish-after.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-doors-painting-before.jpg" alt="Hallway Doors Painting Before"></a>
+    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-doors-painting-before.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1"></a>
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish1.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2"></a>
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish2.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before"></a>
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/kitchen-before1.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After"></a>
+    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/kitchen-after.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before"></a>
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After"></a>
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before"></a>
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/staircase-paint-before.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After"></a>
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/staircase-paint-after.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before.jpg" alt="Wallpaper Before"></a>
+    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after.jpg" alt="Wallpaper After"></a>
+    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after.jpg"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before1.jpg" alt="Wallpaper Before 1"></a>
+    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before1.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2"></a>
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after2.jpg"></a>
   </div>  <!-- Finish Images -->  <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish.jpg" alt="Wallpaper Finish"></a>
+    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish1.jpg" alt="Wallpaper Finish 1"></a>
+    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish1.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish2.jpg" alt="Wallpaper Finish 2"></a>
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish2.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish"></a>
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish"></a>
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/bed-room-finish.jpg"></a>
   </div>
 </div><!-- Lightbox JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><script>
   const filterButtons = document.querySelectorAll('.filter-btn');
