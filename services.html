@@ -10,8 +10,8 @@
 
   <style>
     body {
-      background: #000;
-      color: #fff;
+      background: #f5f5f5;
+      color: #222;
       font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 40px 20px;
@@ -19,17 +19,17 @@
     }
 
     h1 {
-      color: #00ff00;
+      color: #00cc66;
       font-size: 36px;
       margin-bottom: 20px;
-      text-shadow: 0 0 10px #00ff00;
+      text-shadow: 0 0 8px rgba(0, 204, 102, 0.5);
     }
 
     p {
       max-width: 800px;
       margin: 0 auto 50px;
       font-size: 18px;
-      color: #ccc;
+      color: #444;
     }
 
     .services-grid {
@@ -41,17 +41,17 @@
     }
 
     .service-item {
-      background: #111;
-      border: 2px solid #00ff00;
+      background: #fff;
+      border: 2px solid #00cc66;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .service-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     }
 
     .service-image img {
@@ -66,20 +66,20 @@
 
     .service-title {
       font-size: 22px;
-      color: #00ff00;
+      color: #00cc66;
       margin-bottom: 15px;
       font-weight: 600;
     }
 
     .service-description {
       font-size: 16px;
-      color: #eee;
+      color: #555;
       margin-bottom: 10px;
     }
 
     .review-snippet {
       font-style: italic;
-      color: #ccc;
+      color: #777;
       font-size: 14px;
     }
 
@@ -87,19 +87,19 @@
       display: inline-block;
       margin-top: 50px;
       padding: 15px 30px;
-      background-color: #00ff00;
-      color: #000;
+      background-color: #00cc66;
+      color: #fff;
       font-size: 20px;
       border: none;
       border-radius: 30px;
       text-decoration: none;
       transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 15px rgba(0, 204, 102, 0.5);
     }
 
     .cta-button:hover {
-      background-color: #fff;
-      box-shadow: 0 0 15px #00ff00;
-      color: #00ff00;
+      background-color: #00aa55;
+      box-shadow: 0 0 20px rgba(0, 204, 102, 0.7);
     }
   </style>
 </head>
@@ -112,7 +112,7 @@
 <div class="services-grid">
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1605276376688-3a2c7d79b1a5?fit=crop&w=800&q=80" alt="Interior Painting"></div>
+    <div class="service-image"><img src="images/interior-painting.jpg" alt="Interior Painting"></div>
     <div class="service-content">
       <div class="service-title">Interior Painting</div>
       <div class="service-description">Transform your interiors across Inverness with flawless wall, ceiling, and woodwork finishes that redefine your space.</div>
@@ -121,7 +121,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1582582421384-7e62e19a8f97?fit=crop&w=800&q=80" alt="Exterior Painting"></div>
+    <div class="service-image"><img src="images/exterior-painting.jpg" alt="Exterior Painting"></div>
     <div class="service-content">
       <div class="service-title">Exterior Painting</div>
       <div class="service-description">Protect and beautify your home’s exterior in Inverness and surrounding areas with high-end, durable paint finishes.</div>
@@ -130,7 +130,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1615485921628-ef5f07f657f3?fit=crop&w=800&q=80" alt="Ames Taping"></div>
+    <div class="service-image"><img src="images/ames-taping.jpg" alt="Ames Taping"></div>
     <div class="service-content">
       <div class="service-title">Ames Taping</div>
       <div class="service-description">Delivering perfectly smooth, seamless wall preparation for new builds and renovations across Inverness.</div>
@@ -139,7 +139,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1615958964019-5be1fd1f0c2c?fit=crop&w=800&q=80" alt="Spray Painting"></div>
+    <div class="service-image"><img src="images/spray-painting.jpg" alt="Spray Painting"></div>
     <div class="service-content">
       <div class="service-title">Spray Painting</div>
       <div class="service-description">Achieve flawless, even coverage with professional spray painting services tailored for Inverness and beyond.</div>
@@ -148,7 +148,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1616627789427-c9b25554d5f1?fit=crop&w=800&q=80" alt="Surface Preparation"></div>
+    <div class="service-image"><img src="images/surface-preparation.jpg" alt="Surface Preparation"></div>
     <div class="service-content">
       <div class="service-title">Surface Preparation & Finishing</div>
       <div class="service-description">We prepare and prime surfaces to perfection for stunning, long-lasting paint results across Inverness and surrounding areas.</div>
@@ -157,7 +157,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1594652634015-26adbc5c0f0a?fit=crop&w=800&q=80" alt="Wallpaper Hanging"></div>
+    <div class="service-image"><img src="images/wallpaper-hanging.jpg" alt="Wallpaper Hanging"></div>
     <div class="service-content">
       <div class="service-title">Wallpaper Hanging & Removal</div>
       <div class="service-description">Expert wallpaper installation and removal services delivering stylish, seamless finishes for homes across Inverness.</div>
@@ -166,7 +166,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?fit=crop&w=800&q=80" alt="Commercial Painting"></div>
+    <div class="service-image"><img src="images/commercial-painting.jpg" alt="Commercial Painting"></div>
     <div class="service-content">
       <div class="service-title">Commercial Painting</div>
       <div class="service-description">Reliable painting solutions for offices and retail spaces in Inverness — minimal disruption, maximum quality.</div>
@@ -175,7 +175,7 @@
   </div>
 
   <div class="service-item">
-    <div class="service-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fit=crop&w=800&q=80" alt="Feature Walls"></div>
+    <div class="service-image"><img src="images/feature-walls.jpg" alt="Feature Walls"></div>
     <div class="service-content">
       <div class="service-title">Feature Walls & Decorative Finishes</div>
       <div class="service-description">Create eye-catching feature walls and high-end decorative finishes that elevate any space in Inverness and surrounding areas.</div>
