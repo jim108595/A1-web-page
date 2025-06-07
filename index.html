@@ -4,14 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A1 Painting & Decorating</title>
 <style>
-  body {
-    background: #000;
-    color: #fff;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  }/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 20px; animation: pulse 3s infinite; }
+  html {
+    scroll-behavior: smooth;
+  }body { background: #000; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+
+/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 20px; animation: pulse 3s infinite; }
 
 @keyframes pulse { 0% { box-shadow: 0 0 15px #00ff00; } 50% { box-shadow: 0 0 25px #00ff00; } 100% { box-shadow: 0 0 15px #00ff00; } }
 
@@ -45,28 +42,41 @@ nav a:hover { color: #25D366; }
 
 .stars span { color: #00ff00; font-size: 20px; }
 
-/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 100px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; box-shadow: 0 0 15px #25D366; transition: all 0.3s ease; text-decoration: none; z-index: 1001; }
+/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 100px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; box-shadow: 0 0 15px #25D366; transition: all 0.3s ease; text-decoration: none; z-index: 1001; font-size: 24px; }
 
-.whatsapp-button:hover { box-shadow: 0 0 25px #25D366; } </style>
+.whatsapp-button:hover { box-shadow: 0 0 25px #25D366; }
 
+/* Sections */ section { padding: 100px 20px; text-align: center; }
+
+#home { height: 100vh; } #services { height: 100vh; } #gallery { height: 100vh; } #contact { height: 100vh; }
+
+</style>
 </head>
 <body><div class="burger-menu" onclick="toggleMenu()">
   <div></div>
   <div></div>
   <div></div>
 </div><div class="logo">
-  <img src="your-logo.png" alt="A1 Painting & Decorating">
+  <img src="logo.png" alt="A1 Painting & Decorating">
 </div><nav id="menu">
-  <a href="#home">Home</a>
-  <a href="#services">Services</a>
-  <a href="#gallery">Gallery</a>
-  <a href="#contact">Contact</a>
-</nav><div class="review-box">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</nav><section id="home">
+  <h1>Welcome to A1 Painting & Decorating</h1>
+</section><section id="services">
+  <h1>Our Services</h1>
+</section><section id="gallery">
+  <h1>Gallery</h1>
+</section><section id="contact">
+  <h1>Contact Us</h1>
+</section><div class="review-box">
   <p>"Superb finish and clean job. Will definitely hire again!"</p>
   <div class="stars">
     <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
   </div>
-</div><a href="https://wa.me/your-number" class="whatsapp-button">
+</div><a href="https://wa.me/447123456789" class="whatsapp-button" target="_blank">
   &#128172;
 </a><script>
 function toggleMenu() {
