@@ -2,207 +2,257 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A1 Painting & Decorating</title>  <!-- SEO Meta Tags -->  <meta name="description" content="A1 Painting & Decorating - Transforming Spaces with Precision & Passion. High-quality finishes, residential and commercial painting experts.">
-  <meta name="keywords" content="Painting, Decorating, House Painting, Commercial Painting, Scotland Decorators, Inverness Painter, Home Renovation, Professional Painters">
-  <meta name="author" content="A1 Painting & Decorating">  <!-- Open Graph Meta Tags -->  <meta property="og:title" content="A1 Painting & Decorating">
-  <meta property="og:description" content="Professional painting and decorating services across Scotland. Transforming spaces with precision and passion.">
-  <meta property="og:image" content="https://yourwebsite.com/your-logo.png">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourwebsite.com">  <!-- Favicon -->  <link rel="icon" href="favicon.ico" type="image/x-icon">  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+  <title>Gallery | A1 Painting & Decorating</title>  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">  <!-- Lightbox CSS -->  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">  <style>
     body {
       background: #000;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      text-align: center;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-      position: relative;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    /* Logo Centered */
-    .logo {
-      margin-top: 50px;
-      animation: pulse 3s infinite;
-    }
-    @keyframes pulse {
-      0% { filter: drop-shadow(0 0 5px #00ff00); }
-      50% { filter: drop-shadow(0 0 15px #00ff00); }
-      100% { filter: drop-shadow(0 0 5px #00ff00); }
-    }
-    .logo img {
-      width: 200px;
-      height: auto;
-    }
-
-    /* Burger Menu Centered Below Logo */
-    .burger-menu {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 30px auto 10px;
-      cursor: pointer;
-      z-index: 1002;
-    }
-    .burger-menu div {
-      width: 25px;
-      height: 3px;
-      background-color: #00ff00;
-      margin: 5px 0;
-      transition: 0.4s;
-      border-radius: 2px;
-    }
-    .burger-menu:hover div {
-      box-shadow: 0 0 10px #00ff00;
+      justify-content: flex-start;
+      padding: 30px;
     }
 
-    /* WhatsApp Button Fixed Top Right */
-    .whatsapp-button {
-      position: fixed;
-      top: 20px;
-      right: 30px;
-      background-color: #25D366;
-      color: white;
-      border-radius: 50%;
-      padding: 14px;
-      box-shadow: 0 0 15px #25D366;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      font-size: 22px;
-      z-index: 1001;
-    }
-    .whatsapp-button:hover {
-      box-shadow: 0 0 25px #25D366;
-    }
-
-    /* Divider Line */
-    .divider {
-      width: 80px;
-      height: 2px;
-      background-color: #00ff00;
-      margin: 30px auto;
-      box-shadow: 0 0 10px #00ff00;
-    }
-
-    /* Headline */
-    .headline {
-      font-size: 24px;
-      font-weight: 600;
-      color: #00ff00;
-      text-shadow: 0 0 6px #00ff00;
+    .hero-section {
+      text-align: center;
       margin-bottom: 30px;
-      letter-spacing: 1px;
     }
 
-    /* Review Text */
-    .review {
-      font-family: 'Lora', serif;
-      font-size: 20px;
-      font-style: italic;
-      color: #fff;
-      text-shadow: 0 0 6px #00ff00;
-      transition: opacity 0.5s ease;
-      margin: 30px 20px 10px;
-    }
-
-    /* Stars */
-    .stars {
-      margin-top: 10px;
-    }
-    .stars span {
-      color: gold;
-      font-size: 24px;
-      text-shadow: 0 0 8px gold;
-    }
-
-    /* Side Nav */
-    .sidenav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      background-color: #111;
-      box-shadow: -2px 0 20px #00ff00;
-      overflow-x: hidden;
-      transition: 0.5s;
-      padding-top: 60px;
-      z-index: 1000;
-    }
-
-    .sidenav a {
-      padding: 8px 8px 8px 32px;
-      text-decoration: none;
-      font-size: 24px;
+    .hero-section h1 {
       color: #00ff00;
-      display: block;
-      transition: 0.3s;
+      text-shadow: 0 0 10px #00ff00;
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    .sidenav a:hover {
-      color: #25D366;
-      text-shadow: 0 0 10px #00ff00;
+    .hero-section p {
+      color: #ccc;
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 30px;
+    }
+
+    .arrow-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 0 40px;
+    }
+
+    .arrow-btn {
+      font-size: 40px;
+      color: #00ff00;
+      text-decoration: none;
+      animation: pulse 1.5s infinite;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.2); opacity: 0.7; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      background: #000;
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: #00ff00;
+      color: #000;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 1s ease;
+      background: #111;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+      loading: lazy;
+    }
+
+    .gallery-item.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Lightbox Custom Caption */
+    .lb-caption {
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 10px;
+      font-family: 'Poppins', sans-serif;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-section h1 {
+        font-size: 28px;
+      }
+      .hero-section p {
+        font-size: 16px;
+      }
+
+      .arrow-btn {
+        font-size: 30px;
+      }
     }
   </style></head>
-<body><div class="logo">
-  <img src="logo.png" alt="A1 Painting & Decorating Logo">
-</div><div class="burger-menu" onclick="openNav()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div><a href="https://wa.me/447495517536?text=Hi%20A1%20Painting%20%26%20Decorating%2C%20I%20am%20interested%20in%20a%20quote%20please!" class="whatsapp-button" target="_blank">
-  💬
-</a><div id="mySidenav" class="sidenav">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="gallery.html">Gallery</a>
-  <a href="contact.html">Contact</a>
-  <a href="javascript:void(0)" onclick="closeNav()">Close</a>
-</div><div class="divider"></div><div class="headline">
-  Transforming Spaces with Precision & Passion.
-</div><div class="divider"></div><div class="review" id="review-text">
-  “Superb finish and clean job. Will definitely hire again!”
-</div>
-<div class="stars">
-  <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-</div><script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+<body><div class="hero-section">
+  <h1>Before & After Transformations</h1>
+  <p>See the incredible difference we bring to homes and businesses with our expert painting and decorating services.</p>
+</div><div class="arrow-nav">
+  <a href="index.html" class="arrow-btn">&#8592;</a>
+  <a href="contact.html" class="arrow-btn">&#8594;</a>
+</div><div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="before">Before</button>
+  <button class="filter-btn" data-filter="after">After</button>
+</div><div class="gallery">
+  <!-- Before and After Pairs -->
+  <div class="gallery-item before">
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-door-prep-before.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-door-finish-after.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-doors-painting-before.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish1.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish2.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/kitchen-before1.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/kitchen-after.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/staircase-paint-before.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/staircase-paint-after.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after.jpg"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before1.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after2.jpg"></a>
+  </div>  <!-- Finish Images -->  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish1.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish2.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/bed-room-finish.jpg"></a>
+  </div>
+</div><!-- Lightbox JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
 
-const reviews = [
-  "Superb finish and clean job. Will definitely hire again!",
-  "Professional, reliable and the attention to detail is amazing.",
-  "The best painters in Scotland — highly recommend!",
-  "Exceptional work, clean and efficient from start to finish."
-];
+      const filter = button.getAttribute('data-filter');
 
-let currentReview = 0;
+      galleryItems.forEach(item => {
+        if (filter === 'all') {
+          item.style.display = 'block';
+        } else if (item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
 
-setInterval(() => {
-  currentReview = (currentReview + 1) % reviews.length;
-  const reviewText = document.getElementById('review-text');
+  // Fade-in animation on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
 
-  reviewText.style.opacity = 0;
-  setTimeout(() => {
-    reviewText.textContent = `“${reviews[currentReview]}”`;
-    reviewText.style.opacity = 1;
-  }, 500);
-}, 5000);
+  galleryItems.forEach(item => {
+    observer.observe(item);
+  });
 </script></body>
-</html>
+      </html>
