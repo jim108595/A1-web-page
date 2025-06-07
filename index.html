@@ -49,6 +49,13 @@
       text-decoration: none;
       animation: pulse 1.5s infinite;
       text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      transition: all 0.3s ease;
+    }
+
+    .arrow-btn:hover {
+      color: #fff;
+      text-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+      transform: scale(1.1);
     }
 
     @keyframes pulse {
@@ -139,6 +146,29 @@
       border-radius: 5px;
     }
 
+    /* Scroll to Top Button */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #00ff00;
+      color: #000;
+      border: none;
+      outline: none;
+      padding: 15px;
+      border-radius: 50%;
+      font-size: 20px;
+      box-shadow: 0 0 15px #00ff00, 0 0 30px #00ff00;
+      cursor: pointer;
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+
+    #scrollTopBtn:hover {
+      transform: scale(1.2);
+    }
+
     @media (max-width: 600px) {
       .hero-section h1 {
         font-size: 28px;
@@ -163,61 +193,62 @@
   <button class="filter-btn" data-filter="before">Before</button>
   <button class="filter-btn" data-filter="after">After</button>
 </div><div class="gallery">
-  <!-- Before and After Pairs -->
   <div class="gallery-item before">
-    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-door-prep-before.jpg"></a>
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-door-prep-before.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-door-finish-after.jpg"></a>
+    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-door-finish-after.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-doors-painting-before.jpg"></a>
+    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/hallway-doors-painting-before.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish1.jpg"></a>
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish1.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish2.jpg"></a>
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/hallway-paint-finish2.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/kitchen-before1.jpg"></a>
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/kitchen-before1.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/kitchen-after.jpg"></a>
+    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/kitchen-after.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg"></a>
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg"></a>
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/staircase-paint-before.jpg"></a>
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/staircase-paint-before.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/staircase-paint-after.jpg"></a>
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/staircase-paint-after.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after.jpg" loading="lazy"></a>
   </div>  <div class="gallery-item before">
-    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before1.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery" data-title="Before"><img src="gallery-photos-new/wallpaper-before1.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after2.jpg"></a>
-  </div>  <!-- Finish Images -->  <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-after2.jpg" loading="lazy"></a>
+  </div>  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish1.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish1.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish2.jpg"></a>
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/wallpaper-finish2.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg"></a>
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg" loading="lazy"></a>
   </div>
   <div class="gallery-item after">
-    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/bed-room-finish.jpg"></a>
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery" data-title="After"><img src="gallery-photos-new/bed-room-finish.jpg" loading="lazy"></a>
   </div>
-</div><!-- Lightbox JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><script>
+</div><!-- Scroll to Top Button --><button id="scrollTopBtn" onclick="scrollToTop()">⬆️</button>
+
+<!-- Lightbox JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><script>
   const filterButtons = document.querySelectorAll('.filter-btn');
   const galleryItems = document.querySelectorAll('.gallery-item');
 
@@ -254,5 +285,20 @@
   galleryItems.forEach(item => {
     observer.observe(item);
   });
+
+  // Scroll to Top Button
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollTopBtn.style.display = 'block';
+    } else {
+      scrollTopBtn.style.display = 'none';
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 </script></body>
-      </html>
+    </html>
