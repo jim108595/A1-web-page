@@ -6,67 +6,78 @@
   <title>Our Services | A1 Painting & Decorating</title>
   <meta name="description" content="Premium painting and decorating services in Inverness and surrounding areas. Interior painting, exterior painting, Ames taping, spray painting, wallpapering, and more.">
   <meta name="keywords" content="Painting Inverness, Decorators Inverness, Ames Taping Inverness, Spray Painting Inverness, House Painting Inverness, Commercial Painters Inverness">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      background: #000;
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
+      background: #fff;
+      color: #111;
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 40px 20px;
       text-align: center;
     }
 
     h1 {
-      color: #00ff00;
-      text-shadow: 0 0 10px #00ff00;
+      color: #222;
+      font-size: 36px;
       margin-bottom: 20px;
     }
 
     p {
       max-width: 800px;
-      margin: 0 auto 40px;
+      margin: 0 auto 50px;
       font-size: 18px;
-      color: #ccc;
+      color: #555;
     }
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .service-item {
-      background: #111;
-      padding: 20px;
-      border: 2px solid #00ff00;
-      border-radius: 15px;
+      background: #f9f9f9;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
     }
 
     .service-item:hover {
       transform: translateY(-10px);
-      box-shadow: 0 0 20px #00ff00;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 20px;
     }
 
     .service-title {
-      font-size: 24px;
-      color: #00ff00;
+      font-size: 22px;
+      color: #111;
       margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .service-description {
       font-size: 16px;
-      color: #eee;
+      color: #555;
       margin-bottom: 10px;
     }
 
     .review-snippet {
       font-style: italic;
-      color: #ccc;
+      color: #777;
       font-size: 14px;
     }
 
@@ -74,8 +85,8 @@
       display: inline-block;
       margin-top: 50px;
       padding: 15px 30px;
-      background-color: #00ff00;
-      color: #000;
+      background-color: #00cc66;
+      color: #fff;
       font-size: 20px;
       border: none;
       border-radius: 30px;
@@ -84,66 +95,89 @@
     }
 
     .cta-button:hover {
-      background-color: #fff;
-      box-shadow: 0 0 15px #00ff00;
-      color: #00ff00;
+      background-color: #00aa55;
+      box-shadow: 0 0 15px rgba(0, 204, 102, 0.6);
     }
   </style>
 </head>
 <body>
 
-<h1>Our Professional Painting & Decorating Services</h1>
+<h1>Professional Painting & Decorating Services</h1>
 
-<p>At A1 Painting & Decorating, we deliver exceptional craftsmanship to homes and businesses across Inverness and surrounding areas. From flawless interior finishes to advanced Ames taping and spraying, we transform spaces with precision and passion.</p>
+<p>We deliver luxury painting and decorating services for homes and businesses across Inverness and surrounding areas. Our services bring a touch of elegance and precision to every project.</p>
 
 <div class="services-grid">
 
   <div class="service-item">
-    <div class="service-title">🎨 Interior Painting</div>
-    <div class="service-description">Transform your interiors across Inverness and surrounding areas with expert wall, ceiling, and woodwork finishes that bring your home to life.</div>
-    <div class="review-snippet">“Flawless finish — looks incredible!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1605276376688-3a2c7d79b1a5?fit=crop&w=800&q=80" alt="Interior Painting"></div>
+    <div class="service-content">
+      <div class="service-title">Interior Painting</div>
+      <div class="service-description">Transform your interiors across Inverness with flawless wall, ceiling, and woodwork finishes that redefine your space.</div>
+      <div class="review-snippet">“Flawless finish — looks incredible!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🏡 Exterior Painting</div>
-    <div class="service-description">Protect and enhance your property's exterior in Inverness and nearby regions with our premium, durable painting solutions.</div>
-    <div class="review-snippet">“Best exterior painters around!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1582582421384-7e62e19a8f97?fit=crop&w=800&q=80" alt="Exterior Painting"></div>
+    <div class="service-content">
+      <div class="service-title">Exterior Painting</div>
+      <div class="service-description">Protect and beautify your home’s exterior in Inverness and surrounding areas with high-end, durable paint finishes.</div>
+      <div class="review-snippet">“Best exterior painters around!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🧱 Ames Taping</div>
-    <div class="service-description">Achieve perfectly smooth walls in Inverness and surrounding areas with our expert Ames taping services, ideal for new builds and renovations.</div>
-    <div class="review-snippet">“Walls look brand new — highly recommended!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1615485921628-ef5f07f657f3?fit=crop&w=800&q=80" alt="Ames Taping"></div>
+    <div class="service-content">
+      <div class="service-title">Ames Taping</div>
+      <div class="service-description">Delivering perfectly smooth, seamless wall preparation for new builds and renovations across Inverness.</div>
+      <div class="review-snippet">“Walls look brand new — highly recommended!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">💨 Spray Painting</div>
-    <div class="service-description">Flawless spray painting services for homes and businesses in Inverness, delivering even coverage and a stunning finish every time.</div>
-    <div class="review-snippet">“Amazing finish, super fast!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1615958964019-5be1fd1f0c2c?fit=crop&w=800&q=80" alt="Spray Painting"></div>
+    <div class="service-content">
+      <div class="service-title">Spray Painting</div>
+      <div class="service-description">Achieve flawless, even coverage with professional spray painting services tailored for Inverness and beyond.</div>
+      <div class="review-snippet">“Amazing finish, super fast!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🧹 Surface Preparation & Finishing</div>
-    <div class="service-description">Prepare your surfaces to perfection before painting. We serve Inverness and nearby areas ensuring long-lasting, beautiful results.</div>
-    <div class="review-snippet">“Prep work was top-notch!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1616627789427-c9b25554d5f1?fit=crop&w=800&q=80" alt="Surface Preparation"></div>
+    <div class="service-content">
+      <div class="service-title">Surface Preparation & Finishing</div>
+      <div class="service-description">We prepare and prime surfaces to perfection for stunning, long-lasting paint results across Inverness and surrounding areas.</div>
+      <div class="review-snippet">“Prep work was top-notch!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🖼️ Wallpaper Hanging & Removal</div>
-    <div class="service-description">Expert wallpaper installation and removal services for homes across Inverness and surrounding towns. Get stylish, seamless finishes.</div>
-    <div class="review-snippet">“Transformed my space — love it!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1594652634015-26adbc5c0f0a?fit=crop&w=800&q=80" alt="Wallpaper Hanging"></div>
+    <div class="service-content">
+      <div class="service-title">Wallpaper Hanging & Removal</div>
+      <div class="service-description">Expert wallpaper installation and removal services delivering stylish, seamless finishes for homes across Inverness.</div>
+      <div class="review-snippet">“Transformed my space — love it!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🏢 Commercial Painting</div>
-    <div class="service-description">Professional commercial painting services for businesses throughout Inverness, ensuring minimal disruption and maximum quality.</div>
-    <div class="review-snippet">“Reliable and very professional!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?fit=crop&w=800&q=80" alt="Commercial Painting"></div>
+    <div class="service-content">
+      <div class="service-title">Commercial Painting</div>
+      <div class="service-description">Reliable painting solutions for offices and retail spaces in Inverness — minimal disruption, maximum quality.</div>
+      <div class="review-snippet">“Reliable and very professional!”</div>
+    </div>
   </div>
 
   <div class="service-item">
-    <div class="service-title">🖌️ Feature Walls & Decorative Finishes</div>
-    <div class="service-description">Create eye-catching feature walls and high-end decorative finishes in Inverness and surrounding areas to make your interiors stand out.</div>
-    <div class="review-snippet">“Beautiful feature wall — makes the whole room!”</div>
+    <div class="service-image"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?fit=crop&w=800&q=80" alt="Feature Walls"></div>
+    <div class="service-content">
+      <div class="service-title">Feature Walls & Decorative Finishes</div>
+      <div class="service-description">Create eye-catching feature walls and high-end decorative finishes that elevate any space in Inverness and surrounding areas.</div>
+      <div class="review-snippet">“Beautiful feature wall — makes the whole room!”</div>
+    </div>
   </div>
 
 </div>
