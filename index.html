@@ -1,291 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A1 Painting & Decorating | Inverness</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A1 Painting & Decorating</title>
+<style>
+  body {
+    background: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 20px; animation: pulse 3s infinite; }
 
-  <!-- Open Graph (OG) Tags -->
-  <meta property="og:title" content="A1 Painting & Decorating | Inverness" />
-  <meta property="og:description" content="Professional painting and decorating services in Inverness. Free quotes, excellent quality. ⭐⭐⭐⭐⭐" />
-  <meta property="og:image" content="https://a1paintingdecorators.com/logo_og.png" />
-  <meta property="og:url" content="https://a1paintingdecorators.com/" />
-  <meta property="og:type" content="website" />
+@keyframes pulse { 0% { box-shadow: 0 0 15px #00ff00; } 50% { box-shadow: 0 0 25px #00ff00; } 100% { box-shadow: 0 0 15px #00ff00; } }
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #bbb;
-      overflow-x: hidden;
-    }
-    header {
-      width: 100%;
-      padding: 20px 40px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.95);
-      box-shadow: 0 0 20px #00ff00;
-      z-index: 1000;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      width: 150px;
-      height: auto;
-      border: 3px solid #00ff00;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #00ff00;
-    }
-    nav {
-      display: none;
-      flex-direction: column;
-      gap: 20px;
-      position: absolute;
-      top: 80px;
-      right: 40px;
-      background-color: rgba(0, 0, 0, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00ff00;
-    }
-    nav a {
-      color: #00ff00;
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    nav a:hover {
-      text-shadow: 0 0 10px #00ff00;
-    }
-    .burger {
-      width: 30px;
-      cursor: pointer;
-    }
-    .burger div {
-      width: 100%;
-      height: 3px;
-      background: #00ff00;
-      margin: 6px 0;
-    }
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1600585154356-c7cb92fa3c94?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 0 20px;
-      margin-top: 150px;
-    }
-    .hero h2 {
-      font-size: 28px;
-      color: #bbb;
-      margin-bottom: 40px;
-      animation: fadeInUp 1.5s ease-out;
-    }
-    .button {
-      padding: 10px 20px;
-      background-color: #00ff00;
-      color: #000;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: 0.3s;
-      box-shadow: 0 0 20px #00ff00;
-      animation: fadeInUp 2s ease-out;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .button:hover {
-      background-color: #0f0;
-      box-shadow: 0 0 30px #00ff00;
-    }
-    .reviews-section {
-      margin: 100px 20px;
-      text-align: center;
-      color: #00FF00;
-    }
-    .reviews-section h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      text-shadow: 0 0 10px #00FF00;
-    }
-    .reviews-slider {
-      position: relative;
-      max-width: 600px;
-      margin: 0 auto;
-      overflow: hidden;
-      height: 200px;
-    }
-    .review {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-      padding: 20px;
-      border: 2px solid #00FF00;
-      border-radius: 10px;
-      background-color: #111;
-      box-shadow: 0 0 15px #00FF00;
-    }
-    .review.active {
-      opacity: 1;
-      animation: glowPop 2s ease-out;
-    }
-    .review p {
-      font-size: 18px;
-      margin-bottom: 15px;
-      color: #ccc;
-    }
-    .stars {
-      font-size: 24px;
-      color: #00FF00;
-      animation: shine 2s infinite;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #555;
-      background-color: #000;
-      margin-top: 80px;
-    }
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50px;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-    .whatsapp-float:hover {
-      background-color: #1ebe57;
-    }
-    @keyframes fadeInUp {
-      0% { opacity: 0; transform: translateY(50px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes shine {
-      0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00; transform: scale(1); }
-      50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00; transform: scale(1.1); }
-      100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00; transform: scale(1); }
-    }
-    @keyframes glowPop {
-      0% { box-shadow: 0 0 5px #00FF00; transform: scale(0.9); }
-      50% { box-shadow: 0 0 20px #00FF00; transform: scale(1); }
-      100% { box-shadow: 0 0 5px #00FF00; transform: scale(0.95); }
-    }
-  </style>
+.logo img { width: 150px; height: auto; }
+
+/* Burger Menu Top Right */ .burger-menu { position: absolute; top: 30px; right: 30px; cursor: pointer; }
+
+.burger-menu div { width: 25px; height: 3px; background-color: #00ff00; margin: 5px 0; transition: 0.4s; }
+
+/* Review Box */ .review-box { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid gold; border-radius: 15px; padding: 20px; text-align: center; max-width: 300px; box-shadow: 0 0 20px gold; animation: fadeInUp 2s ease; }
+
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+
+.review-box p { margin: 0; font-size: 16px; }
+
+/* Gold Stars */ .stars { margin-top: 10px; }
+
+.stars span { color: gold; font-size: 20px; }
+
+/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 100px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; box-shadow: 0 0 15px #25D366; transition: all 0.3s ease; text-decoration: none; }
+
+.whatsapp-button:hover { box-shadow: 0 0 25px #25D366; } </style>
+
 </head>
-<body>
-
-<header>
-  <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" />
-  <div class="burger" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
+<body><div class="burger-menu">
+  <div></div>
+  <div></div>
+  <div></div>
+</div><div class="logo">
+  <img src="your-logo.png" alt="A1 Painting & Decorating">
+</div><div class="review-box">
+  <p>"Superb finish and clean job. Will definitely hire again!"</p>
+  <div class="stars">
+    <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
   </div>
-  <nav id="menu">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<section class="reviews-section">
-  <h2>⭐ What Our Customers Say ⭐</h2>
-  <div class="reviews-slider">
-    <div class="review active">
-      <p>"Outstanding service and brilliant results. Great value for money!"</p>
-      <div class="stars">★★★★★</div>
-    </div>
-    <div class="review">
-      <p>"A1 Painting & Decorating transformed our home — highly recommend!"</p>
-      <div class="stars">★★★★★</div>
-    </div>
-    <div class="review">
-      <p>"Top class work, reliable and very professional."</p>
-      <div class="stars">★★★★★</div>
-    </div>
-    <div class="review">
-      <p>"Superb finish and clean job. Will definitely hire again!"</p>
-      <div class="stars">★★★★★</div>
-    </div>
-  </div>
-</section>
-
-<section class="hero">
-  <h2>Transforming Spaces with Excellence and Care</h2>
-  <a href="https://wa.me/447495517536?text=Hi%2C%20I'm%20looking%20for%20a%20quote%20from%20A1%20Painting%20%26%20Decorating." class="button" onclick="fireConfetti()" target="_blank">Get a Free Quote</a>
-</section>
-
-<a href="https://wa.me/447495517536?text=Hi%2C%20I'm%20looking%20for%20a%20quote%20from%20A1%20Painting%20%26%20Decorating." class="whatsapp-float" target="_blank">&#x1F4AC;</a>
-
-<footer>
-  &copy; 2025 A1 Painting & Decorating. All rights reserved.
-</footer>
-
-<!-- Confetti Script -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
-  function fireConfetti() {
-    confetti({
-      particleCount: 300,
-      spread: 100,
-      origin: { y: 0, x: 0.5 },
-      gravity: 0.7,
-      scalar: 1.2
-    });
-  }
-
-  function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-  }
-
-  const reviews = document.querySelectorAll('.review');
-  let current = 0;
-
-  function showReview(index) {
-    reviews.forEach((review, i) => {
-      review.classList.remove('active');
-      if (i === index) {
-        review.classList.add('active');
-      }
-    });
-  }
-
-  function nextReview() {
-    current = (current + 1) % reviews.length;
-    showReview(current);
-  }
-
-  showReview(current);
-  setInterval(nextReview, 4000); // Auto-scroll every 4 seconds
-</script>
-
-</body>
+</div><a href="https://wa.me/your-number" class="whatsapp-button">
+  &#128172;
+</a></body>
 </html>
