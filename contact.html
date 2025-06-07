@@ -3,98 +3,205 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A1 Painting & Decorating | Inverness</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Contact | A1 Painting & Decorating</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: #f9f9f9;
-      color: #111;
-      font-family: 'Poppins', sans-serif;
+    /* Base Styles */
+    * {
       margin: 0;
-      padding: 40px 20px;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #000;
+      color: #bbb;
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
       text-align: center;
     }
     .logo {
-      width: 200px;
+      display: block;
       margin: 20px auto;
-      animation: pulse 3s infinite;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      padding: 20px;
+      border: 3px solid #00ff00;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00;
+      animation: pulse 2s infinite alternate;
     }
     @keyframes pulse {
-      0% { filter: drop-shadow(0 0 5px #00ff00); }
-      50% { filter: drop-shadow(0 0 15px #00ff00); }
-      100% { filter: drop-shadow(0 0 5px #00ff00); }
+      from { box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
+      to { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00; }
     }
     nav {
-      margin-top: 30px;
+      margin: 30px 0;
     }
     nav a {
-      margin: 0 20px;
+      color: #00ff00;
       text-decoration: none;
-      color: #00cc66;
-      font-weight: 600;
+      margin: 0 20px;
       font-size: 18px;
-      transition: color 0.3s;
+      font-weight: bold;
+      transition: 0.3s;
     }
     nav a:hover {
-      color: #00aa55;
-      text-shadow: 0 0 8px #00ff00;
+      color: #0f0;
+      text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
     }
     h1 {
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 50px;
-      color: #00cc66;
-      margin-top: 50px;
+      color: #00ff00;
+      font-size: 36px;
       margin-bottom: 20px;
-      text-shadow: 0 0 8px #00cc66;
     }
     p {
-      font-size: 20px;
-      max-width: 800px;
-      margin: 0 auto 40px;
-      color: #444;
+      margin: 10px 0;
     }
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background-color: #00cc66;
-      color: white;
+    .contact-info {
+      margin-bottom: 30px;
       font-size: 20px;
-      border-radius: 30px;
+    }
+    .contact-info a {
+      color: #00ff00;
       text-decoration: none;
-      transition: 0.3s;
-      margin-top: 30px;
+      font-weight: bold;
     }
-    .cta-button:hover {
-      background-color: #00aa55;
-      box-shadow: 0 0 10px #00cc66;
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+    form {
+      background: #000;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ff00;
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    input, textarea {
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px 15px;
+      border: 2px solid #00ff00;
+      border-radius: 5px;
+      background-color: #111;
+      color: white;
+      font-size: 16px;
+    }
+    button {
+      background-color: #00ff00;
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0f0;
+    }
+    #thank-you {
+      display: none;
+      margin-top: 20px;
+      font-size: 24px;
+      color: #0f0;
     }
     footer {
-      margin-top: 60px;
+      margin-top: 50px;
       font-size: 14px;
-      color: #888;
+      text-align: center;
+      color: #555;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
 
-  <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h1>Contact Us</h1>
+    <p>Get in touch today for a free quote or consultation!</p>
 
-  <h1>Bringing Life and Colour to Scotland</h1>
+    <div class="contact-info">
+      <p>📍 <a href="https://goo.gl/maps/YOURMAPLINK" target="_blank">Inverness, Scotland</a></p>
+      <p>📞 <a href="tel:+447495517536">07495 517536</a></p>
+      <p>✉️ <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
+    </div>
 
-  <p>At A1 Painting & Decorating, we transform homes and businesses across Inverness and beyond with precision, passion, and professionalism. Quality craftsmanship, attention to detail, and stunning results guaranteed.</p>
+    <!-- FORM WITH FORMSPREE -->
+    <form id="contact-form" action="https://formspree.io/f/xjkrgopv" method="POST">
+      <input type="hidden" name="_subject" value="New Contact Form Submission!">
+      <input type="hidden" name="_captcha" value="false">
 
-  <a class="cta-button" href="contact.html">Request a Free Quote</a>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-  <footer>
-    &copy; 2025 A1 Painting & Decorating. All rights reserved.
-  </footer>
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="thank-you">
+      🎉 Thank you! Your message has been sent. 🎉
+    </div>
+
+    <footer>
+      <p>&copy; 2025 A1 Painting & Decorating. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- CONFETTI Script -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <script>
+    const form = document.getElementById('contact-form');
+    const thankYou = document.getElementById('thank-you');
+
+    form.addEventListener('submit', async function(event) {
+      event.preventDefault();
+      const data = new FormData(form);
+      const action = form.action;
+
+      try {
+        await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        form.reset();
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+
+        // Fire confetti 🎉
+        confetti({
+          particleCount: 150,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+
+      } catch (error) {
+        alert('Oops! Something went wrong.');
+      }
+    });
+  </script>
 </body>
 </html>
