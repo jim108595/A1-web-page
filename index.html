@@ -1,104 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A1 Painting & Decorating | Professional Painter in Inverness</title>
-  <link rel="canonical" href="https://a1paintingdecorators.com/" />
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
+  <link rel="canonical" href="https://a1paintingdecorators.com/" />  <!-- SEO Meta -->  <meta name="description" content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
   <meta name="keywords" content="Painter Inverness, Decorator Inverness, House Painting Inverness, Interior Decorating, A1 Painting & Decorating, Home Renovation" />
   <meta name="author" content="A1 Painting & Decorating" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Open Graph Meta (Social Sharing) -->
-  <meta property="og:site_name" content="A1 Painting & Decorating" />
+  <meta name="robots" content="index, follow" />  <!-- Open Graph Meta -->  <meta property="og:site_name" content="A1 Painting & Decorating" />
   <meta property="og:title" content="A1 Painting & Decorating | Professional Painter in Inverness" />
   <meta property="og:description" content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
   <meta property="og:image" content="https://a1paintingdecorators.com/logo_og.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="https://a1paintingdecorators.com/" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card Meta -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:type" content="website" />  <!-- Twitter Card Meta -->  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="A1 Painting & Decorating | Professional Painter in Inverness" />
   <meta name="twitter:description" content="Professional painting and decorating services based in Inverness. Transforming residential and commercial spaces with excellence and care. Free quotes available." />
-  <meta name="twitter:image" content="https://a1paintingdecorators.com/logo_og.png" />
+  <meta name="twitter:image" content="https://a1paintingdecorators.com/logo_og.png" />  <!-- Favicon -->  <link rel="icon" href="favicon.ico" type="image/x-icon" />  <!-- Styles -->  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #bbb;
+  overflow-x: hidden;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+header {
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px #00ff00;
+  z-index: 999;
+}
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css" />
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
 
-  <!-- Structured Data (Local Business) -->
-  <script type="application/ld+json">
+nav a {
+  color: #00ff00;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
+}
+
+.hero {
+  height: 100vh;
+  background: url('your-hero-image.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  color: #00ff00;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.hero h2 {
+  font-size: 24px;
+  color: #bbb;
+  margin-bottom: 40px;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.button {
+  padding: 15px 30px;
+  background-color: #00ff00;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 20px #00ff00;
+  animation: fadeInUp 2s ease forwards;
+}
+
+.button:hover {
+  background-color: #0f0;
+  box-shadow: 0 0 30px #00ff00;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  margin-top: 50px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* WhatsApp Chat */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 0 20px #25D366;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #128C7E;
+  box-shadow: 0 0 30px #25D366;
+}
+
+  </style>  <!-- Structured Data -->  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "name": "A1 Painting & Decorating",
-    "image": "https://a1paintingdecorators.com/logo_og.png",
-    "@id": "https://a1paintingdecorators.com/",
-    "url": "https://a1paintingdecorators.com/",
-    "telephone": "+441234567890",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Main Street",
-      "addressLocality": "Inverness",
-      "postalCode": "IV1 1AA",
-      "addressCountry": "GB"
-    },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "08:00",
-        "closes": "18:00"
-      }
-    ],
-    "priceRange": "££"
-  }
-  </script>
-</head>
-<body>
-
-<header>
-  <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" loading="lazy" />
-  <div class="menu-toggle" id="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <nav id="nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Professional Painting & Decorating</h1>
-  <h2>Transforming Spaces with Excellence and Care</h2>
-  <a href="gallery.html" class="button">View Our Work</a>
-</section>
-
-<footer>
-  © 2025 A1 Painting & Decorating | All rights reserved.
-</footer>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('nav');
-  menuToggle.addEventListener('click', () => {
-    nav.querySelector('ul').classList.toggle('active');
-  });
-</script>
-
-</body>
-</html>
+    "name": "A1 Painting
