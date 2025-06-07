@@ -1,14 +1,20 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A1 Painting & Decorating | Inverness</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />  <!-- Open Graph (OG) Tags for Social Sharing -->  <meta property="og:title" content="A1 Painting & Decorating | Inverness" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph (OG) Tags -->
+  <meta property="og:title" content="A1 Painting & Decorating | Inverness" />
   <meta property="og:description" content="Professional painting and decorating services in Inverness. Free quotes, excellent quality. ⭐⭐⭐⭐⭐" />
   <meta property="og:image" content="https://a1paintingdecorators.com/logo_og.png" />
   <meta property="og:url" content="https://a1paintingdecorators.com/" />
-  <meta property="og:type" content="website" />  <style>
+  <meta property="og:type" content="website" />
+
+  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
@@ -18,7 +24,7 @@
     }
     header {
       width: 100%;
-      padding: 20px;
+      padding: 20px 40px;
       position: fixed;
       top: 0;
       left: 0;
@@ -28,7 +34,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
     }
     .logo {
       width: 150px;
@@ -105,37 +110,49 @@
       background-color: #0f0;
       box-shadow: 0 0 30px #00ff00;
     }
-    .reviews {
-      margin: 60px auto;
-      width: 90%;
-      max-width: 1000px;
+    .reviews-section {
+      margin: 100px 20px;
       text-align: center;
-      color: #00ff00;
-      font-size: 22px;
-      font-weight: bold;
-      min-height: 100px;
+      color: #00FF00;
+    }
+    .reviews-section h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px #00FF00;
+    }
+    .reviews-slider {
       position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      height: 200px;
     }
     .review {
-      opacity: 0;
       position: absolute;
       top: 0;
       left: 0;
-      right: 0;
-      transition: opacity 1s ease;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      padding: 20px;
+      border: 2px solid #00FF00;
+      border-radius: 10px;
+      background-color: #111;
+      box-shadow: 0 0 15px #00FF00;
     }
     .review.active {
       opacity: 1;
+      animation: glowPop 2s ease-out;
     }
-    .review span {
-      display: inline-block;
-      font-size: 30px;
-      animation: pulse 2s infinite;
-      color: #00ff00;
+    .review p {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #ccc;
     }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); text-shadow: 0 0 5px #00ff00; }
-      50% { transform: scale(1.2); text-shadow: 0 0 20px #00ff00; }
+    .stars {
+      font-size: 24px;
+      color: #00FF00;
+      animation: shine 2s infinite;
     }
     footer {
       text-align: center;
@@ -170,8 +187,21 @@
       0% { opacity: 0; transform: translateY(50px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-  </style></head>
-<body><header>
+    @keyframes shine {
+      0% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00; transform: scale(1); }
+      50% { text-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00; transform: scale(1.1); }
+      100% { text-shadow: 0 0 5px #00FF00, 0 0 10px #00FF00, 0 0 15px #00FF00; transform: scale(1); }
+    }
+    @keyframes glowPop {
+      0% { box-shadow: 0 0 5px #00FF00; transform: scale(0.9); }
+      50% { box-shadow: 0 0 20px #00FF00; transform: scale(1); }
+      100% { box-shadow: 0 0 5px #00FF00; transform: scale(0.95); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
   <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" />
   <div class="burger" onclick="toggleMenu()">
     <div></div>
@@ -183,19 +213,44 @@
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header><section class="reviews">
-  <div class="review active"><span>⭐⭐⭐⭐⭐</span><br>"Fantastic work! My house looks amazing. Highly recommend A1 Painting & Decorating!"</div>
-  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Professional, reliable, and top-quality finish. Will hire again!"</div>
-  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Quick, clean, and brilliant service! Great value for money."</div>
-  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"The best painting service in Inverness. 5 stars!"</div>
-</section><section class="hero">
+</header>
+
+<section class="reviews-section">
+  <h2>⭐ What Our Customers Say ⭐</h2>
+  <div class="reviews-slider">
+    <div class="review active">
+      <p>"Outstanding service and brilliant results. Great value for money!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="review">
+      <p>"A1 Painting & Decorating transformed our home — highly recommend!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="review">
+      <p>"Top class work, reliable and very professional."</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="review">
+      <p>"Superb finish and clean job. Will definitely hire again!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<section class="hero">
   <h2>Transforming Spaces with Excellence and Care</h2>
   <a href="https://wa.me/447495517536?text=Hi%2C%20I'm%20looking%20for%20a%20quote%20from%20A1%20Painting%20%26%20Decorating." class="button" onclick="fireConfetti()" target="_blank">Get a Free Quote</a>
-</section><a href="https://wa.me/447495517536?text=Hi%2C%20I'm%20looking%20for%20a%20quote%20from%20A1%20Painting%20%26%20Decorating." class="whatsapp-float" target="_blank">
-  &#x1F4AC;
-</a><footer>
+</section>
+
+<a href="https://wa.me/447495517536?text=Hi%2C%20I'm%20looking%20for%20a%20quote%20from%20A1%20Painting%20%26%20Decorating." class="whatsapp-float" target="_blank">&#x1F4AC;</a>
+
+<footer>
   &copy; 2025 A1 Painting & Decorating. All rights reserved.
-</footer><!-- Confetti Script --><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script><script>
+</footer>
+
+<!-- Confetti Script -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+<script>
   function fireConfetti() {
     confetti({
       particleCount: 300,
@@ -208,22 +263,29 @@
 
   function toggleMenu() {
     const menu = document.getElementById('menu');
-    if (menu.style.display === 'flex') {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'flex';
-    }
+    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
   }
 
   const reviews = document.querySelectorAll('.review');
-  let currentReview = 0;
+  let current = 0;
 
-  function showNextReview() {
-    reviews[currentReview].classList.remove('active');
-    currentReview = (currentReview + 1) % reviews.length;
-    reviews[currentReview].classList.add('active');
+  function showReview(index) {
+    reviews.forEach((review, i) => {
+      review.classList.remove('active');
+      if (i === index) {
+        review.classList.add('active');
+      }
+    });
   }
 
-  setInterval(showNextReview, 4000);
-</script></body>
+  function nextReview() {
+    current = (current + 1) % reviews.length;
+    showReview(current);
+  }
+
+  showReview(current);
+  setInterval(nextReview, 4000); // Auto-scroll every 4 seconds
+</script>
+
+</body>
 </html>
