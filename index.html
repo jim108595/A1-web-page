@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>A1 Painting & Decorating | Inverness</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-
-  <style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />  <!-- Open Graph (OG) Tags for Social Sharing -->  <meta property="og:title" content="A1 Painting & Decorating | Inverness" />
+  <meta property="og:description" content="Professional painting and decorating services in Inverness. Free quotes, excellent quality. ⭐⭐⭐⭐⭐" />
+  <meta property="og:image" content="https://a1paintingdecorators.com/logo_og.png" />
+  <meta property="og:url" content="https://a1paintingdecorators.com/" />
+  <meta property="og:type" content="website" />  <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
@@ -91,6 +92,38 @@
       background-color: #0f0;
       box-shadow: 0 0 30px #00ff00;
     }
+    .reviews {
+      margin: 60px auto;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      color: #00ff00;
+      font-size: 22px;
+      font-weight: bold;
+      min-height: 100px;
+      position: relative;
+    }
+    .review {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      transition: opacity 1s ease;
+    }
+    .review.active {
+      opacity: 1;
+    }
+    .review span {
+      display: inline-block;
+      font-size: 28px;
+      animation: pulse 2s infinite;
+      color: #00ff00;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); text-shadow: 0 0 5px #00ff00; }
+      50% { transform: scale(1.2); text-shadow: 0 0 20px #00ff00; }
+    }
     footer {
       text-align: center;
       padding: 20px;
@@ -99,7 +132,6 @@
       background-color: #000;
       margin-top: 60px;
     }
-
     @keyframes fadeInDown {
       0% { opacity: 0; transform: translateY(-50px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -108,33 +140,26 @@
       0% { opacity: 0; transform: translateY(50px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-  </style>
-
-</head>
-<body>
-
-<header>
+  </style></head>
+<body><header>
   <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo" />
   <nav>
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header>
-
-<section class="hero">
+</header><section class="hero">
   <h1>Professional Painting & Decorating</h1>
   <h2>Transforming Spaces with Excellence and Care</h2>
   <button class="button" onclick="fireConfetti()">Get a Free Quote</button>
-</section>
-
-<footer>
+</section><section class="reviews">
+  <div class="review active"><span>⭐⭐⭐⭐⭐</span><br>"Fantastic work! My house looks amazing. Highly recommend A1 Painting & Decorating!"</div>
+  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Professional, reliable, and top-quality finish. Will hire again!"</div>
+  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Quick, clean, and brilliant service! Great value for money."</div>
+  <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"The best painting service in Inverness. 5 stars!"</div>
+</section><footer>
   &copy; 2025 A1 Painting & Decorating. All rights reserved.
-</footer>
-
-<!-- Confetti Script -->
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-<script>
+</footer><!-- Confetti Script --><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script><script>
   function fireConfetti() {
     confetti({
       particleCount: 150,
@@ -142,7 +167,16 @@
       origin: { y: 0.6 }
     });
   }
-</script>
 
-</body>
+  const reviews = document.querySelectorAll('.review');
+  let currentReview = 0;
+
+  function showNextReview() {
+    reviews[currentReview].classList.remove('active');
+    currentReview = (currentReview + 1) % reviews.length;
+    reviews[currentReview].classList.add('active');
+  }
+
+  setInterval(showNextReview, 4000);
+</script></body>
 </html>
