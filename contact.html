@@ -6,14 +6,9 @@
   <title>Contact | A1 Painting & Decorating</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #000;
+      background: #000; /* BLACK BACKGROUND */
       color: #bbb;
       font-family: 'Poppins', sans-serif;
       font-size: 16px;
@@ -41,9 +36,7 @@
       from { box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
       to { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00; }
     }
-    nav {
-      margin: 30px 0;
-    }
+    nav { margin: 30px 0; }
     nav a {
       color: #00ff00;
       text-decoration: none;
@@ -123,9 +116,29 @@
       text-align: center;
       color: #555;
     }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      font-size: 28px;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 0 15px #25D366;
+      z-index: 999;
+      transition: box-shadow 0.3s ease;
+    }
+    .whatsapp-button:hover {
+      box-shadow: 0 0 25px #25D366;
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
     <img src="logo.png" alt="A1 Painting & Decorating Logo" class="logo">
 
@@ -144,7 +157,6 @@
       <p>✉️ <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
     </div>
 
-    <!-- FORM WITH FORMSPREE -->
     <form id="contact-form" action="https://formspree.io/f/xjkrgopv" method="POST">
       <input type="hidden" name="_subject" value="New Contact Form Submission!">
       <input type="hidden" name="_captcha" value="false">
@@ -170,7 +182,10 @@
     </footer>
   </div>
 
-  <!-- CONFETTI Script -->
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/447495517536" class="whatsapp-button" target="_blank">💬</a>
+
+  <!-- Confetti Script -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
     const form = document.getElementById('contact-form');
@@ -191,11 +206,12 @@
         form.style.display = 'none';
         thankYou.style.display = 'block';
 
-        // Fire confetti 🎉
+        // Green and Black Confetti
         confetti({
-          particleCount: 150,
+          particleCount: 200,
           spread: 70,
-          origin: { y: 0.6 }
+          origin: { y: 0.6 },
+          colors: ['#00ff00', '#000000'] // Green and Black
         });
 
       } catch (error) {
@@ -203,5 +219,6 @@
       }
     });
   </script>
+
 </body>
 </html>
