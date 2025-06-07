@@ -6,12 +6,7 @@
   <title>Contact | A1 Painting & Decorating</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <style>
-    /* Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       background: #000;
       color: #bbb;
@@ -19,13 +14,7 @@
       font-size: 16px;
       line-height: 1.7;
     }
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
-    }
-    /* Logo with Glow */
+    .container { max-width: 1100px; margin: 0 auto; padding: 20px; text-align: center; }
     .logo {
       display: block;
       margin: 20px auto;
@@ -42,10 +31,7 @@
       from { box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; }
       to { box-shadow: 0 0 20px #00ff00, 0 0 40px #00ff00; }
     }
-    /* Navigation */
-    nav {
-      margin: 30px 0;
-    }
+    nav { margin: 30px 0; }
     nav a {
       color: #00ff00;
       text-decoration: none;
@@ -54,32 +40,16 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #0f0;
-      text-shadow: 0 0 8px #0f0, 0 0 12px #0f0;
-    }
-    /* Contact Section */
-    h1 {
-      color: #00ff00;
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    p {
-      margin: 10px 0;
-    }
-    .contact-info {
-      margin-bottom: 30px;
-      font-size: 20px;
-    }
+    nav a:hover { color: #0f0; text-shadow: 0 0 8px #0f0, 0 0 12px #0f0; }
+    h1 { color: #00ff00; font-size: 36px; margin-bottom: 20px; }
+    p { margin: 10px 0; }
+    .contact-info { margin-bottom: 30px; font-size: 20px; }
     .contact-info a {
       color: #00ff00;
       text-decoration: none;
       font-weight: bold;
     }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    /* Form */
+    .contact-info a:hover { text-decoration: underline; }
     form {
       background: #000;
       padding: 30px;
@@ -112,21 +82,14 @@
       cursor: pointer;
       transition: 0.3s;
     }
-    button:hover {
-      background-color: #0f0;
-    }
+    button:hover { background-color: #0f0; }
     #thank-you {
       display: none;
       margin-top: 20px;
       font-size: 24px;
       color: #0f0;
     }
-    footer {
-      margin-top: 50px;
-      font-size: 14px;
-      text-align: center;
-      color: #555;
-    }
+    footer { margin-top: 50px; font-size: 14px; text-align: center; color: #555; }
   </style>
 </head>
 <body>
@@ -148,7 +111,11 @@
       <p>✉️ <a href="mailto:info@a1paintingdecorators.com">info@a1paintingdecorators.com</a></p>
     </div>
 
-    <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+    <!-- UPDATED FORMSPREE FORM -->
+    <form id="contact-form" action="https://formspree.io/f/xjkrgopv" method="POST">
+      <input type="hidden" name="_subject" value="New Contact Form Submission!">
+      <input type="hidden" name="_captcha" value="false">
+
       <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -170,7 +137,7 @@
     </footer>
   </div>
 
-  <!-- CONFETTI Script -->
+  <!-- CONFETTI Script with Green + Black -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
   <script>
     const form = document.getElementById('contact-form');
@@ -191,11 +158,12 @@
         form.style.display = 'none';
         thankYou.style.display = 'block';
 
-        // Fire confetti 🎉
+        // Green + Black Confetti 🎉
         confetti({
           particleCount: 150,
           spread: 70,
-          origin: { y: 0.6 }
+          origin: { y: 0.6 },
+          colors: ['#00ff00', '#000000']
         });
 
       } catch (error) {
