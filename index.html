@@ -19,6 +19,14 @@
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
 
     /* Logo Centered with Pulse */
@@ -67,34 +75,9 @@
     .mission {
       text-align: center;
       color: #00ff00;
-      font-size: 18px;
-      margin: 20px 15px;
-      text-shadow: 0 0 8px #00ff00;
-    }
-
-    /* Services Section */
-    .services {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin: 20px 20px 40px;
-      gap: 30px;
-    }
-    .service {
-      flex: 1 1 120px;
-      max-width: 120px;
-      text-align: center;
-    }
-    .service .icon {
-      font-size: 40px;
-      margin-bottom: 10px;
-      filter: drop-shadow(0 0 10px #00ff00);
-    }
-    .service p {
       font-size: 16px;
-      color: #00ff00;
-      font-weight: bold;
-      text-shadow: 0 0 5px #00ff00;
+      margin: 20px 15px 40px;
+      text-shadow: 0 0 8px #00ff00;
     }
 
     /* Tagline */
@@ -143,19 +126,19 @@
       bottom: 40px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(17, 17, 17, 0.7);
+      background: rgba(17, 17, 17, 0.8);
       border: 2px solid #00ff00;
       border-radius: 20px;
       padding: 30px 25px;
       text-align: center;
       max-width: 340px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 0 20px #00ff00;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 0 30px #00ff00 inset, 0 0 20px #00ff00;
       animation: glow 4s infinite alternate;
     }
     @keyframes glow {
-      0% { box-shadow: 0 0 20px #00ff00; }
-      100% { box-shadow: 0 0 40px #00ff00; }
+      0% { box-shadow: 0 0 30px #00ff00 inset, 0 0 20px #00ff00; }
+      100% { box-shadow: 0 0 50px #00ff00 inset, 0 0 40px #00ff00; }
     }
     .review-box p {
       margin: 0;
@@ -210,23 +193,6 @@
   <div></div>
 </div><div class="mission">
   Bringing Life and Color to Homes and Businesses Across Scotland.
-</div><div class="services">
-  <div class="service">
-    <div class="icon">🏠</div>
-    <p>Residential</p>
-  </div>
-  <div class="service">
-    <div class="icon">🏢</div>
-    <p>Commercial</p>
-  </div>
-  <div class="service">
-    <div class="icon">🎨</div>
-    <p>Interior</p>
-  </div>
-  <div class="service">
-    <div class="icon">🛠️</div>
-    <p>Exterior</p>
-  </div>
 </div><div class="tagline">
   Professional Painting and Decorating
 </div><nav id="menu">
