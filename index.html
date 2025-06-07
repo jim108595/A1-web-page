@@ -21,22 +21,28 @@
 
 .burger-menu div { width: 25px; height: 3px; background-color: #00ff00; margin: 5px 0; transition: 0.4s; }
 
-/* Review Box */ .review-box { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid gold; border-radius: 15px; padding: 20px; text-align: center; max-width: 300px; box-shadow: 0 0 20px gold; animation: fadeInUp 2s ease; }
+.menu-active .burger-menu div:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+
+.menu-active .burger-menu div:nth-child(2) { opacity: 0; }
+
+.menu-active .burger-menu div:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+
+/* Review Box */ .review-box { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid #00ff00; border-radius: 15px; padding: 20px; text-align: center; max-width: 300px; box-shadow: 0 0 20px #00ff00; animation: fadeInUp 2s ease; }
 
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
 
 .review-box p { margin: 0; font-size: 16px; }
 
-/* Gold Stars */ .stars { margin-top: 10px; }
+/* Green Stars */ .stars { margin-top: 10px; }
 
-.stars span { color: gold; font-size: 20px; }
+.stars span { color: #00ff00; font-size: 20px; }
 
 /* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 100px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; box-shadow: 0 0 15px #25D366; transition: all 0.3s ease; text-decoration: none; }
 
 .whatsapp-button:hover { box-shadow: 0 0 25px #25D366; } </style>
 
 </head>
-<body><div class="burger-menu">
+<body><div class="burger-menu" onclick="toggleMenu()">
   <div></div>
   <div></div>
   <div></div>
@@ -49,5 +55,9 @@
   </div>
 </div><a href="https://wa.me/your-number" class="whatsapp-button">
   &#128172;
-</a></body>
+</a><script>
+function toggleMenu() {
+  document.body.classList.toggle('menu-active');
+}
+</script></body>
 </html>
