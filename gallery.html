@@ -1,1 +1,166 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | A1 Painting & Decorating</title>  <!-- Google Fonts -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">  <!-- Lightbox CSS -->  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">  <style>
+    body {
+      background: #000;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 30px;
+    }
 
+    h1 {
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .filters {
+      margin-bottom: 30px;
+    }
+
+    .filter-btn {
+      background: none;
+      border: 2px solid #00ff00;
+      color: #00ff00;
+      padding: 10px 20px;
+      margin: 0 10px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .filter-btn:hover, .filter-btn.active {
+      background: #00ff00;
+      color: #000;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 1400px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ff00;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #111;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style></head>
+<body><h1>Our Work</h1><div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="before">Before</button>
+  <button class="filter-btn" data-filter="after">After</button>
+</div><div class="gallery">
+  <!-- Before and After Pairs -->
+  <div class="gallery-item before">
+    <a href="gallery-photos-new/hallway-door-prep-before.jpg" data-lightbox="gallery"><img src="gallery-photos-new/hallway-door-prep-before.jpg" alt="Hallway Door Prep Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-door-finish-after.jpg" data-lightbox="gallery"><img src="gallery-photos-new/hallway-door-finish-after.jpg" alt="Hallway Door Finish After"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/hallway-doors-painting-before.jpg" data-lightbox="gallery"><img src="gallery-photos-new/hallway-doors-painting-before.jpg" alt="Hallway Doors Painting Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-paint-finish1.jpg" data-lightbox="gallery"><img src="gallery-photos-new/hallway-paint-finish1.jpg" alt="Hallway Paint Finish 1"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/hallway-paint-finish2.jpg" data-lightbox="gallery"><img src="gallery-photos-new/hallway-paint-finish2.jpg" alt="Hallway Paint Finish 2"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/kitchen-before1.jpg" data-lightbox="gallery"><img src="gallery-photos-new/kitchen-before1.jpg" alt="Kitchen Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/kitchen-after.jpg" data-lightbox="gallery"><img src="gallery-photos-new/kitchen-after.jpg" alt="Kitchen After"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/small-toilet-wallpaper-before.jpg" data-lightbox="gallery"><img src="gallery-photos-new/small-toilet-wallpaper-before.jpg" alt="Small Toilet Wallpaper Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/small-toilet-wallpaper-after.jpg" data-lightbox="gallery"><img src="gallery-photos-new/small-toilet-wallpaper-after.jpg" alt="Small Toilet Wallpaper After"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/staircase-paint-before.jpg" data-lightbox="gallery"><img src="gallery-photos-new/staircase-paint-before.jpg" alt="Staircase Paint Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/staircase-paint-after.jpg" data-lightbox="gallery"><img src="gallery-photos-new/staircase-paint-after.jpg" alt="Staircase Paint After"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/wallpaper-before.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-before.jpg" alt="Wallpaper Before"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-after.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-after.jpg" alt="Wallpaper After"></a>
+  </div>  <div class="gallery-item before">
+    <a href="gallery-photos-new/wallpaper-before1.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-before1.jpg" alt="Wallpaper Before 1"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-after2.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-after2.jpg" alt="Wallpaper After 2"></a>
+  </div>  <!-- Finish Images -->  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-finish.jpg" alt="Wallpaper Finish"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish1.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-finish1.jpg" alt="Wallpaper Finish 1"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/wallpaper-finish2.jpg" data-lightbox="gallery"><img src="gallery-photos-new/wallpaper-finish2.jpg" alt="Wallpaper Finish 2"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/living-room-wallpaper-finish.jpg" data-lightbox="gallery"><img src="gallery-photos-new/living-room-wallpaper-finish.jpg" alt="Living Room Wallpaper Finish"></a>
+  </div>
+  <div class="gallery-item after">
+    <a href="gallery-photos-new/bed-room-finish.jpg" data-lightbox="gallery"><img src="gallery-photos-new/bed-room-finish.jpg" alt="Bedroom Finish"></a>
+  </div>
+</div><!-- Lightbox JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script><script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+
+      const filter = button.getAttribute('data-filter');
+
+      galleryItems.forEach(item => {
+        if (filter === 'all') {
+          item.style.display = 'block';
+        } else if (item.classList.contains(filter)) {
+          item.style.display = 'block';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></body>
+  </html>
