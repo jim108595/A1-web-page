@@ -8,51 +8,53 @@
     scroll-behavior: smooth;
   }body { background: #000; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
 
-/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 20px; animation: pulse 3s infinite; }
+/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 30px; animation: pulse 3s infinite; }
 
-@keyframes pulse { 0% { box-shadow: 0 0 15px #00ff00; } 50% { box-shadow: 0 0 25px #00ff00; } 100% { box-shadow: 0 0 15px #00ff00; } }
+@keyframes pulse { 0% { box-shadow: 0 0 20px #00ff00; } 50% { box-shadow: 0 0 40px #00ff00; } 100% { box-shadow: 0 0 20px #00ff00; } }
 
-.logo img { width: 150px; height: auto; }
+.logo img { width: 200px; height: auto; }
 
-/* Burger Menu Top Right */ .burger-menu { position: absolute; top: 30px; right: 30px; cursor: pointer; z-index: 1001; }
+/* Centered Burger Menu Below Logo */ .burger-menu { display: flex; justify-content: center; margin: 20px 0; cursor: pointer; z-index: 1001; }
 
-.burger-menu div { width: 25px; height: 3px; background-color: #00ff00; margin: 5px 0; transition: 0.4s; }
+.burger-menu div { width: 30px; height: 4px; background-color: #00ff00; margin: 6px 0; transition: 0.4s; }
 
-.menu-active .burger-menu div:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+.menu-active .burger-menu div:nth-child(1) { transform: rotate(-45deg) translate(-6px, 7px); }
 
 .menu-active .burger-menu div:nth-child(2) { opacity: 0; }
 
-.menu-active .burger-menu div:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+.menu-active .burger-menu div:nth-child(3) { transform: rotate(45deg) translate(-6px, -7px); }
 
-/* Slide Menu */ nav { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: #111; box-shadow: -2px 0 20px #00ff00; transition: right 0.5s ease; display: flex; flex-direction: column; padding: 60px 20px; z-index: 1000; }
+/* Slide Menu */ nav { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: #111; box-shadow: -2px 0 20px #00ff00; transition: right 0.5s ease; display: flex; flex-direction: column; padding: 100px 20px 20px 20px; z-index: 1000; }
 
 nav.menu-open { right: 0; }
 
 nav a { color: #00ff00; text-decoration: none; font-size: 24px; margin: 15px 0; transition: color 0.3s; }
 
-nav a:hover { color: #25D366; }
+nav a:hover { color: #25D366; text-shadow: 0 0 10px #00ff00; }
 
-/* Review Box */ .review-box { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid #00ff00; border-radius: 15px; padding: 20px; text-align: center; max-width: 300px; box-shadow: 0 0 20px #00ff00; animation: fadeInUp 2s ease; }
+/* Review Box */ .review-box { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid #00ff00; border-radius: 20px; padding: 25px 20px; text-align: center; max-width: 320px; box-shadow: 0 0 20px #00ff00; animation: glow 4s infinite alternate; }
 
-@keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes glow { 0% { box-shadow: 0 0 20px #00ff00; } 100% { box-shadow: 0 0 40px #00ff00; } }
 
-.review-box p { margin: 0; font-size: 16px; }
+.review-box p { margin: 0; font-size: 18px; font-style: italic; }
 
-/* Green Stars */ .stars { margin-top: 10px; }
+/* Green Stars */ .stars { margin-top: 15px; }
 
-.stars span { color: #00ff00; font-size: 20px; }
+.stars span { color: #00ff00; font-size: 22px; }
 
-/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 100px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 15px; box-shadow: 0 0 15px #25D366; transition: all 0.3s ease; text-decoration: none; z-index: 1001; font-size: 24px; }
+/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 120px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 18px; box-shadow: 0 0 20px #25D366; transition: all 0.3s ease; text-decoration: none; z-index: 1001; font-size: 26px; }
 
-.whatsapp-button:hover { box-shadow: 0 0 25px #25D366; } </style>
+.whatsapp-button:hover { box-shadow: 0 0 30px #25D366; }
+
+body { background: radial-gradient(circle at top center, #000 0%, #111 100%); } </style>
 
 </head>
-<body><div class="burger-menu" onclick="toggleMenu()">
-  <div></div>
-  <div></div>
-  <div></div>
-</div><div class="logo">
+<body><div class="logo">
   <img src="logo.png" alt="A1 Painting & Decorating">
+</div><div class="burger-menu" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
 </div><nav id="menu">
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
@@ -63,7 +65,7 @@ nav a:hover { color: #25D366; }
   <div class="stars">
     <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
   </div>
-</div><a href="https://wa.me/447123456789" class="whatsapp-button" target="_blank">
+</div><a href="https://wa.me/447123456789?text=Hi%20A1%20Painting%20%26%20Decorating%2C%20I%20am%20interested%20in%20a%20quote%20please!" class="whatsapp-button" target="_blank">
   &#128172;
 </a><script>
 function toggleMenu() {
