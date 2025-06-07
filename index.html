@@ -22,6 +22,7 @@
       text-align: center;
       opacity: 0;
       animation: fadeIn 1.5s ease forwards;
+      position: relative;
     }
 
     @keyframes fadeIn {
@@ -30,30 +31,27 @@
       }
     }
 
-    /* Header Flex */
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-    }
-
-    .logo img {
-      width: 200px;
-      height: auto;
+    /* Logo Centered */
+    .logo {
+      margin-top: 50px;
       animation: pulse 3s infinite;
     }
-
     @keyframes pulse {
       0% { filter: drop-shadow(0 0 5px #00ff00); }
       50% { filter: drop-shadow(0 0 15px #00ff00); }
       100% { filter: drop-shadow(0 0 5px #00ff00); }
     }
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
 
-    /* Burger Menu */
+    /* Burger Menu Centered Below Logo */
     .burger-menu {
       display: flex;
       flex-direction: column;
+      align-items: center;
+      margin: 30px auto 10px;
       cursor: pointer;
       z-index: 1002;
     }
@@ -61,7 +59,7 @@
       width: 25px;
       height: 3px;
       background-color: #00ff00;
-      margin: 4px 0;
+      margin: 5px 0;
       transition: 0.4s;
       border-radius: 2px;
     }
@@ -69,16 +67,19 @@
       box-shadow: 0 0 10px #00ff00;
     }
 
-    /* WhatsApp Button */
+    /* WhatsApp Button Fixed Top Right */
     .whatsapp-button {
+      position: fixed;
+      top: 20px;
+      right: 30px;
       background-color: #25D366;
       color: white;
       border-radius: 50%;
-      padding: 12px;
+      padding: 14px;
       box-shadow: 0 0 15px #25D366;
       transition: all 0.3s ease;
       text-decoration: none;
-      font-size: 20px;
+      font-size: 22px;
       z-index: 1001;
     }
     .whatsapp-button:hover {
@@ -154,17 +155,15 @@
       text-shadow: 0 0 10px #00ff00;
     }
   </style></head>
-<body><div class="header">
-  <div class="burger-menu" onclick="openNav()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>  <div class="logo">
-    <img src="logo.png" alt="A1 Painting & Decorating Logo">
-  </div>  <a href="https://wa.me/447495517536?text=Hi%20A1%20Painting%20%26%20Decorating%2C%20I%20am%20interested%20in%20a%20quote%20please!" class="whatsapp-button" target="_blank">
-    💬
-  </a>
-</div><div id="mySidenav" class="sidenav">
+<body><div class="logo">
+  <img src="logo.png" alt="A1 Painting & Decorating Logo">
+</div><div class="burger-menu" onclick="openNav()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div><a href="https://wa.me/447495517536?text=Hi%20A1%20Painting%20%26%20Decorating%2C%20I%20am%20interested%20in%20a%20quote%20please!" class="whatsapp-button" target="_blank">
+  💬
+</a><div id="mySidenav" class="sidenav">
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
   <a href="gallery.html">Gallery</a>
