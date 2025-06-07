@@ -63,6 +63,40 @@
       transform: rotate(45deg) translate(-6px, -7px);
     }
 
+    /* Mission Statement */
+    .mission {
+      text-align: center;
+      color: #00ff00;
+      font-size: 18px;
+      margin: 20px 15px;
+      text-shadow: 0 0 8px #00ff00;
+    }
+
+    /* Services Section */
+    .services {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 20px 40px;
+      gap: 30px;
+    }
+    .service {
+      flex: 1 1 120px;
+      max-width: 120px;
+      text-align: center;
+    }
+    .service .icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 10px #00ff00);
+    }
+    .service p {
+      font-size: 16px;
+      color: #00ff00;
+      font-weight: bold;
+      text-shadow: 0 0 5px #00ff00;
+    }
+
     /* Tagline */
     .tagline {
       text-align: center;
@@ -174,6 +208,25 @@
   <div></div>
   <div></div>
   <div></div>
+</div><div class="mission">
+  Bringing Life and Color to Homes and Businesses Across Scotland.
+</div><div class="services">
+  <div class="service">
+    <div class="icon">🏠</div>
+    <p>Residential</p>
+  </div>
+  <div class="service">
+    <div class="icon">🏢</div>
+    <p>Commercial</p>
+  </div>
+  <div class="service">
+    <div class="icon">🎨</div>
+    <p>Interior</p>
+  </div>
+  <div class="service">
+    <div class="icon">🛠️</div>
+    <p>Exterior</p>
+  </div>
 </div><div class="tagline">
   Professional Painting and Decorating
 </div><nav id="menu">
@@ -187,7 +240,7 @@
     <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
   </div>
 </div><a href="https://wa.me/447123456789?text=Hi%20A1%20Painting%20%26%20Decorating%2C%20I%20am%20interested%20in%20a%20quote%20please!" class="whatsapp-button" target="_blank">
-  &#128172;
+  💬
 </a><script>
 function toggleMenu() {
   document.body.classList.toggle('menu-active');
