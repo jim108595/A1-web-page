@@ -87,13 +87,15 @@
       transition: 0.3s;
       box-shadow: 0 0 20px #00ff00;
       animation: fadeInUp 2s ease-out;
+      text-decoration: none;
+      display: inline-block;
     }
     .button:hover {
       background-color: #0f0;
       box-shadow: 0 0 30px #00ff00;
     }
     .reviews {
-      margin: 60px auto;
+      margin: 40px auto;
       width: 90%;
       max-width: 800px;
       text-align: center;
@@ -148,23 +150,25 @@
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">Contact</a>
   </nav>
-</header><section class="hero">
-  <h1>Professional Painting & Decorating</h1>
-  <h2>Transforming Spaces with Excellence and Care</h2>
-  <button class="button" onclick="fireConfetti()">Get a Free Quote</button>
-</section><section class="reviews">
+</header><section class="reviews">
   <div class="review active"><span>⭐⭐⭐⭐⭐</span><br>"Fantastic work! My house looks amazing. Highly recommend A1 Painting & Decorating!"</div>
   <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Professional, reliable, and top-quality finish. Will hire again!"</div>
   <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"Quick, clean, and brilliant service! Great value for money."</div>
   <div class="review"><span>⭐⭐⭐⭐⭐</span><br>"The best painting service in Inverness. 5 stars!"</div>
+</section><section class="hero">
+  <h1>Professional Painting & Decorating</h1>
+  <h2>Transforming Spaces with Excellence and Care</h2>
+  <a href="https://wa.me/447495517536" class="button" onclick="fireConfetti()" target="_blank">Get a Free Quote</a>
 </section><footer>
   &copy; 2025 A1 Painting & Decorating. All rights reserved.
 </footer><!-- Confetti Script --><script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script><script>
   function fireConfetti() {
     confetti({
-      particleCount: 150,
-      spread: 70,
-      origin: { y: 0.6 }
+      particleCount: 300,
+      spread: 100,
+      origin: { y: 0, x: 0.5 },
+      gravity: 0.7,
+      scalar: 1.2
     });
   }
 
