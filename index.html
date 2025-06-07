@@ -1,67 +1,188 @@
 <!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A1 Painting & Decorating</title>
-<style>
-  html {
-    scroll-behavior: smooth;
-  }body { background: #000; color: #fff; font-family: 'Arial', sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A1 Painting & Decorating</title>  <!-- SEO Meta Tags -->  <meta name="description" content="A1 Painting & Decorating - Professional painting and decorating services in Scotland. High-quality finishes, residential and commercial painting experts.">
+  <meta name="keywords" content="Painting, Decorating, House Painting, Commercial Painting, Scotland Decorators, Inverness Painter, Home Renovation, Professional Painters">
+  <meta name="author" content="A1 Painting & Decorating">  <!-- Open Graph Meta Tags -->  <meta property="og:title" content="A1 Painting & Decorating">
+  <meta property="og:description" content="Professional painting and decorating services across Scotland. Transforming homes and businesses with quality finishes.">
+  <meta property="og:image" content="https://yourwebsite.com/your-logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com">  <!-- Favicon -->  <link rel="icon" href="favicon.ico" type="image/x-icon">  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background: radial-gradient(circle at top center, #000 0%, #111 100%);
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
 
-/* Logo Centered with Pulse */ .logo { display: flex; justify-content: center; margin-top: 30px; animation: pulse 3s infinite; }
+    /* Logo Centered with Pulse */
+    .logo {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 20px #00ff00; }
+      50% { box-shadow: 0 0 40px #00ff00; }
+      100% { box-shadow: 0 0 20px #00ff00; }
+    }
+    .logo img {
+      width: 200px;
+      height: auto;
+    }
 
-@keyframes pulse { 0% { box-shadow: 0 0 20px #00ff00; } 50% { box-shadow: 0 0 40px #00ff00; } 100% { box-shadow: 0 0 20px #00ff00; } }
+    /* Centered Burger Menu */
+    .burger-menu {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0 10px 0;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .burger-menu div {
+      width: 30px;
+      height: 4px;
+      background-color: #00ff00;
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+    .menu-active .burger-menu div:nth-child(1) {
+      transform: rotate(-45deg) translate(-6px, 7px);
+    }
+    .menu-active .burger-menu div:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-active .burger-menu div:nth-child(3) {
+      transform: rotate(45deg) translate(-6px, -7px);
+    }
 
-.logo img { width: 200px; height: auto; }
+    /* Tagline */
+    .tagline {
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #00ff00;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00ff00;
+    }
 
-/* Centered Burger Menu Below Logo */ .burger-menu { display: flex; justify-content: center; margin: 20px 0; cursor: pointer; z-index: 1001; }
+    /* Slide Menu */
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: #111;
+      box-shadow: -2px 0 20px #00ff00;
+      transition: right 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      padding: 100px 20px 20px 20px;
+      z-index: 1000;
+    }
+    nav.menu-open {
+      right: 0;
+    }
+    nav a {
+      color: #00ff00;
+      text-decoration: none;
+      font-size: 24px;
+      margin: 15px 0;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #25D366;
+      text-shadow: 0 0 10px #00ff00;
+    }
 
-.burger-menu div { width: 30px; height: 4px; background-color: #00ff00; margin: 6px 0; transition: 0.4s; }
+    /* Review Box (Glassmorphism) */
+    .review-box {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(17, 17, 17, 0.7);
+      border: 2px solid #00ff00;
+      border-radius: 20px;
+      padding: 30px 25px;
+      text-align: center;
+      max-width: 340px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px #00ff00;
+      animation: glow 4s infinite alternate;
+    }
+    @keyframes glow {
+      0% { box-shadow: 0 0 20px #00ff00; }
+      100% { box-shadow: 0 0 40px #00ff00; }
+    }
+    .review-box p {
+      margin: 0;
+      font-size: 18px;
+      font-style: italic;
+      position: relative;
+      transition: opacity 0.5s ease;
+    }
+    .review-box p::before {
+      content: '"';
+      font-size: 50px;
+      color: #00ff00;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
 
-.menu-active .burger-menu div:nth-child(1) { transform: rotate(-45deg) translate(-6px, 7px); }
+    /* Green Stars */
+    .stars {
+      margin-top: 20px;
+    }
+    .stars span {
+      color: #00ff00;
+      font-size: 22px;
+    }
 
-.menu-active .burger-menu div:nth-child(2) { opacity: 0; }
-
-.menu-active .burger-menu div:nth-child(3) { transform: rotate(45deg) translate(-6px, -7px); }
-
-/* Slide Menu */ nav { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: #111; box-shadow: -2px 0 20px #00ff00; transition: right 0.5s ease; display: flex; flex-direction: column; padding: 100px 20px 20px 20px; z-index: 1000; }
-
-nav.menu-open { right: 0; }
-
-nav a { color: #00ff00; text-decoration: none; font-size: 24px; margin: 15px 0; transition: color 0.3s; }
-
-nav a:hover { color: #25D366; text-shadow: 0 0 10px #00ff00; }
-
-/* Review Box */ .review-box { position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%); background: #111; border: 2px solid #00ff00; border-radius: 20px; padding: 25px 20px; text-align: center; max-width: 320px; box-shadow: 0 0 20px #00ff00; animation: glow 4s infinite alternate; }
-
-@keyframes glow { 0% { box-shadow: 0 0 20px #00ff00; } 100% { box-shadow: 0 0 40px #00ff00; } }
-
-.review-box p { margin: 0; font-size: 18px; font-style: italic; }
-
-/* Green Stars */ .stars { margin-top: 15px; }
-
-.stars span { color: #00ff00; font-size: 22px; }
-
-/* WhatsApp Button */ .whatsapp-button { position: fixed; bottom: 120px; right: 30px; background-color: #25D366; color: white; border-radius: 50%; padding: 18px; box-shadow: 0 0 20px #25D366; transition: all 0.3s ease; text-decoration: none; z-index: 1001; font-size: 26px; }
-
-.whatsapp-button:hover { box-shadow: 0 0 30px #25D366; }
-
-body { background: radial-gradient(circle at top center, #000 0%, #111 100%); } </style>
-
-</head>
+    /* WhatsApp Button */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 120px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 18px;
+      box-shadow: 0 0 20px #25D366;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      z-index: 1001;
+      font-size: 26px;
+    }
+    .whatsapp-button:hover {
+      box-shadow: 0 0 30px #25D366;
+    }
+  </style></head>
 <body><div class="logo">
-  <img src="logo.png" alt="A1 Painting & Decorating">
+  <img src="logo.png" alt="A1 Painting and Decorating Logo">
 </div><div class="burger-menu" onclick="toggleMenu()">
   <div></div>
   <div></div>
   <div></div>
+</div><div class="tagline">
+  Professional Painting and Decorating
 </div><nav id="menu">
   <a href="index.html">Home</a>
   <a href="services.html">Services</a>
   <a href="gallery.html">Gallery</a>
   <a href="contact.html">Contact</a>
 </nav><div class="review-box">
-  <p>"Superb finish and clean job. Will definitely hire again!"</p>
+  <p id="review-text">Superb finish and clean job. Will definitely hire again!</p>
   <div class="stars">
     <span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span>
   </div>
@@ -72,5 +193,25 @@ function toggleMenu() {
   document.body.classList.toggle('menu-active');
   document.getElementById('menu').classList.toggle('menu-open');
 }
+
+const reviews = [
+  "Superb finish and clean job. Will definitely hire again!",
+  "Professional, reliable and the attention to detail is amazing.",
+  "The best painters in Scotland — highly recommend!",
+  "Exceptional work, clean and efficient from start to finish."
+];
+
+let currentReview = 0;
+
+setInterval(() => {
+  currentReview = (currentReview + 1) % reviews.length;
+  const reviewText = document.getElementById('review-text');
+
+  reviewText.style.opacity = 0;
+  setTimeout(() => {
+    reviewText.textContent = reviews[currentReview];
+    reviewText.style.opacity = 1;
+  }, 500);
+}, 5000);
 </script></body>
 </html>
